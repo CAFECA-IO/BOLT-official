@@ -41,8 +41,6 @@
   grid-area: footer_link_list;
   display: flex;
   justify-content: space-between;
-  margin-left: 20rem;
-  padding-top: 1rem;
 }
 
 .footer_link_item {
@@ -64,13 +62,21 @@
 
 .footer_copyright {
   grid-area: footer_copyright;
-  text-align: right;
-
   font: normal normal normal 12px/23px Noto Sans TC;
 }
 
 /* 螢幕寬度小於 768px 時 */
 @media screen and (max-width: 768px) {
+  .footer_link_list {
+    border: groove 1px #f2f2f2;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer_link_item {
+    padding: 1rem;
+    align-items: center;
+  }
 }
 
 /* 螢幕寬度小於 992px 時 */
@@ -96,6 +102,10 @@
   .footer_text_container {
     margin-left: 1rem;
   }
+  .footer_copyright {
+    padding: 0.5rem;
+    text-align: center;
+  }
 }
 
 /* 螢幕寬度大於 992.1px 時 */
@@ -119,5 +129,13 @@
   .footer_logo span {
     height: 1px;
     width: 100%;
+  }
+
+  .footer_link_list {
+    margin-left: 16rem;
+    padding-top: 1rem;
+  }
+  .footer_copyright {
+    text-align: right;
   }
 }
