@@ -18,7 +18,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <MainNavbar />
         <div>
           <h1>This is home page</h1>
         </div>
@@ -31,7 +30,6 @@ export default function Home() {
           height={900}
           priority
         />
-        <Footer />
       </main>
       {/*       <main className={styles.main}>
         <div className={styles.description}>
