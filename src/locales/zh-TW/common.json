@@ -3,13 +3,12 @@
     "about": "關於 Bolt",
     "technology": "核心技術",
     "faq": "常見問題",
-    "blockchain": "區塊鏈瀏覽器"
+    "blockchain": "區塊鏈瀏覽器",
+    "contactUs": "聯絡我們",
+    "privary": "政策條款"
   },
   "main": {
-    "title": "兼具隱私的區塊鏈存證庫",
-    "contactForm": {
-      "title": "聯絡我們"
-    }
+    "title": "兼具隱私的區塊鏈存證庫"
   },
   "about": {
     "whyBolt": {
@@ -41,6 +40,9 @@
     "answer3": "Boltchain 的設計能良好介接企業的中央式系統與公有區塊鏈，讓企業能有效使用區塊鏈建立相關應用。在一般商業環境中，有中間人服務，或需要監管機關介入，無法完全去中心化時，我們可以解決用戶和中間人資訊不對等的問題，包含數位內容的版權管理、金融產業等。",
     "question4": "如何下載安裝 Bolt？",
     "answer4": "詳細內容放置於此"
+  },
+  "contactForm": {
+    "title": "聯絡我們"
   },
   "privary": {
     "title": "隱私權政策與條款"
