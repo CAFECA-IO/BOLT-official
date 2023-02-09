@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import MainNavbar from "@/components/common/navbar";
+import Footer from "@/components/common/footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,16 @@ export default function Home() {
         <div>
           <h1>This is home page</h1>
         </div>
+
+        <Image
+          src="/vercel.svg"
+          alt="Vercel Logo"
+          className={styles.vercelLogo}
+          width={100}
+          height={900}
+          priority
+        />
+        <Footer />
       </main>
       {/*       <main className={styles.main}>
         <div className={styles.description}>
