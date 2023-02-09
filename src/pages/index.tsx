@@ -1,11 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import styles from "@/styles/Home.module.css";
 import MainNavbar from "@/components/common/navbar";
 import Footer from "@/components/common/footer";
 
 export default function Home() {
+  const { t } = useTranslation("common");
   return (
     <>
       <Head>
@@ -136,4 +139,13 @@ export default function Home() {
       </main> */}
     </>
   );
+}
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+      // Will be passed to the page component as props
+    },
+  };
 }

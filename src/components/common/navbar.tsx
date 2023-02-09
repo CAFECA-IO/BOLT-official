@@ -1,9 +1,12 @@
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { useTranslation } from "next-i18next";
 import myStyles from "@/styles/navbar.module.css";
 
 function MainNavbar() {
+  const { t } = useTranslation("common");
+
   //collapse選單收合
   const [showMenu, setShowMenu] = useState(false);
   const navToggler = () => {
@@ -37,13 +40,13 @@ function MainNavbar() {
         <div className={`${menuStyles} ${myStyles.nav_list_container}`}>
           <ul>
             <li>
-              <Link href="/about_bolt">關於 Bolt</Link>
+              <Link href="/about_bolt">{t("nav.about")}</Link>
             </li>
             <li>
-              <Link href="/technology">核心技術</Link>
+              <Link href="/technology">{t("nav.technology")}</Link>
             </li>
             <li>
-              <Link href="/faq">常見問題</Link>
+              <Link href="/faq">{t("nav.faq")}</Link>
             </li>
           </ul>
 
@@ -53,7 +56,7 @@ function MainNavbar() {
             <li>language</li>
             <li>
               <Link href="" className={myStyles.blockchain_btn}>
-                區塊鏈瀏覽器
+                {t("nav.blockchain")}
               </Link>
             </li>
           </ul>
