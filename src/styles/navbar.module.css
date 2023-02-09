@@ -1,10 +1,10 @@
 .nav_main_container {
   background-color: #3a3b4d;
   width: 100vw;
-  padding: 1rem 5rem 1rem 5rem;
   display: flex;
   font: normal normal 18px/26px Noto Sans TC;
   font-size: medium;
+  padding: 1rem 5rem 1rem 5rem;
 }
 
 .nav_list_container {
@@ -24,8 +24,27 @@
   text-align: center;
 }
 
+.menu_btn {
+  position: absolute;
+  top: 1.75rem;
+  right: 5rem;
+  width: 50px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
 /* 螢幕寬度小於 768px 時 */
 @media screen and (max-width: 768px) {
+  .nav_main_container {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .menu_btn {
+    right: 2rem;
+  }
 }
 
 /* 螢幕寬度小於 992px 時 */
@@ -34,18 +53,6 @@
     flex-direction: column;
   }
 
-  .menu_btn {
-    position: absolute;
-    top: 1.75rem;
-    right: 5rem;
-    width: 50px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-  }
   .menu_btn_burger,
   .menu_btn_cross {
     width: 35px;
@@ -89,6 +96,7 @@
     height: 80px;
     flex-direction: row;
     justify-content: space-between;
+    transition: all 0.3s ease-in-out;
   }
 
   .nav_list_container span {
@@ -104,8 +112,15 @@
   .blockchain_btn {
     padding: 10px 20px 10px 20px;
     border-radius: 5rem;
+    border: 1px solid #31d3f5;
 
     color: #3a3b4d;
     background-color: #31d3f5;
+    transition: all 0.1s ease-in;
+  }
+
+  .blockchain_btn:hover {
+    background-color: transparent;
+    color: #31d3f5;
   }
 }
