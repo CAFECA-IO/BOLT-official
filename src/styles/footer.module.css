@@ -1,6 +1,7 @@
 .footer_main_container {
   background-color: #3a3b4d;
   color: #f2f2f2;
+  transition: all 0.7s ease;
 }
 
 .footer_logo {
@@ -102,6 +103,11 @@
   .footer_text_container {
     margin-left: 1rem;
   }
+
+  .footer_link_list {
+    padding: 2rem;
+  }
+
   .footer_copyright {
     padding: 0.5rem;
     text-align: center;
