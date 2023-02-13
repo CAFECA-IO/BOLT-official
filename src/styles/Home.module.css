@@ -5,11 +5,108 @@
   align-items: center;
   padding-top: 6rem;
   min-height: 100vh;
-  background: white url("/img/main_bg.svg") no-repeat center 6rem / cover;
+  background: #f8fafa url("/img/main_bg.svg") no-repeat center 6rem / cover;
 }
 
+.main_block1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll_down {
+  animation: fromBottom 1s ease-out 1 forwards;
+}
+
+/* bolt_main */
 .bolt_main_container {
   display: flex;
+  align-items: center;
+  padding: 7rem 0 1rem 0;
+}
+
+.bolt_main_textbox {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  text-align: center;
+  padding: 3rem;
+  color: #3a3b4d;
+}
+
+.bolt_main_textbox h1 {
+  font: normal normal 60px/97px Noto Sans TC;
+  white-space: nowrap;
+}
+
+.bolt_main_textbox span {
+  border-bottom: 1px solid #3a3b4d;
+}
+
+.bolt_main_textbox p {
+  font: normal normal 18px/26px Noto Sans TC;
+}
+
+.whitepaper::before {
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  background: transparent url("/img/icons/book@2x.png") no-repeat top / 50% 50%;
+}
+
+.bolt_main_from_top,
+.bolt_main_from_bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bolt_main_from_top {
+  height: 250px;
+  animation: fromTop 1s ease-out 1 forwards;
+}
+
+.bolt_main_from_bottom {
+  padding-top: 2.5rem;
+  height: 150px;
+  animation: fromBottom 1s ease-out 1 forwards;
+}
+
+.bolt_main_btnbox {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bolt_main_btnbox button {
+  padding: 10px 30px 10px 30px;
+  color: #3a3b4d;
+  border: none;
+  border-radius: 5rem;
+  background: radial-gradient(
+    closest-side at 50% 50%,
+    #f8fafa 0%,
+    #f2f2f2 100%
+  );
+  font: normal normal 18px/26px Barlow;
+  letter-spacing: 0.09px;
+  box-shadow: 0px 3px 7px #00000029;
+}
+
+.bolt_main_btnbox button:hover {
+  box-shadow: none;
+}
+
+.bolt_main_imgbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-out 1 forwards;
 }
 
 /* Mobile */
@@ -23,11 +120,34 @@
 @media (prefers-color-scheme: dark) {
 }
 
-@keyframes rotate {
+/* animation */
+@keyframes fadeIn {
   from {
-    transform: rotate(360deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
