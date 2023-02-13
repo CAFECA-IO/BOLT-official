@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
   align-items: center;
   padding-top: 6rem;
   min-height: 100vh;
@@ -17,6 +17,15 @@
 
 .scroll_down {
   animation: fromBottom 1s ease-out 1 forwards;
+}
+
+.main_block2 {
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+.main_block2 h1 {
+  text-align: center;
 }
 
 /* bolt_main */
@@ -96,6 +105,7 @@
   font: normal normal 18px/26px Barlow;
   letter-spacing: 0.09px;
   box-shadow: 0px 3px 7px #00000029;
+  cursor: pointer;
 }
 
 .bolt_main_btnbox button:hover {

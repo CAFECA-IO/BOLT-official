@@ -17,9 +17,11 @@ function BoltMain() {
             height={45}
           />
           <h1>{t("main.block1.title")}</h1>
-          <p className={myStyles.whitepaper}>
-            &emsp;&emsp;<span>{t("main.block1.whitepaper")}</span>
-          </p>
+          <Link href="">
+            <p className={myStyles.whitepaper}>
+              &emsp;&emsp;<span>{t("main.block1.whitepaper")}</span>
+            </p>
+          </Link>
         </div>
         <div className={myStyles.bolt_main_from_bottom}>
           <div className={myStyles.bolt_main_btnbox}>

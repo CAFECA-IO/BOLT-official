@@ -25,16 +25,35 @@ function I18n() {
       <div className={subMenuStyles}>
         <ul className={myStyles.lang_dropmenu}>
           <li>
-            <Link href={router} scroll={false} locale="en">
+            <Link
+              href={router}
+              onClick={clickHandler}
+              scroll={false}
+              locale="en"
+            >
               English
             </Link>
           </li>
           <li>
-            <Link href={router} scroll={false} locale="zh-TW">
+            <Link
+              href={router}
+              onClick={clickHandler}
+              scroll={false}
+              locale="zh-TW"
+            >
               繁體中文
             </Link>
           </li>
-          <li></li>
+          <li>
+            <Link
+              href={router}
+              onClick={clickHandler}
+              scroll={false}
+              locale="zh-CN"
+            >
+              简体中文
+            </Link>
+          </li>
         </ul>
       </div>
     </>
