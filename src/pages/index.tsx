@@ -6,6 +6,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import myStyles from "@/styles/Home.module.css";
 import BoltMain from "@/components/home/bolt_main";
+import BoltIntro from "@/components/home/bolt_introduction";
 
 export default function Home() {
   const { t } = useTranslation("common");
@@ -21,7 +22,7 @@ export default function Home() {
         <div className={myStyles.main_block1}>
           <BoltMain />
 
-          <Link href="/#" className={myStyles.scroll_down}>
+          <Link href="/#what" className={myStyles.scroll_down}>
             <Image
               src="/img/icons/scroll_down.png"
               alt="scroll_down"
@@ -29,6 +30,10 @@ export default function Home() {
               height={20}
             />
           </Link>
+        </div>
+        <div id="what" className={myStyles.main_block2}>
+          <h1>{t("main.block2.title")}</h1>
+          <BoltIntro />
         </div>
       </main>
     </>

@@ -16,20 +16,20 @@ function BoltMain() {
             width={160}
             height={45}
           />
-          <h1>{t("main.title")}</h1>
+          <h1>{t("main.block1.title")}</h1>
           <p className={myStyles.whitepaper}>
-            &emsp;&emsp;<span>{t("main.whitepaper")}</span>
+            &emsp;&emsp;<span>{t("main.block1.whitepaper")}</span>
           </p>
         </div>
         <div className={myStyles.bolt_main_from_bottom}>
           <div className={myStyles.bolt_main_btnbox}>
-            <button>{t("main.windows")}</button>
-            <button>{t("main.macos")}</button>
-            <button>{t("main.linux")}</button>
+            <button>{t("main.block1.windows")}</button>
+            <button>{t("main.block1.macos")}</button>
+            <button>{t("main.block1.linux")}</button>
           </div>
           <Link href="">
             <p>
-              <span>{t("main.howTo")}</span>
+              <span>{t("main.block1.howTo")}</span>
             </p>
           </Link>
         </div>
