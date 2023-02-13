@@ -1,9 +1,13 @@
+import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import myStyles from "@/styles/navbar.module.css";
 
 function I18n() {
-  //collapse選單收合
+  const router = useRouter();
+
+  //選單收合
   const [showSubMenu, setShowSubMenu] = useState(false);
   const clickHandler = () => {
     setShowSubMenu(!showSubMenu);
@@ -20,8 +24,16 @@ function I18n() {
 
       <div className={subMenuStyles}>
         <ul className={myStyles.lang_dropmenu}>
-          <li>English</li>
-          <li>繁體中文</li>
+          <li>
+            <Link href={router} scroll={false} locale="en">
+              English
+            </Link>
+          </li>
+          <li>
+            <Link href={router} scroll={false} locale="zh-TW">
+              繁體中文
+            </Link>
+          </li>
           <li></li>
         </ul>
       </div>
