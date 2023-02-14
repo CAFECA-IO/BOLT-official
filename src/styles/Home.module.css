@@ -1,15 +1,20 @@
 .main {
   display: flex;
   flex-direction: column;
-
   align-items: center;
-  padding-top: 6rem;
   min-height: 100vh;
-  background: #f8fafa url("/img/main_bg.svg") no-repeat center 6rem / cover;
 }
 
-.main_block1 {
-  width: 100%;
+.main_bg {
+  padding-top: 6rem;
+  background: #f8fafa url("/img/main_bg.svg") no-repeat center top/ cover;
+}
+
+.main_block1,
+.main_block2,
+.main_block3,
+.main_block4 {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,13 +24,22 @@
   animation: fromBottom 1s ease-out 1 forwards;
 }
 
-.main_block2 {
-  padding-top: 10rem;
-  display: flex;
-  flex-direction: column;
+.main_block2,
+.main_block3,
+.main_block4 {
+  padding-top: 15rem;
 }
-.main_block2 h1 {
+.main_block2 h1,
+.main_block3 h1,
+.main_block4 h1 {
   text-align: center;
+  font: normal normal 36px/58px Noto Sans TC;
+  color: #3a3b4d;
+}
+
+.main_block3 {
+  background: transparent url("/img/ground_bg.svg") no-repeat bottom / cover;
+  background-position: bottom;
 }
 
 /* bolt_main */
@@ -116,14 +130,66 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 45vw;
   animation: fadeIn 1s ease-out 1 forwards;
 }
 
 /* bolt_introduction */
-
 .bolt_intro_container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+}
+
+.bolt_intro_odd,
+.bolt_intro_even {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bolt_intro_odd {
+  flex-direction: row;
+}
+
+.bolt_intro_even {
+  flex-direction: row-reverse;
+}
+
+.bolt_intro_textbox {
+  width: 50%;
+  padding: 4rem;
+}
+
+.bolt_intro_textbox h2 {
+  color: #3a3b4d;
+  font: normal normal normal 28px/45px Noto Sans TC;
+  margin-bottom: 1rem;
+}
+
+.bolt_intro_textbox span {
+  color: #31d3f5 !important;
+}
+
+.bolt_intro_textbox p {
+  color: #3a3b4d;
+  font: normal normal normal 14px/23px Noto Sans TC;
+}
+
+/* contact form */
+.contact_container {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem;
+}
+
+.contact_formPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10rem;
 }
 
 /* Mobile */

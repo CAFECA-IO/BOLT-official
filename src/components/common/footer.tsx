@@ -55,7 +55,7 @@ function Footer() {
 
       <div className={myStyles.footer_link_item}>
         <h4>{t("nav.contactUs")}</h4>
-        <Link href="/#contactForm">
+        <Link href="/#contact_us">
           <p>{t("contactForm.title")}</p>
         </Link>
       </div>
