@@ -82,29 +82,17 @@ function Footer() {
             />
           </Link>
 
-          <span></span>
+          <span className={myStyles.borderline}></span>
 
           <div className={myStyles.footer_text_container}>
-            <div className={myStyles.footer_text}>
-              <Image
-                alt=""
-                src="./img/icons/email.svg"
-                width={20}
-                height={25}
-              />
-              <p>service@boltchain.io</p>
-            </div>
-            <div className={myStyles.footer_text}>
-              <Image
-                alt=""
-                src="./img/icons/github.svg"
-                width={20}
-                height={25}
-              />
-              <Link href="">
-                <p>Github</p>
-              </Link>
-            </div>
+            <p className={myStyles.email_text}>
+              &emsp;&emsp; service@boltchain.io
+            </p>
+            <Link href="" className={myStyles.github_text}>
+              <p>
+                &emsp;&emsp; <span>Github</span>
+              </p>
+            </Link>
           </div>
         </div>
         {linkList}

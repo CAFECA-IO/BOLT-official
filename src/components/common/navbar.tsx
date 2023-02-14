@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
+import I18n from "./i18n";
 import myStyles from "@/styles/navbar.module.css";
 
 function MainNavbar() {
@@ -38,7 +39,7 @@ function MainNavbar() {
         </label>
 
         <div className={`${menuStyles} ${myStyles.nav_list_container}`}>
-          <ul>
+          <ul className={myStyles.leftList}>
             <li>
               <Link href="/about_bolt">{t("nav.about")}</Link>
             </li>
@@ -52,8 +53,10 @@ function MainNavbar() {
 
           <span></span>
 
-          <ul>
-            <li>language</li>
+          <ul className={myStyles.rightList}>
+            <li>
+              <I18n />
+            </li>
             <li>
               <Link href="" className={myStyles.blockchain_btn}>
                 {t("nav.blockchain")}

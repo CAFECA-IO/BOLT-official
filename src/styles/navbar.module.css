@@ -4,9 +4,9 @@
   display: flex;
   font: normal normal 18px/26px Noto Sans TC;
   font-size: medium;
-  padding: 1rem 0rem 1rem 5rem;
-  overflow: hidden;
+  padding: 1rem 5rem 1rem 5rem;
   position: fixed;
+  z-index: 100;
 }
 
 .nav_list_container {
@@ -19,11 +19,16 @@
 .nav_list_container ul {
   list-style: none;
   display: inline-flex;
+
+  align-items: center;
 }
 
-.nav_list_container li {
+.leftList li {
   padding: 1.5rem;
-  text-align: center;
+}
+
+.rightList li {
+  padding: 0.75rem;
 }
 
 .menu_btn {
@@ -37,6 +42,46 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+}
+
+/* Language */
+.lang_icon_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.langmenu_open,
+.langmenu_close {
+  position: absolute;
+  color: black;
+  padding-top: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.langmenu_open {
+  visibility: visible;
+  opacity: 1;
+}
+.langmenu_close {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.lang_dropmenu {
+  width: 150px;
+  background-color: #f2f2f2;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 0.25rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.lang_dropmenu li {
+  padding: 10px;
+  width: 95%;
+  border-bottom: 0.5px outset;
 }
 
 /* 螢幕寬度小於 768px 時 */
@@ -53,6 +98,7 @@
 @media screen and (max-width: 992px) {
   .nav_main_container {
     flex-direction: column;
+    overflow: hidden;
   }
 
   .menu_btn_burger,
