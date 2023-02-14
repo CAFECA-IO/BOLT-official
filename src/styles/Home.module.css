@@ -1,16 +1,19 @@
 .main {
   display: flex;
   flex-direction: column;
-
   align-items: center;
-  padding-top: 6rem;
   min-height: 100vh;
-  background: #f8fafa url("/img/main_bg.svg") no-repeat center 6rem / cover;
+}
+
+.main_bg {
+  padding-top: 6rem;
+  background: #f8fafa url("/img/main_bg.svg") no-repeat center top/ cover;
 }
 
 .main_block1,
 .main_block2,
-.main_block3 {
+.main_block3,
+.main_block4 {
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -22,11 +25,13 @@
 }
 
 .main_block2,
-.main_block3 {
-  padding-top: 10rem;
+.main_block3,
+.main_block4 {
+  padding-top: 15rem;
 }
 .main_block2 h1,
-.main_block3 h1 {
+.main_block3 h1,
+.main_block4 h1 {
   text-align: center;
   font: normal normal 36px/58px Noto Sans TC;
   color: #3a3b4d;
@@ -171,6 +176,20 @@
 .bolt_intro_textbox p {
   color: #3a3b4d;
   font: normal normal normal 14px/23px Noto Sans TC;
+}
+
+/* contact form */
+.contact_container {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem;
+}
+
+.contact_formPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10rem;
 }
 
 /* Mobile */
