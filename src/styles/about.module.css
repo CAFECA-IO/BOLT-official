@@ -1,0 +1,58 @@
+.about_container {
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafa;
+}
+
+.about_block1 {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about_block1 h1 {
+  font: normal normal 36px/58px Noto Sans TC;
+  color: #3a3b4d;
+}
+
+/* why bolt */
+.ticket_holder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: flip 1.5s ease-in-out 1 forwards;
+}
+
+.ticket {
+  max-width: 30%;
+  padding: 5rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #3a3b4d;
+}
+
+.ticket h3 {
+  font: normal normal normal 28px/45px Noto Sans TC;
+  margin-bottom: 1rem;
+}
+
+.ticket p {
+  font: normal normal normal 14px/23px Noto Sans TC;
+  margin-top: 1rem;
+}
+
+/* animation */
+@keyframes flip {
+  from {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}

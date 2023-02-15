@@ -5,7 +5,7 @@
     "faq": "FAQ",
     "blockchain": "區塊鏈瀏覽器",
     "contactUs": "Contact Us",
-    "privary": "Privacy Policy"
+    "privacy": "Privacy Policy"
   },
   "main": {
     "block1": {
@@ -36,7 +36,13 @@
   },
   "about": {
     "whyBolt": {
-      "title": "Why Use Bolt ?"
+      "title": "Why Use Bolt ?",
+      "title1": "合理的上鏈成本",
+      "description1": "大量壓縮鏈下資料與交易紀錄，能以極低成本上多條公鏈存證。",
+      "title2": "零知識證明技術",
+      "description2": "該技術在無需揭露資料機密下仍可讓資料受區塊鏈生態監管。",
+      "title3": "數據交換平台",
+      "description3": "透過合理分潤鼓勵數據提供者，打造真實數據整合平台，提供相關單位合法取得數據之管道。"
     },
     "useCase": {
       "title": "Use Case"
