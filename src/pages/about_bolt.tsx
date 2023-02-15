@@ -2,6 +2,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import myStyles from "@/styles/about.module.css";
 import WhyBolt from "@/components/about/why_bolt";
+import UseCaseList from "@/components/about/usecase_list";
 
 function AboutBoltPage() {
   const { t } = useTranslation("common");
@@ -11,6 +12,10 @@ function AboutBoltPage() {
       <div className={myStyles.about_block1}>
         <h1>{t("about.whyBolt.title")}</h1>
         <WhyBolt />
+      </div>
+      <div className={myStyles.about_block2}>
+        <h1>{t("about.useCase.title")}</h1>
+        <UseCaseList />
       </div>
     </div>
   );

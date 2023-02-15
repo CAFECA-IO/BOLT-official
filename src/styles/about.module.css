@@ -5,14 +5,16 @@
   background-color: #f8fafa;
 }
 
-.about_block1 {
+.about_block1,
+.about_block2 {
   padding: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.about_block1 h1 {
+.about_block1 h1,
+.about_block2 h1 {
   font: normal normal 36px/58px Noto Sans TC;
   color: #3a3b4d;
 }
@@ -26,7 +28,6 @@
 }
 
 .ticket {
-  max-width: 30%;
   padding: 5rem 2rem 0 2rem;
   display: flex;
   flex-direction: column;
@@ -45,14 +46,76 @@
   margin-top: 1rem;
 }
 
+/* use case */
+.uselist_container {
+  padding-top: 5rem 0 5rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.useitem_container {
+  width: 100%;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a3b4d;
+}
+
+.useitem_container:nth-child(odd) {
+  flex-direction: row;
+}
+.useitem_container:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.useitem_textbox {
+  width: 70%;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.useitem_textbox h3 {
+  font: normal normal normal 28px/23px Noto Sans TC;
+  margin-bottom: 1.5rem;
+}
+
+.useitem_textbox p {
+  font: normal normal normal 14px/23px Noto Sans TC;
+}
+
+.useitem_imgbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 螢幕寬度小於 992px 時 */
+@media screen and (max-width: 992px) {
+  .ticket_holder {
+    flex-direction: column;
+  }
+}
+
+/* 螢幕寬度大於 992.1px 時 */
+@media screen and (min-width: 992.1px) {
+  .ticket_holder {
+    flex-direction: row;
+  }
+
+  .ticket {
+    max-width: 30%;
+  }
+}
+
 /* animation */
 @keyframes flip {
   from {
-    opacity: 0;
     transform: rotateX(90deg);
   }
   to {
-    opacity: 1;
     transform: rotateX(0);
   }
 }

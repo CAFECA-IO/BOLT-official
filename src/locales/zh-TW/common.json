@@ -45,7 +45,31 @@
       "description3": "透過合理分潤鼓勵數據提供者，打造真實數據整合平台，提供相關單位合法取得數據之管道。"
     },
     "useCase": {
-      "title": "應用場景"
+      "title": "應用場景",
+      "case1": {
+        "title": "交易所審計：",
+        "descriptionLine1": "防止加密貨幣的雷曼時刻再次發生，加強交易所可性度",
+        "descriptionLine2": "導入流程：",
+        "descriptionLine3": "Bolt Audit 使用零知識證明技術驗證，過程不需揭露交易所營運數據",
+        "descriptionLine4": "用戶得以隨時比對雙方證據是否吻合，並於發現異常時及時公佈給相關用戶。用戶亦可自行存證指定格式相關證據，並存證於 Bolt 透過 Bolt Explorer 確認資料成功寫入，提供用戶資料存證收據",
+        "descriptionLine5": "透過 Bolt 定期將交易所資料整理為指定格式，加密存證於區塊鏈上",
+        "image": "/img/usecase01.svg"
+      },
+      "case2": {
+        "title": "資料信任服務：",
+        "description": "解決資料信任問題，如：捐款資金走向等，將資料上到 BOLT 後，壓縮上到公鏈 讓大眾有管道進行驗證，提高資料的可信度，同時加強企業形象。",
+        "image": "/img/usecase02.svg"
+      },
+      "case3": {
+        "title": "商品溯源：",
+        "description": "解決假貨問題，可將商品資訊及產銷環節等資料進行登錄，獲取專屬的證書頁面，確保資料受到保護， 亦可透過深度追溯服務提供消費者詳實的產銷履歷資訊，杜絕假貨帶來的損失，亦讓消費者能更安心購買。",
+        "image": "/img/usecase03.svg"
+      },
+      "case4": {
+        "title": "資產數位化應用：",
+        "description": "將資產轉換 Boltchain 資產後可完整導入區塊鏈交易追蹤與存證機制，提升各種中心式應用服務可信度。",
+        "image": "/img/usecase04.svg"
+      }
     },
     "news": {
       "title": "最新消息"

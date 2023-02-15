@@ -1,6 +1,11 @@
 export function getPageIndex() {
   return pageIndex;
 }
+
+export function getUseCaseData() {
+  return useCaseData;
+}
+
 const pageIndex = [
   {
     title: "nav.about",
@@ -26,5 +31,34 @@ const pageIndex = [
     title: "nav.privary",
     items: ["privary.title"],
     links: ["/privary_policy"],
+  },
+];
+
+const useCaseData = [
+  {
+    title: "about.useCase.case1.title",
+    description: [
+      "about.useCase.case1.descriptionLine1",
+      "about.useCase.case1.descriptionLine2",
+      "about.useCase.case1.descriptionLine3",
+      "about.useCase.case1.descriptionLine4",
+      "about.useCase.case1.descriptionLine5",
+    ],
+    image: "about.useCase.case1.image",
+  },
+  {
+    title: "about.useCase.case2.title",
+    description: ["about.useCase.case2.description"],
+    image: "about.useCase.case2.image",
+  },
+  {
+    title: "about.useCase.case3.title",
+    description: ["about.useCase.case3.description"],
+    image: "about.useCase.case3.image",
+  },
+  {
+    title: "about.useCase.case4.title",
+    description: ["about.useCase.case4.description"],
+    image: "about.useCase.case4.image",
   },
 ];
