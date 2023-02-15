@@ -10,7 +10,7 @@ function UseCaseItems(props: {
   const { t } = useTranslation("common");
 
   const useDescrip = props.description;
-  const useImg = t(`${props.image}`);
+  const useImg = t(`${props.image}`); //image .svg
 
   const useDescripList = useDescrip.map((v) => {
     return <p key={v}>{t(v)}</p>;

@@ -16,6 +16,7 @@ function NewsItems(props: {
   //const localeDate = new Date(props.date).toLocaleDateString("zh-TW");
   const newsImg = t(`${props.image}`);
 
+  //todo: Link url.format
   return (
     <div>
       <Link href="/news/[newsId]" as={newsLink}>
