@@ -14,7 +14,7 @@ function UseCaseItems(props: {
 
   const useDescripList = useDescrip.map((v) => {
     return <p key={v}>{t(v)}</p>;
-  });
+  }); //todo: react use id
 
   return (
     <div className={myStyles.useitem_container}>

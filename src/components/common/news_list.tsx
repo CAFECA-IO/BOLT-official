@@ -13,7 +13,7 @@ function NewsList() {
         date={v.date}
         image={v.image}
         contents={v.contents}
-        link={v.id}
+        link={v.id} //link 格式
       />
     );
   });
