@@ -13,24 +13,23 @@ function NewsItems(props: {
   const { t } = useTranslation("common");
 
   const newsLink = `/news/${props.link}`;
+  //const localeDate = new Date(props.date).toLocaleDateString("zh-TW");
+  const newsImg = t(`${props.image}`);
 
   return (
     <div>
-      <div className={myStyles.newsitem_ticket}>
-        <div className={myStyles.newsitem_imgbox}>
-          <Image
-            alt="news1"
-            src="/img/news/Placement Area.png"
-            width={320}
-            height={240}
-          />
+      <Link href="/news/[newsId]" as={newsLink}>
+        <div className={myStyles.newsitem_ticket}>
+          <div className={myStyles.newsitem_imgbox}>
+            <Image alt="news1" src={newsImg} width={320} height={240} />
+          </div>
+          <h3>{t(`${props.title}`)}</h3>
+          <time>{props.date}</time>
+          <div className={myStyles.newsitem_contentbox}>
+            <p>{t(`${props.contents}`)}</p>
+          </div>
         </div>
-        <h3>{t(`${props.title}`)}</h3>
-        <time>2023.2.15</time>
-        <div className={myStyles.newsitem_contentbox}>
-          <p>{t(`${props.contents}`)}</p>
-        </div>
-      </div>
+      </Link>
     </div>
   );
 }
