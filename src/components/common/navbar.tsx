@@ -25,7 +25,7 @@ function MainNavbar() {
           <Link href="/#">
             <Image
               alt="bolt_logo"
-              src="./img/bolt_logo_main.svg"
+              src="/img/bolt_logo_main.svg"
               width={160}
               height={45}
             />

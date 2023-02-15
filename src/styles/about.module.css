@@ -6,7 +6,8 @@
 }
 
 .about_block1,
-.about_block2 {
+.about_block2,
+.about_block3 {
   padding: 5rem;
   display: flex;
   flex-direction: column;
@@ -14,7 +15,8 @@
 }
 
 .about_block1 h1,
-.about_block2 h1 {
+.about_block2 h1,
+.about_block3 h1 {
   font: normal normal 36px/58px Noto Sans TC;
   color: #3a3b4d;
 }
@@ -48,7 +50,6 @@
 
 /* use case */
 .uselist_container {
-  padding-top: 5rem 0 5rem 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -90,6 +91,56 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* news */
+.newslist_container {
+  padding: 5rem 0 5rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.newsitem_ticket {
+  width: 400px;
+  height: 450px;
+  padding: 1.5rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 12px #0000001a;
+  color: #3a3b4d;
+}
+
+.newsitem_imgbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsitem_ticket h3 {
+  font: normal normal normal 28px/45px Noto Sans TC;
+  margin: 0.5rem;
+}
+
+.newsitem_ticket time,
+.newsitem_contentbox p {
+  font: normal normal normal 14px/23px Noto Sans TC;
+}
+
+.newsitem_contentbox {
+  padding: 0.5rem;
+}
+
+.newsitem_contentbox p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 /* 螢幕寬度小於 992px 時 */
