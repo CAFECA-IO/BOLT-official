@@ -36,7 +36,7 @@
   },
   "about": {
     "whyBolt": {
-      "title": "Why Use Bolt"
+      "title": "Why Use Bolt ?"
     },
     "useCase": {
       "title": "Use Case"
@@ -66,9 +66,14 @@
     "answer4": "詳細內容放置於此"
   },
   "contactForm": {
-    "title": "Contact Us"
+    "title": "Contact Us",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "E-mail",
+    "message": "Message",
+    "button": "Send"
   },
-  "privary": {
+  "privacy": {
     "title": "Privacy Policy"
   }
 }

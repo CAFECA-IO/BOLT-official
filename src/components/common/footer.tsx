@@ -61,9 +61,9 @@ function Footer() {
       </div>
 
       <div className={myStyles.footer_link_item}>
-        <h4>{t("nav.privary")}</h4>
-        <Link href="/privary_policy">
-          <p>{t("privary.title")}</p>
+        <h4>{t("nav.privacy")}</h4>
+        <Link href="/privacy_policy">
+          <p>{t("privacy.title")}</p>
         </Link>
       </div>
     </div>

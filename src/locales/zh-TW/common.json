@@ -66,9 +66,14 @@
     "answer4": "詳細內容放置於此"
   },
   "contactForm": {
-    "title": "聯絡我們"
+    "title": "聯絡我們",
+    "name": "姓名",
+    "phone": "聯絡電話",
+    "email": "E-mail",
+    "message": "訊息",
+    "button": "確認發送"
   },
-  "privary": {
+  "privacy": {
     "title": "隱私權政策與條款"
   }
 }
