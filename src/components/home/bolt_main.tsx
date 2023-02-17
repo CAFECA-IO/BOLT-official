@@ -17,7 +17,11 @@ function BoltMain() {
             height={45}
           />
           <h1>{t("main.block1.title")}</h1>
-          <Link href="">
+          <Link
+            download="BOLT_Whitepaper_v2.0.11.pdf"
+            href="/files/BOLT_Whitepaper_v2.0.11.pdf"
+            target="_blank"
+          >
             <p className={myStyles.whitepaper}>
               &emsp;&emsp;<span>{t("main.block1.whitepaper")}</span>
             </p>
