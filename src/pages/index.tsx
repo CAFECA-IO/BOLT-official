@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useEffect } from "react";
@@ -30,12 +29,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Bolt</title>
-        <meta name="description" content="Welcome Bolt" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" /> {/* 加入書籤列看到的小icon */}
-      </Head>
       <main className={myStyles.main}>
         <div className={myStyles.main_bg}>
           <div className={myStyles.main_block1}>
