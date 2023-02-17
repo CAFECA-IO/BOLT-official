@@ -91,6 +91,13 @@
   flex-wrap: wrap;
 }
 
+.newslist_link {
+  text-decoration: underline;
+  font: normal normal 18px/26px Noto Sans TC;
+  letter-spacing: 0.09px;
+  color: #3a3b4d;
+}
+
 .newsitem_ticket {
   width: 400px;
   height: 450px;

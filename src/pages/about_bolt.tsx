@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import myStyles from "@/styles/about.module.css";
@@ -21,6 +22,9 @@ function AboutBoltPage() {
       <div id="news" className={myStyles.about_block3}>
         <h1>{t("about.news.title")}</h1>
         <NewsList />
+        <Link href="/news" className={myStyles.newslist_link}>
+          查看更多
+        </Link>
       </div>
     </div>
   );
