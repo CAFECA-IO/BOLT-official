@@ -11,6 +11,7 @@ function TechnologyPage() {
   const techList = techData.map((v) => {
     return (
       <TechnologyItems
+        key={v.anchor}
         anchor={v.anchor}
         title={v.title}
         description={v.description}

@@ -72,22 +72,10 @@ const useCaseData = [
 ];
 
 const faqData = [
-  {
-    question: "FAQ.question1",
-    answer: "FAQ.answer1",
-  },
-  {
-    question: "FAQ.question2",
-    answer: "FAQ.answer2",
-  },
-  {
-    question: "FAQ.question3",
-    answer: "FAQ.answer3",
-  },
-  {
-    question: "FAQ.question4",
-    answer: "FAQ.answer4",
-  },
+  { id: "q001", question: "FAQ.question1", answer: "FAQ.answer1" },
+  { id: "q002", question: "FAQ.question2", answer: "FAQ.answer2" },
+  { id: "q003", question: "FAQ.question3", answer: "FAQ.answer3" },
+  { id: "q004", question: "FAQ.question4", answer: "FAQ.answer4" },
 ];
 
 const technologyData = [
