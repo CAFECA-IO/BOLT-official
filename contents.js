@@ -10,6 +10,10 @@ export function getFaqData() {
   return faqData;
 }
 
+export function getTechnologyData() {
+  return technologyData;
+}
+
 const pageIndex = [
   {
     title: "nav.about",
@@ -83,5 +87,26 @@ const faqData = [
   {
     question: "FAQ.question4",
     answer: "FAQ.answer4",
+  },
+];
+
+const technologyData = [
+  {
+    anchor: "distributed-audit",
+    title: "technology.title1",
+    description: "technology.description1",
+    image: "/img/technology01.svg",
+  },
+  {
+    anchor: "zero-knowledge-proof",
+    title: "technology.title2",
+    description: "technology.description2",
+    image: "/img/technology02.svg",
+  },
+  {
+    anchor: "hybrid-chain-evidence",
+    title: "technology.title3",
+    description: "technology.description3",
+    image: "/img/technology03.svg",
   },
 ];
