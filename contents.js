@@ -6,6 +6,10 @@ export function getUseCaseData() {
   return useCaseData;
 }
 
+export function getFaqData() {
+  return faqData;
+}
+
 const pageIndex = [
   {
     title: "nav.about",
@@ -60,5 +64,24 @@ const useCaseData = [
     title: "about.useCase.case4.title",
     description: ["about.useCase.case4.description"],
     image: "about.useCase.case4.image",
+  },
+];
+
+const faqData = [
+  {
+    question: "FAQ.question1",
+    answer: "FAQ.answer1",
+  },
+  {
+    question: "FAQ.question2",
+    answer: "FAQ.answer2",
+  },
+  {
+    question: "FAQ.question3",
+    answer: "FAQ.answer3",
+  },
+  {
+    question: "FAQ.question4",
+    answer: "FAQ.answer4",
   },
 ];
