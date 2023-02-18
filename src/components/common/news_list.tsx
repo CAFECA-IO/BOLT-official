@@ -2,9 +2,11 @@ import myStyles from "@/styles/about.module.css";
 import NewsItems from "./news_items";
 import { dummyNewsData } from "@/interfaces/news_detail";
 
-function NewsList() {
+function NewsList(max = 4) {
   const newsData = dummyNewsData;
-
+  if (max > 6) {
+    newsData.splice(4);
+  }
   const newsList = newsData.map((v) => {
     return (
       <NewsItems

@@ -1,5 +1,4 @@
 .tech_main_container {
-  padding: 10rem 10rem 6rem 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,23 +21,13 @@
   align-items: stretch;
 }
 
-.tech_item_container:nth-child(odd) {
-  flex-direction: row;
-}
-
-.tech_item_container:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
 .tech_item_imgbox {
-  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .tech_item_textbox {
-  width: 50%;
   padding: 4rem;
   display: flex;
   flex-direction: column;
@@ -54,4 +43,40 @@
 .tech_item_textbox p {
   margin-top: 2rem;
   font: normal normal normal 14px/23px Noto Sans TC;
+}
+
+/* 螢幕寬度小於 992px 時 */
+@media screen and (max-width: 992px) {
+  .tech_main_container {
+    padding: 10rem 0 6rem 0;
+  }
+
+  .tech_item_container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+  }
+}
+
+/* 螢幕寬度大於 992.1px 時 */
+@media screen and (min-width: 992.1px) {
+  .tech_main_container {
+    padding: 10rem 10rem 6rem 10rem;
+  }
+
+  .tech_item_container:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  .tech_item_container:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .tech_item_imgbox {
+    width: 50%;
+  }
+
+  .tech_item_textbox {
+    width: 50%;
+  }
 }
