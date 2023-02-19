@@ -22,13 +22,13 @@ function Footer() {
     <div className={myStyles.footer_link_list}>
       <div className={myStyles.footer_link_item}>
         <h4>{t("nav.about")}</h4>
-        <Link href="/about_bolt#whyBolt">
+        <Link href="/about_bolt#whyBolt" scroll={false}>
           <p>{t("about.whyBolt.title")}</p>
         </Link>
-        <Link href="/about_bolt#useCase">
+        <Link href="/about_bolt#useCase" scroll={false}>
           <p>{t("about.useCase.title")}</p>
         </Link>
-        <Link href="/about_bolt#news">
+        <Link href="/about_bolt#news" scroll={false}>
           <p>{t("about.news.title")}</p>
         </Link>
       </div>
@@ -61,9 +61,9 @@ function Footer() {
       </div>
 
       <div className={myStyles.footer_link_item}>
-        <h4>{t("nav.privary")}</h4>
-        <Link href="/privary_policy">
-          <p>{t("privary.title")}</p>
+        <h4>{t("nav.privacy")}</h4>
+        <Link href="/privacy_policy">
+          <p>{t("privacy.title")}</p>
         </Link>
       </div>
     </div>
@@ -76,7 +76,7 @@ function Footer() {
           <Link href="/#" className={myStyles.logo_box}>
             <Image
               alt="bolt_logo"
-              src="./img/bolt_logo_footer.svg"
+              src="/img/bolt_logo_footer.svg"
               width={150}
               height={110}
             />

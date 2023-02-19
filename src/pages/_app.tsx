@@ -6,7 +6,7 @@ import Layout from "@/components/common/layout";
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Layout>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </Layout>
   );
 };

@@ -19,7 +19,7 @@ function I18n() {
   return (
     <>
       <div className={myStyles.lang_icon_box} onClick={clickHandler}>
-        <Image alt="" src="./img/icons/globe.svg" width={44} height={44} />
+        <Image alt="" src="/img/icons/globe.svg" width={44} height={44} />
       </div>
 
       <div className={subMenuStyles}>

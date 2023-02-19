@@ -64,11 +64,11 @@ function BoltIntro() {
       const frameStep1 = maxFrames * ((scrollPosition - 350) / duration);
       const frameConne1 =
         maxFrames * (((scrollPosition - 1200) / duration) * 2);
-      const frameStep2 = maxFrames * (((scrollPosition - 1500) / duration) * 2);
+      const frameStep2 = maxFrames * (((scrollPosition - 1600) / duration) * 2);
       const frameConne2 =
-        maxFrames * (((scrollPosition - 2100) / duration) * 2);
+        maxFrames * (((scrollPosition - 2200) / duration) * 2);
       const frameStep3 =
-        maxFrames * (((scrollPosition - 2500) / duration) * 1.5);
+        maxFrames * (((scrollPosition - 2600) / duration) * 1.5);
 
       animStep1.goToAndStop(frameStep1, true);
       animConne1.goToAndStop(frameConne1, true);

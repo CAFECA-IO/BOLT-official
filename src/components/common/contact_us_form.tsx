@@ -1,10 +1,13 @@
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 import myStyles from "@/styles/Home.module.css";
 
 function ContactUsForm() {
+  const { t } = useTranslation("common");
+
   return (
     <div className={myStyles.contact_container}>
-      <div>
+      <div className={myStyles.contact_imgbox}>
         <Image
           alt="contact_us"
           src="/img/contact.svg"
@@ -13,17 +16,34 @@ function ContactUsForm() {
         />
       </div>
       <form className={myStyles.contact_formPart}>
-        <input id="name" type="text" placeholder="name" required></input>
-        <input id="phone" type="text" placeholder="phone" required></input>
-        <input id="email" type="text" placeholder="Email" required></input>
+        <input
+          id="name"
+          type="text"
+          placeholder={`${t("contactForm.name")}`}
+          required
+        ></input>
+        <input
+          id="phone"
+          type="text"
+          placeholder={`${t("contactForm.phone")}`}
+          required
+        ></input>
+        <input
+          id="email"
+          type="text"
+          placeholder={`${t("contactForm.email")}`}
+          required
+        ></input>
         <textarea
           id="message"
           rows={5}
           wrap="soft"
-          placeholder="message"
+          placeholder={`${t("contactForm.message")}`}
           required
         ></textarea>
-        <button type="submit">send</button>
+        <button id="submit" type="submit">
+          {t("contactForm.button")}
+        </button>
       </form>
     </div>
   );

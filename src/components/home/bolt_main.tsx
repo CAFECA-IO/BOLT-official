@@ -29,7 +29,7 @@ function BoltMain() {
             <button>{t("main.block1.macos")}</button>
             <button>{t("main.block1.linux")}</button>
           </div>
-          <Link href="">
+          <Link href="/faq">
             <p>
               <span>{t("main.block1.howTo")}</span>
             </p>
