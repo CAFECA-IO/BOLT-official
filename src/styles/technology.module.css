@@ -1,0 +1,82 @@
+.tech_main_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8fafa url("/img/main_bg.svg") no-repeat center top/ cover;
+}
+
+.tech_main_container h1 {
+  font: normal normal medium 36px/58px Noto Sans TC;
+  color: #3a3b4d;
+}
+
+.tech_contents_container {
+  padding-top: 3rem;
+}
+
+/* technology items */
+.tech_item_container {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.tech_item_imgbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech_item_textbox {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #3a3b4d;
+  color: #f2f2f2;
+}
+
+.tech_item_textbox h4 {
+  font: normal normal normal 28px/23px Noto Sans TC;
+}
+
+.tech_item_textbox p {
+  margin-top: 2rem;
+  font: normal normal normal 14px/23px Noto Sans TC;
+}
+
+/* 螢幕寬度小於 992px 時 */
+@media screen and (max-width: 992px) {
+  .tech_main_container {
+    padding: 10rem 0 6rem 0;
+  }
+
+  .tech_item_container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+  }
+}
+
+/* 螢幕寬度大於 992.1px 時 */
+@media screen and (min-width: 992.1px) {
+  .tech_main_container {
+    padding: 10rem 10rem 6rem 10rem;
+  }
+
+  .tech_item_container:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  .tech_item_container:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .tech_item_imgbox {
+    width: 50%;
+  }
+
+  .tech_item_textbox {
+    width: 50%;
+  }
+}

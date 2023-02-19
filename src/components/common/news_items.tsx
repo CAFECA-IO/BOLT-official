@@ -4,15 +4,15 @@ import { useTranslation } from "next-i18next";
 import myStyles from "@/styles/about.module.css";
 
 function NewsItems(props: {
+  id: string;
   title: string;
   date: string;
   image: string;
   contents: string;
-  link: string;
 }) {
   const { t } = useTranslation("common");
 
-  const newsLink = `/news/${props.link}`;
+  const newsLink = `/news/${props.id}`;
   //const localeDate = new Date(props.date).toLocaleDateString("zh-TW");
   const newsImg = t(`${props.image}`);
 

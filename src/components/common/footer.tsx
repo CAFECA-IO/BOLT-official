@@ -35,20 +35,20 @@ function Footer() {
 
       <div className={myStyles.footer_link_item}>
         <h4>{t("nav.technology")}</h4>
-        <Link href="/technology#">
+        <Link href="/technology#distributed-audit" scroll={false}>
           <p>{t("technology.title1")}</p>
         </Link>
-        <Link href="/technology#">
+        <Link href="/technology#zero-knowledge-proof" scroll={false}>
           <p>{t("technology.title2")}</p>
         </Link>
-        <Link href="/technology#">
+        <Link href="/technology#hybrid-chain-evidence" scroll={false}>
           <p>{t("technology.title3")}</p>
         </Link>
       </div>
 
       <div className={myStyles.footer_link_item}>
         <h4>{t("nav.faq")}</h4>
-        <Link href="/faq">
+        <Link href="/faq#" scroll={false}>
           <p>{t("FAQ.title")}</p>
         </Link>
       </div>

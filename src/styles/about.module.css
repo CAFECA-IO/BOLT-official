@@ -57,23 +57,13 @@
 
 .useitem_container {
   width: 100%;
-  padding: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #3a3b4d;
 }
 
-.useitem_container:nth-child(odd) {
-  flex-direction: row;
-}
-.useitem_container:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
 .useitem_textbox {
-  width: 50%;
-  padding: 5rem;
   display: flex;
   flex-direction: column;
 }
@@ -88,9 +78,8 @@
 }
 
 .useitem_imgbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  padding: 1rem;
 }
 
 /* news */
@@ -100,6 +89,13 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.newslist_link {
+  text-decoration: underline;
+  font: normal normal 18px/26px Noto Sans TC;
+  letter-spacing: 0.09px;
+  color: #3a3b4d;
 }
 
 .newsitem_ticket {
@@ -148,6 +144,16 @@
   .ticket_holder {
     flex-direction: column;
   }
+
+  .useitem_container {
+    padding: 3rem 0 3rem 0;
+    flex-direction: column;
+  }
+
+  .useitem_textbox {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
 }
 
 /* 螢幕寬度大於 992.1px 時 */
@@ -158,6 +164,22 @@
 
   .ticket {
     max-width: 30%;
+  }
+
+  .useitem_container {
+    padding: 5rem;
+  }
+
+  .useitem_container:nth-child(odd) {
+    flex-direction: row;
+  }
+  .useitem_container:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .useitem_textbox {
+    width: 50%;
+    padding: 3rem;
   }
 }
 

@@ -1,19 +1,21 @@
 import myStyles from "@/styles/about.module.css";
 import NewsItems from "./news_items";
-import { getNewData } from "contents";
+import { dummyNewsData } from "@/interfaces/news_detail";
 
-function NewsList() {
-  const newsData = getNewData();
-
+function NewsList(max = 4) {
+  const newsData = dummyNewsData;
+  if (max > 6) {
+    newsData.splice(4);
+  }
   const newsList = newsData.map((v) => {
     return (
       <NewsItems
         key={v.id}
+        id={v.id}
         title={v.title}
         date={v.date}
         image={v.image}
         contents={v.contents}
-        link={v.id} //link 格式
       />
     );
   });

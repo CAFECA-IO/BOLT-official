@@ -23,7 +23,7 @@ function UseCaseItems(props: {
         {useDescripList}
       </div>
       <div className={myStyles.useitem_imgbox}>
-        <Image src={`${useImg}`} alt="use_case01" width={500} height={500} />
+        <Image src={`${useImg}`} alt="use_case01" width={400} height={400} />
       </div>
     </div>
   );
