@@ -1,6 +1,7 @@
-import myStyles from "@/styles/about.module.css";
 import NewsItems from "./news_items";
 import { getAllNews } from "@/interfaces/news_detail";
+import myStyles from "@/styles/about.module.css";
+import newsStyles from "@/styles/news.module.css";
 
 function NewsList(props: { max: number }) {
   const newsData = getAllNews();
@@ -21,6 +22,6 @@ function NewsList(props: { max: number }) {
     );
   });
 
-  return <div className={myStyles.newslist_container}>{newsList}</div>;
+  return <div className={newsStyles.newslist_container}>{newsList}</div>;
 }
 export default NewsList;

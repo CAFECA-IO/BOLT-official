@@ -12,7 +12,7 @@ function AllNewsPage() {
         <h1>{t("news.title")}</h1>
       </div>
 
-      <NewsList max={Infinity} />
+      <NewsList max={0} />
     </div>
   );
 }

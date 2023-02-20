@@ -94,6 +94,57 @@
   color: #31d3f5;
 }
 
+/* news list */
+.newslist_container {
+  padding: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* news items */
+.newsitem_ticket {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.newsitem_imgbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsitem_textbox {
+  width: 100%;
+  margin-left: 3rem;
+  color: #3a3b4d;
+}
+
+.newsitem_textbox h3 {
+  font: normal normal normal 28px/45px Noto Sans TC;
+}
+
+.newsitem_textbox time,
+.newsitem_contentbox p {
+  font: normal normal normal 14px/23px Barlow;
+}
+
+.newsitem_textbox time {
+  float: right;
+}
+
+.newsitem_contentbox p {
+  padding-right: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 /* 螢幕寬度小於 992px 時 */
 @media screen and (max-width: 992px) {
 }

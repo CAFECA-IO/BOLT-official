@@ -11,7 +11,7 @@ export const dummyNewsData: INewsDetail[] = [
   {
     id: "n001",
     title: "News1",
-    date: "2023-2-15",
+    date: "2023-02-15",
     thumbnail: "/img/news/Placement Area.png",
     image: "/img/news/Placement Area@2x.png",
     contents:
@@ -20,7 +20,7 @@ export const dummyNewsData: INewsDetail[] = [
   {
     id: "n002",
     title: "News2",
-    date: "2023-2-1",
+    date: "2023-02-01",
     thumbnail: "/img/news/Placement Area2.png",
     image: "/img/news/Placement Area2@2x.png",
     contents:
@@ -29,7 +29,7 @@ export const dummyNewsData: INewsDetail[] = [
   {
     id: "n003",
     title: "News3",
-    date: "2023-1-1",
+    date: "2023-01-01",
     thumbnail: "/img/news/Placement Area3.png",
     image: "/img/news/Placement Area3@2x.png",
     contents: "新年快樂。",
