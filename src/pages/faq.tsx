@@ -9,7 +9,7 @@ function FAQPage() {
 
   const faqData = getFaqData();
   const faqList = faqData.map((v) => {
-    return <FAQItems question={v.question} answer={v.answer} />;
+    return <FAQItems key={v.id} question={v.question} answer={v.answer} />;
   });
 
   return (

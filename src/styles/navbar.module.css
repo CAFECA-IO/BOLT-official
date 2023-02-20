@@ -6,6 +6,7 @@
   font-size: medium;
   padding: 1rem 5rem 1rem 5rem;
   position: fixed;
+  border-bottom: 0.5px solid #f8fafa;
   z-index: 100;
 }
 

@@ -1,5 +1,4 @@
 .faq_main_container {
-  padding: 10rem 10rem 6rem 10rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,15 +31,10 @@
   border-bottom: 1px solid gainsboro;
 }
 
-.faq_block h4 {
-  font: normal normal normal 28px/45px Noto Sans TC;
-}
-
 .faq_showAns h4::after,
 .faq_hideAns h4::after {
   content: "";
   float: right;
-  margin-top: 10px;
   display: block;
   width: 17px;
   height: 17px;
@@ -77,4 +71,27 @@
 
 .hideAnswer {
   height: 0;
+}
+
+/* 螢幕寬度小於 992px 時 */
+@media screen and (max-width: 992px) {
+  .faq_main_container {
+    padding: 10rem 1rem 6rem 1rem;
+  }
+}
+
+/* 螢幕寬度大於 992.1px 時 */
+@media screen and (min-width: 992.1px) {
+  .faq_main_container {
+    padding: 10rem 10rem 6rem 10rem;
+  }
+
+  .faq_block h4 {
+    font: normal normal normal 28px/45px Noto Sans TC;
+  }
+
+  .faq_showAns h4::after,
+  .faq_hideAns h4::after {
+    margin-top: 10px;
+  }
 }

@@ -63,3 +63,14 @@ export const dummyNewsData: INewsDetail[] = [
       "能媽說上表離作我；年向幾驗太受……覺友燈那活本其識！只車大要會在仍花念年被深善領行畫示國子主二麼現資施！",
   },
 ];
+
+export function getAllNews() {
+  return dummyNewsData;
+}
+
+export function getNewsById(id: string) {
+  const news = dummyNewsData.find((news) => {
+    news.id === id;
+  });
+  return news || dummyNewsData[0];
+}

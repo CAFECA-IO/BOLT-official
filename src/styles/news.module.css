@@ -1,0 +1,22 @@
+.news_main_container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8fafa;
+}
+
+.news_main_banner {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  background-color: #3a3b4d;
+}
+
+/* 螢幕寬度小於 992px 時 */
+@media screen and (max-width: 992px) {
+}
+
+/* 螢幕寬度大於 992.1px 時 */
+@media screen and (min-width: 992.1px) {
+}
