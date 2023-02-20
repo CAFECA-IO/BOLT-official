@@ -2,9 +2,9 @@ import myStyles from "@/styles/about.module.css";
 import NewsItems from "./news_items";
 import { getAllNews } from "@/interfaces/news_detail";
 
-function NewsList(max = 4) {
+function NewsList(props: { max: number }) {
   const newsData = getAllNews();
-  if (max > 6) {
+  if (props.max > 6) {
     newsData.splice(4);
   }
 

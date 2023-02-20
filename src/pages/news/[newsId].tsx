@@ -18,7 +18,7 @@ function NewsDetailPage() {
   const news = getNewsById(newsId as string);
 
   return (
-    <div className={myStyles.news_main_container}>
+    <div className={myStyles.news_detail_container}>
       <NewsBody
         title={news.title}
         date={news.date}

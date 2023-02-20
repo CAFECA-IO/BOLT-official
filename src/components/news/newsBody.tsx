@@ -28,9 +28,9 @@ function NewsBody(props: {
           <p>{props.contents}</p>
         </div>
       </div>
-      <button>
-        <Link href="/news">{t("news.goBack")}</Link>
-      </button>
+      <Link href="/news" className={myStyles.goBackBtn}>
+        <button>{t("news.goBack")}</button>
+      </Link>
     </div>
   );
 }
