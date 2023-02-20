@@ -2,7 +2,11 @@ import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import myStyles from "@/styles/faq.module.css";
 
-function FAQItems(props: { question: string; answer: string }) {
+function FAQItems(props: {
+  question: string;
+  answer: string;
+  //faqStyle: string;
+}) {
   const { t } = useTranslation("common");
 
   const [showAns, setShowAns] = useState(false);

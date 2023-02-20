@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import myStyles from "@/styles/faq.module.css";
@@ -7,9 +8,22 @@ import { getFaqData } from "contents";
 function FAQPage() {
   const { t } = useTranslation("common");
 
+  //const [showAnsIndex, setShowAnsIndex] = useState(null);
+  //const clickHandler = () => setShowAnsIndex();
+
+  //const faqBlockStyles = showAns ? myStyles.faq_showAns : myStyles.faq_hideAns;
+  //const answerTextStyles = showAns ? myStyles.showAnswer : myStyles.hideAnswer;
+
   const faqData = getFaqData();
   const faqList = faqData.map((v) => {
-    return <FAQItems key={v.id} question={v.question} answer={v.answer} />;
+    return (
+      <FAQItems
+        key={v.id}
+        question={v.question}
+        answer={v.answer}
+        //faqStyle={answerTextStyles}
+      />
+    );
   });
 
   return (
