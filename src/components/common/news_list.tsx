@@ -15,7 +15,7 @@ function NewsList(max = 4) {
         id={v.id}
         title={v.title}
         date={v.date}
-        image={v.image}
+        thumbnail={v.thumbnail}
         contents={v.contents}
       />
     );

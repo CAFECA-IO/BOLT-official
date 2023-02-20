@@ -7,14 +7,14 @@ function NewsItems(props: {
   id: string;
   title: string;
   date: string;
-  image: string;
+  thumbnail: string;
   contents: string;
 }) {
   const { t } = useTranslation("common");
 
   const newsLink = `/news/${props.id}`;
   //const localeDate = new Date(props.date).toLocaleDateString("zh-TW");
-  const newsImg = t(`${props.image}`);
+  const newsImg = t(`${props.thumbnail}`);
 
   //todo: Link url.format
   return (

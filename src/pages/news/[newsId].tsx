@@ -1,7 +1,9 @@
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { getNewsById } from "@/interfaces/news_detail";
 import myStyles from "@/styles/news.module.css";
+import NewsBody from "@/components/news/newsBody";
 
 function NewsDetailPage() {
   const { t } = useTranslation("common");
@@ -9,9 +11,20 @@ function NewsDetailPage() {
   const router = useRouter();
   const { newsId } = router.query;
 
+  if (!newsId) {
+    return <></>;
+  }
+
+  const news = getNewsById(newsId as string);
+
   return (
     <div className={myStyles.news_main_container}>
-      <div className={myStyles.news_main_banner}></div>
+      <NewsBody
+        title={news.title}
+        date={news.date}
+        image={news.image}
+        contents={news.contents}
+      />
     </div>
   );
 }
