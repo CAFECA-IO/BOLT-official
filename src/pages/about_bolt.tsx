@@ -9,6 +9,8 @@ import NewsList from "@/components/common/news_list";
 function AboutBoltPage() {
   const { t } = useTranslation("common");
 
+  const newsListStyles = myStyles;
+
   return (
     <div className={myStyles.about_container}>
       <div id="whyBolt" className={myStyles.about_block1}>
@@ -21,7 +23,7 @@ function AboutBoltPage() {
       </div>
       <div id="news" className={myStyles.about_block3}>
         <h1>{t("about.news.title")}</h1>
-        <NewsList max={4} />
+        <NewsList styles={newsListStyles} max={7} />
         <Link href="/news" className={myStyles.newslist_link}>
           查看更多
         </Link>
