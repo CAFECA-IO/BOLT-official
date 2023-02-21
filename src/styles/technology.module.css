@@ -66,10 +66,12 @@
 
   .tech_item_container:nth-child(odd) {
     flex-direction: row;
+    height: 400px;
   }
 
   .tech_item_container:nth-child(even) {
     flex-direction: row-reverse;
+    height: 400px;
   }
 
   .tech_item_imgbox {

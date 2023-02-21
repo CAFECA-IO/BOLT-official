@@ -39,7 +39,7 @@ export default NewsDetailPage;
 export const getStaticPaths = async () => {
   return {
     paths: [{ params: { newsId: "" } }],
-    fallback: true,
+    fallback: "blocking",
   };
 };
 

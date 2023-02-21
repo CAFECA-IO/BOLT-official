@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import myStyles from "../../styles/Home.module.css";
@@ -42,7 +42,12 @@ function BoltMain() {
       </div>
 
       <div className={myStyles.bolt_main_imgbox}>
-        <Image src="/img/main_1@2x.png" alt="" width={660} height={650} />
+        <Image
+          src="/img/main_1@2x.png"
+          alt=""
+          layout="fill"
+          objectFit="contain"
+        />
       </div>
     </div>
   );

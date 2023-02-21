@@ -21,7 +21,7 @@ function AboutBoltPage() {
       </div>
       <div id="news" className={myStyles.about_block3}>
         <h1>{t("about.news.title")}</h1>
-        <NewsList styles={myStyles} max={7} />
+        <NewsList styles={myStyles} max={4} />
         <Link href="/news" className={myStyles.newslist_link}>
           查看更多
         </Link>
