@@ -35,9 +35,9 @@ function FAQItems({
       className={`${myStyles.faq_block} ${faqBlockStyles}`}
       onClick={clickHandler}
     >
-      <h4>{t(`${question}`)}</h4>
+      <h4>{t(question)}</h4>
       <div className={answerAreaStyles}>
-        <p>{t(`${answer}`)}</p>
+        <p>{t(answer)}</p>
       </div>
     </section>
   );

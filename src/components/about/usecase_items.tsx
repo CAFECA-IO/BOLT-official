@@ -12,7 +12,7 @@ function UseCaseItems({ title, description, image }: IUsecaseParams) {
   const { t } = useTranslation("common");
 
   const useDescrip = description;
-  const useImg = t(`${image}`); //image .svg
+  const useImg = t(image); //image .svg
 
   const useDescripList = useDescrip.map((v) => {
     return <p key={v}>{t(v)}</p>;
@@ -21,11 +21,11 @@ function UseCaseItems({ title, description, image }: IUsecaseParams) {
   return (
     <div className={myStyles.useitem_container}>
       <div className={myStyles.useitem_textbox}>
-        <h3>{t(`${title}`)}</h3>
+        <h3>{t(title)}</h3>
         {useDescripList}
       </div>
       <div className={myStyles.useitem_imgbox}>
-        <Image src={`${useImg}`} alt="use_case01" width={400} height={400} />
+        <Image src={useImg} alt={title} width={400} height={400} />
       </div>
     </div>
   );

@@ -20,11 +20,11 @@ function TechnologyItems({
   return (
     <div id={anchor} className={myStyles.tech_item_container}>
       <div className={myStyles.tech_item_imgbox}>
-        <Image src={image} alt={t(`${title}`)} width={400} height={400} />
+        <Image src={image} alt={t(title)} width={400} height={400} />
       </div>
       <div className={myStyles.tech_item_textbox}>
-        <h4>{t(`${title}`)}</h4>
-        <p>{t(`${description}`)}</p>
+        <h4>{t(title)}</h4>
+        <p>{t(description)}</p>
       </div>
     </div>
   );
