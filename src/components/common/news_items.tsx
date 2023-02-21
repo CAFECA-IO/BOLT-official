@@ -1,18 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import { INewsItemsParams } from "../../interfaces/news_items";
 
-function NewsItems(props: {
-  id: string;
-  title: string;
-  date: string;
-  thumbnail: string;
-  contents: string;
-  styles: { [key: string]: string };
-}) {
+function NewsItems({
+  id,
+  title,
+  date,
+  thumbnail,
+  contents,
+  styles,
+}: INewsItemsParams) {
   const { t } = useTranslation("common");
-
-  const { id, title, date, thumbnail, contents, styles } = props;
 
   const newsLink = `/news/${id}`;
   const localeDate = new Date(date).toLocaleDateString("zh-TW");
