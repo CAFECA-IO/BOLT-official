@@ -20,6 +20,7 @@ function NewsDetailPage() {
   return (
     <div className={myStyles.news_detail_container}>
       <NewsBody
+        id={news.id}
         title={news.title}
         date={news.date}
         image={news.image}
