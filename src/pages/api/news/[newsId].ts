@@ -1,16 +1,15 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { dummyNewsData } from "@/interfaces/news_detail";
-//import { getNewsById } from "@/interfaces/news_detail";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { newsId } = req.query;
+  const newsId = req.query.newsId as string;
 
   function getNewsById(id: string) {
-    const news = dummyNewsData.find((news) => news.id === id);
-    return news || null;
+    const getNews = dummyNewsData.find((news) => news.id === id);
+    return getNews || null;
   }
 
-  const news = getNewsById(newsId as string);
+  const news = getNewsById(newsId);
 
-  res.status(200).send({ news });
+  res.status(200).send(news);
 }

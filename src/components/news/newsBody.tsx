@@ -10,7 +10,13 @@ function NewsBody({ title, date, image, contents }: INewsDetail) {
   return (
     <div className={myStyles.news_body_container}>
       <div className={myStyles.news_body_imgbox}>
-        <Image src={image} alt={title} layout="fill" objectFit="cover" />
+        <Image
+          src={image}
+          alt={title}
+          layout="fill"
+          objectFit="cover"
+          priority={true}
+        />
       </div>
       <div className={myStyles.news_body_textbox}>
         <h1>{title}</h1>
