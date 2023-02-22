@@ -79,8 +79,3 @@ export const dummyNewsData: INewsDetail[] = [
 export function getAllNews() {
   return dummyNewsData;
 }
-
-export function getNewsById(id: string) {
-  const news = dummyNewsData.find((news) => news.id === id);
-  return news || dummyNewsData[0];
-}

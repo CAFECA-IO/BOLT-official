@@ -1,9 +1,6 @@
-import { useEffect } from "react";
 import useSWR from "swr";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-//import { getNewsById } from "@/interfaces/news_detail";
 import myStyles from "@/styles/news.module.css";
 import NewsBody from "@/components/news/newsBody";
 import SeeMoreList from "@/components/news/seeMore_list";
@@ -34,8 +31,6 @@ function NewsDetailPage() {
       contents={news.contents}
     />
   );
-
-  //const news = getNewsById(newsId as string);
 
   return (
     <div className={myStyles.news_detail_container}>
