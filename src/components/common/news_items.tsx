@@ -30,7 +30,7 @@ function NewsItems({
       <Link href="/news/[newsId]" as={newsLink}>
         <div className={styles.newsitem_ticket}>
           <div className={styles.newsitem_imgbox}>
-            <Image alt="news1" src={newsImg} width={320} height={240} />
+            <Image alt={title} src={newsImg} width={320} height={240} />
           </div>
           <div className={styles.newsitem_textbox}>
             <h3>{t(title)}</h3>
