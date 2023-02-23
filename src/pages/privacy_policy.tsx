@@ -5,15 +5,29 @@ import myStyles from "@/styles/privacy.module.css";
 function PrivacyPage() {
   const { t } = useTranslation("common");
 
+  const UPDATE = "2023-2-23";
+
   return (
     <div className={myStyles.privacy_main_container}>
       <h1>{t("privacy.title")}</h1>
       <div className={myStyles.privacy_contents_container}>
-        <h2>{t("privacy.update")}</h2>
+        <h2>
+          {t("privacy.update")}&emsp;
+          {UPDATE}
+        </h2>
         <p>{t("privacy.line1")}</p>
+
+        <h4>{t("privacy.gather1")}</h4>
+        <p>{t("privacy.gather2")}</p>
+        <p>{t("privacy.gather3")}</p>
+
+        <h4>{t("privacy.protect1")}</h4>
+        <p>{t("privacy.protect2")}</p>
+        <p>{t("privacy.protect3")}</p>
 
         <h4>{t("privacy.cookie1")}</h4>
         <p>{t("privacy.cookie2")}</p>
+        <p>{t("privacy.cookie3")}</p>
 
         <h4>{t("privacy.third1")}</h4>
         <p>{t("privacy.third2")}</p>
