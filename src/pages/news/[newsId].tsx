@@ -1,33 +1,50 @@
 import useSWR from "swr";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import myStyles from "@/styles/news.module.css";
 import NewsBody from "@/components/news/newsBody";
 import SeeMoreList from "@/components/news/seeMore_list";
 import { INewsDetail } from "@/interfaces/news_detail";
-
+/* 
 const fetcher = async (url: string) => {
   const res = await fetch(`/api${url}`);
   return await res.json();
-};
+}; */
 
 function NewsDetailPage() {
   const router = useRouter();
   const { newsId } = router.query;
 
+  const [loadedNews, setLoadedNews] = useState<INewsDetail>();
+  /* 
   const { data: news } = useSWR<INewsDetail>(
     newsId ? `/news/${newsId}` : "null",
     fetcher
-  );
+  ); */
 
-  const newsBodyArea = news ? (
+  useEffect(() => {
+    fetch(`/api/news/${newsId}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setLoadedNews(data);
+      })
+      .catch(() => {
+        /*發生錯誤時要做的事情*/
+        console.log("News not found");
+      });
+  }, []);
+
+  const newsBodyArea = loadedNews ? (
     <NewsBody
-      id={news.id}
-      title={news.title}
-      date={news.date}
+      id={loadedNews.id}
+      title={loadedNews.title}
+      date={loadedNews.date}
       thumbnail=""
-      image={news.image}
-      contents={news.contents}
+      image={loadedNews.image}
+      contents={loadedNews.contents}
     />
   ) : (
     <div style={{ padding: "10rem", color: "white" }}>loading...</div>
