@@ -1,11 +1,11 @@
 import NewsItems from "./news_items";
 import { getAllNews } from "@/interfaces/news_detail";
-import myStyles from "@/styles/about.module.css";
-import newsStyles from "@/styles/news.module.css";
 
-function NewsList(props: { max: number }) {
+function NewsList(props: { styles: { [key: string]: string }; max: number }) {
   const newsData = getAllNews();
-  if (props.max > 6) {
+
+  const { styles, max } = props;
+  if (max > 6) {
     newsData.splice(4);
   }
 
@@ -18,10 +18,11 @@ function NewsList(props: { max: number }) {
         date={v.date}
         thumbnail={v.thumbnail}
         contents={v.contents}
+        styles={styles}
       />
     );
   });
 
-  return <div className={newsStyles.newslist_container}>{newsList}</div>;
+  return <div className={styles.newslist_container}>{newsList}</div>;
 }
 export default NewsList;

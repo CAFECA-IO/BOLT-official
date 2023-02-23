@@ -1,28 +1,43 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { useTranslation } from "next-i18next";
 import myStyles from "@/styles/faq.module.css";
-
-function FAQItems(props: {
+interface IFaqItemsParams {
+  id: string;
   question: string;
   answer: string;
-  //faqStyle: string;
-}) {
+  faqBlockStyles: string;
+  answerAreaStyles: string;
+  showAnsIndex: string;
+  setShowAnsIndex: Dispatch<SetStateAction<string>>;
+}
+
+function FAQItems({
+  id,
+  question,
+  answer,
+  faqBlockStyles,
+  answerAreaStyles,
+  showAnsIndex,
+  setShowAnsIndex,
+}: IFaqItemsParams) {
   const { t } = useTranslation("common");
 
-  const [showAns, setShowAns] = useState(false);
-  const clickHandler = () => setShowAns(!showAns);
-
-  const faqBlockStyles = showAns ? myStyles.faq_showAns : myStyles.faq_hideAns;
-  const answerTextStyles = showAns ? myStyles.showAnswer : myStyles.hideAnswer;
+  const clickHandler = () => {
+    if (showAnsIndex != id) {
+      setShowAnsIndex(id);
+    } else {
+      setShowAnsIndex("");
+    }
+  };
 
   return (
     <section
       className={`${myStyles.faq_block} ${faqBlockStyles}`}
       onClick={clickHandler}
     >
-      <h4>{t(`${props.question}`)}</h4>
-      <div className={answerTextStyles}>
-        <p>{t(`${props.answer}`)}</p>
+      <h4>{t(question)}</h4>
+      <div className={answerAreaStyles}>
+        <p>{t(answer)}</p>
       </div>
     </section>
   );

@@ -25,7 +25,7 @@
 
 /* news detail */
 .news_detail_container {
-  padding: 10rem 6rem 6rem 6rem;
+  padding-top: 10rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -37,6 +37,7 @@
 .news_body_container {
   width: 80vw;
   background-color: #f8fafa;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,6 +75,7 @@
   padding: 3rem;
   font: normal normal normal 14px/23px Barlow;
   text-align: left;
+  white-space: pre-wrap;
 }
 
 .goBackBtn button {
@@ -143,6 +145,37 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+/* see more */
+.seeMore_container {
+  width: 100%;
+  padding: 4rem 8rem 4rem 8rem;
+  background-color: #f2f2f2;
+  color: #3a3b4d;
+}
+
+.seeMore_container h1 {
+  font: normal normal 36px/58px Noto Sans TC;
+}
+
+.seeMore_list {
+  padding-top: 2rem;
+}
+
+.seeMore_items {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seeMore_items h2 {
+  font: normal normal normal 28px/45px Noto Sans TC;
+}
+
+.seeMore_items time {
+  font: normal normal normal 14px/23px Noto Sans TC;
 }
 
 /* 螢幕寬度小於 992px 時 */

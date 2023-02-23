@@ -8,20 +8,26 @@ import { getFaqData } from "contents";
 function FAQPage() {
   const { t } = useTranslation("common");
 
-  //const [showAnsIndex, setShowAnsIndex] = useState(null);
-  //const clickHandler = () => setShowAnsIndex();
-
-  //const faqBlockStyles = showAns ? myStyles.faq_showAns : myStyles.faq_hideAns;
-  //const answerTextStyles = showAns ? myStyles.showAnswer : myStyles.hideAnswer;
+  const [showAnsIndex, setShowAnsIndex] = useState("");
 
   const faqData = getFaqData();
+
   const faqList = faqData.map((v) => {
+    const faqBlockStyles =
+      v.id === showAnsIndex ? myStyles.faq_showAns : myStyles.faq_hideAns;
+    const answerAreaStyles =
+      v.id === showAnsIndex ? myStyles.showAnswer : myStyles.hideAnswer;
+
     return (
       <FAQItems
         key={v.id}
+        id={v.id}
         question={v.question}
         answer={v.answer}
-        //faqStyle={answerTextStyles}
+        faqBlockStyles={faqBlockStyles}
+        answerAreaStyles={answerAreaStyles}
+        showAnsIndex={showAnsIndex}
+        setShowAnsIndex={setShowAnsIndex}
       />
     );
   });

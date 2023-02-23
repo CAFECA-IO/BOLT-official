@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { getNewsById } from "@/interfaces/news_detail";
 import myStyles from "@/styles/news.module.css";
 import NewsBody from "@/components/news/newsBody";
+import SeeMoreList from "@/components/news/seeMore_list";
 
 function NewsDetailPage() {
   const { t } = useTranslation("common");
@@ -20,11 +21,15 @@ function NewsDetailPage() {
   return (
     <div className={myStyles.news_detail_container}>
       <NewsBody
+        id={news.id}
         title={news.title}
         date={news.date}
+        thumbnail=""
         image={news.image}
         contents={news.contents}
       />
+
+      <SeeMoreList />
     </div>
   );
 }
@@ -34,7 +39,7 @@ export default NewsDetailPage;
 export const getStaticPaths = async () => {
   return {
     paths: [{ params: { newsId: "" } }],
-    fallback: true,
+    fallback: "blocking",
   };
 };
 
