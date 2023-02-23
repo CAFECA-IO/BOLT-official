@@ -1,0 +1,28 @@
+{
+  "name": "bolt-official",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.1.6",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
+    "i18next": "^22.4.9",
+    "lottie-web": "^5.10.2",
+    "next": "13.1.6",
+    "next-i18next": "^13.1.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-i18next": "^12.1.5",
+    "swr": "^2.0.3",
+    "typescript": "4.9.5"
+  }
+}

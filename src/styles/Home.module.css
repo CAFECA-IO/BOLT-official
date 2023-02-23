@@ -1,0 +1,315 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 7rem;
+}
+
+.main_bg {
+  padding-top: 6rem;
+  background: #f8fafa url("/img/main_bg.svg") no-repeat center top/ cover;
+}
+
+.main_block1,
+.main_block2,
+.main_block3,
+.main_block4 {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll_down {
+  animation: fromBottom 1s ease-out 1 forwards;
+}
+
+.main_block2 {
+  padding-top: 15rem;
+}
+.main_block3,
+.main_block4 {
+  padding-top: 7rem;
+}
+.main_block2 h1,
+.main_block3 h1,
+.main_block4 h1 {
+  text-align: center;
+  font: normal normal 36px/58px Noto Sans TC;
+  color: #3a3b4d;
+}
+
+.main_block3 {
+  background: transparent url("/img/ground_bg.svg") no-repeat bottom / cover;
+  background-position: bottom;
+}
+
+/* bolt_main */
+.bolt_main_container {
+  display: flex;
+  align-items: center;
+  padding: 7rem 0 1rem 0;
+}
+
+.bolt_main_textbox {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  text-align: center;
+  padding: 3rem;
+  color: #3a3b4d;
+}
+
+.bolt_main_textbox h1 {
+  font: normal normal 60px/97px Noto Sans TC;
+  white-space: nowrap;
+}
+
+.bolt_main_textbox span {
+  border-bottom: 1px solid #3a3b4d;
+}
+
+.bolt_main_textbox p {
+  font: normal normal 18px/26px Noto Sans TC;
+}
+
+.whitepaper::before {
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  background: transparent url("/img/icons/book@2x.png") no-repeat top / 50% 50%;
+}
+
+.bolt_main_from_top,
+.bolt_main_from_bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bolt_main_from_top {
+  height: 250px;
+  animation: fromTop 1s ease-out 1 forwards;
+}
+
+.bolt_main_from_bottom {
+  padding-top: 2.5rem;
+  height: 150px;
+  animation: fromBottom 1s ease-out 1 forwards;
+}
+
+.bolt_main_btnbox {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bolt_main_btnbox button {
+  padding: 10px 30px 10px 30px;
+  color: #3a3b4d;
+  border: none;
+  border-radius: 5rem;
+  background: radial-gradient(
+    closest-side at 50% 50%,
+    #f8fafa 0%,
+    #f2f2f2 100%
+  );
+  font: normal normal 18px/26px Barlow;
+  letter-spacing: 0.09px;
+  box-shadow: 0px 3px 7px #00000029;
+  cursor: pointer;
+}
+
+.bolt_main_btnbox button:hover {
+  box-shadow: none;
+}
+
+.bolt_main_imgbox {
+  position: relative;
+  width: 660px;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  animation: fadeIn 1s ease-out 1 forwards;
+}
+
+/* bolt_introduction */
+.bolt_intro_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+}
+
+.bolt_intro_odd,
+.bolt_intro_even {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bolt_intro_odd {
+  flex-direction: row;
+}
+
+.bolt_intro_even {
+  flex-direction: row-reverse;
+}
+
+.bolt_intro_textbox {
+  width: 50%;
+  padding: 4rem;
+}
+
+.bolt_intro_textbox h2 {
+  color: #3a3b4d;
+  font: normal normal normal 28px/45px Noto Sans TC;
+  margin-bottom: 1rem;
+}
+
+.bolt_intro_textbox span {
+  color: #31d3f5 !important;
+}
+
+.bolt_intro_textbox p {
+  color: #3a3b4d;
+  font: normal normal normal 14px/23px Noto Sans TC;
+}
+
+/* contact form */
+.contact_container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+}
+
+.contact_imgbox {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact_formPart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact_formPart input,
+.contact_formPart textarea {
+  width: 80%;
+  border: none;
+  color: #3a3b4d;
+  font: normal normal 15px/23px Noto Sans TC;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact_formPart input::placeholder,
+.contact_formPart textarea::placeholder {
+  text-align: left;
+  font: normal normal 18px/26px Noto Sans TC;
+  letter-spacing: 0.09px;
+  color: #3a3b4d;
+  opacity: 70%;
+}
+
+.contact_formPart input:focus::placeholder,
+.contact_formPart textarea:focus::placeholder {
+  opacity: 0;
+}
+
+.contact_formPart input {
+  border-bottom: 1px solid #3a3b4d;
+  background-color: transparent;
+  height: 40px;
+}
+
+.contact_formPart textarea {
+  border: 1px solid #3a3b4d;
+}
+
+.contact_formPart button {
+  padding: 10px;
+  width: 120px;
+  background-color: #31d3f5;
+  border: 1px solid #31d3f5;
+  border-radius: 23px;
+  color: #3a3b4d;
+  font: normal normal 18px/26px Noto Sans TC;
+  letter-spacing: 0.09px;
+  transition: all 0.1s ease-in;
+}
+
+.contact_formPart button:hover {
+  background-color: transparent;
+  color: #31d3f5;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+}
+
+/* 螢幕寬度小於 992px 時 */
+@media screen and (max-width: 992px) {
+  .contact_container {
+    flex-direction: column;
+  }
+
+  .contact_formPart {
+    margin-top: 2rem;
+  }
+}
+
+/* 螢幕寬度大於 992.1px 時 */
+@media screen and (min-width: 992.1px) {
+  .contact_container {
+    flex-direction: row;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+/* animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

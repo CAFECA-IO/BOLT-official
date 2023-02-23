@@ -1,0 +1,201 @@
+.about_container {
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafa;
+}
+
+.about_block1,
+.about_block2,
+.about_block3 {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about_block1 h1,
+.about_block2 h1,
+.about_block3 h1 {
+  font: normal normal 36px/58px Noto Sans TC;
+  color: #3a3b4d;
+}
+
+/* why bolt */
+.ticket_holder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: flip 1.5s ease-in-out 1 forwards;
+}
+
+.ticket {
+  padding: 5rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #3a3b4d;
+}
+
+.ticket h3 {
+  font: normal normal normal 28px/45px Noto Sans TC;
+  margin-bottom: 1rem;
+}
+
+.ticket p {
+  font: normal normal normal 14px/23px Noto Sans TC;
+  margin-top: 1rem;
+}
+
+/* use case */
+.uselist_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.useitem_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a3b4d;
+}
+
+.useitem_textbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.useitem_textbox h3 {
+  font: normal normal normal 28px/23px Noto Sans TC;
+  margin-bottom: 1.5rem;
+}
+
+.useitem_textbox p {
+  font: normal normal normal 14px/23px Noto Sans TC;
+}
+
+.useitem_imgbox {
+  display: block;
+  padding: 1rem;
+}
+
+/* news */
+.newslist_container {
+  padding: 5rem 0 5rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.newslist_link {
+  text-decoration: underline;
+  font: normal normal 18px/26px Noto Sans TC;
+  letter-spacing: 0.09px;
+  color: #3a3b4d;
+}
+
+.newsitem_ticket {
+  width: 400px;
+  height: 450px;
+  padding: 1.5rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 12px #0000001a;
+  color: #3a3b4d;
+  overflow: hidden;
+}
+
+.newsitem_imgbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsitem_textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsitem_textbox h3 {
+  font: normal normal normal 28px/45px Noto Sans TC;
+  margin: 0.5rem;
+}
+
+.newsitem_textbox time,
+.newsitem_contentbox p {
+  font: normal normal normal 14px/23px Noto Sans TC;
+}
+
+.newsitem_contentbox {
+  padding: 0.5rem;
+}
+
+.newsitem_contentbox p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* 螢幕寬度小於 992px 時 */
+@media screen and (max-width: 992px) {
+  .ticket_holder {
+    flex-direction: column;
+  }
+
+  .useitem_container {
+    padding: 3rem 0 3rem 0;
+    flex-direction: column;
+  }
+
+  .useitem_textbox {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+
+/* 螢幕寬度大於 992.1px 時 */
+@media screen and (min-width: 992.1px) {
+  .ticket_holder {
+    flex-direction: row;
+  }
+
+  .ticket {
+    max-width: 30%;
+  }
+
+  .useitem_container {
+    padding: 5rem;
+  }
+
+  .useitem_container:nth-child(odd) {
+    flex-direction: row;
+  }
+  .useitem_container:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .useitem_textbox {
+    width: 50%;
+    padding: 3rem;
+  }
+}
+
+/* animation */
+@keyframes flip {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0);
+  }
+}
