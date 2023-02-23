@@ -6,6 +6,7 @@ import myStyles from "@/styles/news.module.css";
 import NewsBody from "@/components/news/newsBody";
 import SeeMoreList from "@/components/news/seeMore_list";
 import { INewsDetail } from "@/interfaces/news_detail";
+import { getAllNews } from "@/interfaces/news_detail";
 /* 
 const fetcher = async (url: string) => {
   const res = await fetch(`/api${url}`);
@@ -17,8 +18,9 @@ function NewsDetailPage() {
   const { newsId } = router.query;
 
   const [loadedNews, setLoadedNews] = useState<INewsDetail>();
+
   /* 
-  const { data: news } = useSWR<INewsDetail>(
+  const { data: news } = useSWR<INewsDetail[]>(
     newsId ? `/news/${newsId}` : "null",
     fetcher
   ); */
@@ -62,8 +64,14 @@ function NewsDetailPage() {
 export default NewsDetailPage;
 
 export const getStaticPaths = async () => {
+  const news = getAllNews();
+
+  const paths = news.map((v) => ({
+    params: { newsId: v.id },
+  }));
+
   return {
-    paths: [{ params: { newsId: "n001" } }],
+    paths,
     fallback: "blocking",
   };
 };

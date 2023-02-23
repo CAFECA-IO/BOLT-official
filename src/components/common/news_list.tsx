@@ -7,7 +7,7 @@ function NewsList(props: { styles: { [key: string]: string }; max: number }) {
   const newsData = getAllNews();
   const { styles, max } = props;
 
-  const [loadedList, setLoadedList] = useState<INewsDetail>();
+  const [loadedList, setLoadedList] = useState<INewsDetail[]>();
 
   useEffect(() => {
     fetch(`/api/news`)

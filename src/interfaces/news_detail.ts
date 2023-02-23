@@ -12,7 +12,7 @@ export const dummyNewsData: INewsDetail[] = [
   {
     id: "n001",
     title: "新手指南丨什麼是零知識證明（ZKP）？",
-    date: "2022-06-22",
+    date: "2022-06-22", //unix_timestamp
     thumbnail: "/img/news/Placement Area.png",
     image: "/img/news/Placement Area@2x.png",
     tag: ["Knowledge", "ZKP"],
