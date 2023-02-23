@@ -17,9 +17,9 @@ function NewsList(props: { styles: { [key: string]: string }; max: number }) {
       .then((data) => {
         setLoadedList(data);
       })
-      .catch(() => {
+      .catch((e) => {
         /*發生錯誤時要做的事情*/
-        console.log("List not found");
+        throw e; // ++ ToDo: 導入錯誤頁面
       });
   }, []);
 

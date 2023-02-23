@@ -33,9 +33,9 @@ function NewsDetailPage() {
       .then((data) => {
         setLoadedNews(data);
       })
-      .catch(() => {
+      .catch((e) => {
         /*發生錯誤時要做的事情*/
-        console.log("News not found");
+        throw e; // ++ ToDo: 導入錯誤頁面
       });
   }, []);
 
