@@ -95,6 +95,11 @@
     "question4": "如何下載安裝 Bolt？",
     "answer4": "詳細內容放置於此"
   },
+  "news": {
+    "title": "最新消息",
+    "seeMore": "更多文章",
+    "goBack": "返回上頁"
+  },
   "contactForm": {
     "title": "聯絡我們",
     "name": "姓名",

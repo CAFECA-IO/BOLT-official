@@ -117,12 +117,18 @@
   align-items: center;
 }
 
-.newsitem_ticket h3 {
+.newsitem_textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsitem_textbox h3 {
   font: normal normal normal 28px/45px Noto Sans TC;
   margin: 0.5rem;
 }
 
-.newsitem_ticket time,
+.newsitem_textbox time,
 .newsitem_contentbox p {
   font: normal normal normal 14px/23px Noto Sans TC;
 }

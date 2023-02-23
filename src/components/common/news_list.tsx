@@ -1,12 +1,14 @@
-import myStyles from "@/styles/about.module.css";
 import NewsItems from "./news_items";
-import { dummyNewsData } from "@/interfaces/news_detail";
+import { getAllNews } from "@/interfaces/news_detail";
+import myStyles from "@/styles/about.module.css";
+import newsStyles from "@/styles/news.module.css";
 
-function NewsList(max = 4) {
-  const newsData = dummyNewsData;
-  if (max > 6) {
+function NewsList(props: { max: number }) {
+  const newsData = getAllNews();
+  if (props.max > 6) {
     newsData.splice(4);
   }
+
   const newsList = newsData.map((v) => {
     return (
       <NewsItems
@@ -14,12 +16,12 @@ function NewsList(max = 4) {
         id={v.id}
         title={v.title}
         date={v.date}
-        image={v.image}
+        thumbnail={v.thumbnail}
         contents={v.contents}
       />
     );
   });
 
-  return <div className={myStyles.newslist_container}>{newsList}</div>;
+  return <div className={newsStyles.newslist_container}>{newsList}</div>;
 }
 export default NewsList;

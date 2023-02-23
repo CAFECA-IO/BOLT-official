@@ -17,8 +17,8 @@ function TechnologyItems(props: {
         <Image
           src={props.image}
           alt={t(`${props.title}`)}
-          width={500}
-          height={500}
+          width={400}
+          height={400}
         />
       </div>
       <div className={myStyles.tech_item_textbox}>
