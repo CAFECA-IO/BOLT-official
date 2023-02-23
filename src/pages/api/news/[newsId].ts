@@ -4,12 +4,7 @@ import { dummyNewsData } from "@/interfaces/news_detail";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const newsId = req.query.newsId as string;
 
-  function getNewsById(id: string) {
-    const getNews = dummyNewsData.find((news) => news.id === id);
-    return getNews || null;
-  }
-
-  const news = getNewsById(newsId);
+  const news = dummyNewsData.find((news) => news.id === newsId) || null;
 
   res.status(200).send(news);
 }

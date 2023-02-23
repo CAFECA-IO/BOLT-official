@@ -7,6 +7,11 @@ import { INewsDetail } from "../../interfaces/news_detail";
 function NewsBody({ title, date, image, contents }: INewsDetail) {
   const { t } = useTranslation("common");
 
+  const content = contents.forEach((v, i) => {
+    contents.splice(i, i + 2, "\n");
+  });
+  console.log(content);
+
   return (
     <div className={myStyles.news_body_container}>
       <div className={myStyles.news_body_imgbox}>

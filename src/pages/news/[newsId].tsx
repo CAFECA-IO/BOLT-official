@@ -6,8 +6,9 @@ import NewsBody from "@/components/news/newsBody";
 import SeeMoreList from "@/components/news/seeMore_list";
 import { INewsDetail } from "@/interfaces/news_detail";
 
-const fetcher = (url: string, id: string) => {
-  return fetch(`/api${url}`).then((res) => res.json());
+const fetcher = async (url: string) => {
+  const res = await fetch(`/api${url}`);
+  return await res.json();
 };
 
 function NewsDetailPage() {
@@ -19,9 +20,7 @@ function NewsDetailPage() {
     fetcher
   );
 
-  const newsBodyArea = !news ? (
-    <div style={{ padding: "10rem", color: "white" }}>loading...</div>
-  ) : (
+  const newsBodyArea = news ? (
     <NewsBody
       id={news.id}
       title={news.title}
@@ -30,6 +29,8 @@ function NewsDetailPage() {
       image={news.image}
       contents={news.contents}
     />
+  ) : (
+    <div style={{ padding: "10rem", color: "white" }}>loading...</div>
   );
 
   return (
@@ -45,7 +46,7 @@ export default NewsDetailPage;
 
 export const getStaticPaths = async () => {
   return {
-    paths: [{ params: { newsId: "" } }],
+    paths: [{ params: { newsId: "n001" } }],
     fallback: "blocking",
   };
 };
