@@ -6,6 +6,7 @@ import myStyles from "@/styles/news.module.css";
 import NewsBody from "@/components/news/newsBody";
 import SeeMoreList from "@/components/news/seeMore_list";
 import { INewsDetail } from "@/interfaces/news_detail";
+import { getAllNews } from "@/interfaces/news_detail";
 
 /* 
 const fetcher = async (url: string) => {
@@ -63,10 +64,17 @@ function NewsDetailPage() {
 export default NewsDetailPage;
 
 export const getStaticPaths = async () => {
+  /* ToDo:React Hook useEffect has a missing dependency: 'newsId'. Either include it or remove the dependency array. 
   const res = await fetch(new URL("/api/news", baseUrl));
-  const news = await res.json();
+  const news: INewsDetail[] = await res.json();
 
-  const paths = news.map((v: INewsDetail) => ({
+  const paths = news.map((v) => ({
+    params: { newsId: v.id },
+  })); */
+
+  const news = getAllNews();
+
+  const paths = news.map((v) => ({
     params: { newsId: v.id },
   }));
 
