@@ -71,11 +71,35 @@
   text-align: center;
 }
 
+.news_contents {
+  padding-top: 2rem;
+}
+
+.news_contents h6 {
+  text-align: right;
+}
+
+.news_contents hr {
+  margin-top: 5px;
+  border-top: 1px solid #d0d0d5;
+}
+
 .news_contents p {
-  padding: 3rem 6rem 3rem 6rem;
+  padding: 1rem;
   font: normal normal normal 14px/23px Barlow;
   text-align: left;
   white-space: pre-wrap;
+}
+
+.news_contents p:last-child {
+  text-align: end;
+  color: lightcoral;
+}
+
+.news_contents ol,
+.news_contents ul {
+  margin-left: 2rem;
+  font: normal normal normal 14px/23px Barlow;
 }
 
 .goBackBtn button {

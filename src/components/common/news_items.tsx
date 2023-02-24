@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import moment from "moment";
 
 interface INewsItemsParams {
   id: string;
   title: string;
-  date: string;
+  timestamp: number;
   thumbnail: string;
   contents: string[];
   styles: { [key: string]: string };
@@ -14,7 +15,7 @@ interface INewsItemsParams {
 function NewsItems({
   id,
   title,
-  date,
+  timestamp,
   thumbnail,
   contents,
   styles,
@@ -22,8 +23,9 @@ function NewsItems({
   const { t } = useTranslation("common");
 
   const newsLink = `/news/${id}`;
-  const localeDate = new Date(date).toLocaleDateString("zh-TW");
+  const localeDate = moment(timestamp).format("YYYY.MM.DD");
   const newsImg = t(thumbnail);
+  const showContents = contents.slice(1, 5);
 
   return (
     <>
@@ -36,7 +38,7 @@ function NewsItems({
             <h3>{t(title)}</h3>
             <time>{localeDate}</time>
             <div className={styles.newsitem_contentbox}>
-              <p>{t(contents)}</p>
+              <p>{showContents}</p>
             </div>
           </div>
         </div>

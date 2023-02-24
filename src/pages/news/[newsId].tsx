@@ -1,4 +1,4 @@
-import useSWR from "swr";
+//import useSWR from "swr";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -6,19 +6,20 @@ import myStyles from "@/styles/news.module.css";
 import NewsBody from "@/components/news/newsBody";
 import SeeMoreList from "@/components/news/seeMore_list";
 import { INewsDetail } from "@/interfaces/news_detail";
-import { getAllNews } from "@/interfaces/news_detail";
+
 /* 
 const fetcher = async (url: string) => {
   const res = await fetch(`/api${url}`);
   return await res.json();
 }; */
 
+const baseUrl = "http://localhost:3000/";
+
 function NewsDetailPage() {
   const router = useRouter();
   const { newsId } = router.query;
 
   const [loadedNews, setLoadedNews] = useState<INewsDetail>();
-
   /* 
   const { data: news } = useSWR<INewsDetail[]>(
     newsId ? `/news/${newsId}` : "null",
@@ -34,16 +35,14 @@ function NewsDetailPage() {
         setLoadedNews(data);
       })
       .catch((e) => {
-        /*發生錯誤時要做的事情*/
         throw e; // ++ ToDo: 導入錯誤頁面
       });
   }, []);
-
   const newsBodyArea = loadedNews ? (
     <NewsBody
       id={loadedNews.id}
       title={loadedNews.title}
-      date={loadedNews.date}
+      timestamp={loadedNews.timestamp}
       thumbnail=""
       image={loadedNews.image}
       contents={loadedNews.contents}
@@ -64,9 +63,10 @@ function NewsDetailPage() {
 export default NewsDetailPage;
 
 export const getStaticPaths = async () => {
-  const news = getAllNews();
+  const res = await fetch(new URL("/api/news", baseUrl));
+  const news = await res.json();
 
-  const paths = news.map((v) => ({
+  const paths = news.map((v: INewsDetail) => ({
     params: { newsId: v.id },
   }));
 
