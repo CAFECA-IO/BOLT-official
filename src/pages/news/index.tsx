@@ -17,9 +17,10 @@ function AllNewsPage() {
 
   //const { data: news } = useSWR<INewsDetail[]>(`/news`, fetcher);
 
+  const NEWS_PER_PAGE = 5;
+
   const [loadedList, setLoadedList] = useState<INewsDetail[]>();
   const [currentPage, setCurrentPage] = useState(1);
-  const [newsPerPage, setNewsPerPage] = useState(5);
 
   useEffect(() => {
     fetch(`/api/news`)
@@ -38,8 +39,8 @@ function AllNewsPage() {
     return <div>loading</div>;
   }
 
-  const lastNewsIndex = currentPage * newsPerPage;
-  const firstNewsIndex = lastNewsIndex - newsPerPage;
+  const lastNewsIndex = currentPage * NEWS_PER_PAGE;
+  const firstNewsIndex = lastNewsIndex - NEWS_PER_PAGE;
   const currentNews = loadedList.slice(firstNewsIndex, lastNewsIndex);
 
   return (
@@ -50,7 +51,7 @@ function AllNewsPage() {
       <NewsList newsData={currentNews} styles={myStyles} max={0} />
       <Pagination
         allNews={loadedList.length}
-        newsPerPage={newsPerPage}
+        newsPerPage={NEWS_PER_PAGE}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
