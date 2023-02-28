@@ -15,13 +15,16 @@ function AboutBoltPage() {
         <h1>{t("about.whyBolt.title")}</h1>
         <WhyBolt />
       </div>
+
       <div id="useCase" className={myStyles.about_block2}>
         <h1>{t("about.useCase.title")}</h1>
         <UseCaseList />
       </div>
+
       <div id="news" className={myStyles.about_block3}>
         <h1>{t("about.news.title")}</h1>
         <NewsList styles={myStyles} max={4} />
+
         <Link href="/news" className={myStyles.newslist_link}>
           查看更多
         </Link>

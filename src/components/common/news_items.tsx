@@ -7,7 +7,7 @@ interface INewsItemsParams {
   title: string;
   date: string;
   thumbnail: string;
-  contents: string;
+  contents: string[];
   styles: { [key: string]: string };
 }
 
