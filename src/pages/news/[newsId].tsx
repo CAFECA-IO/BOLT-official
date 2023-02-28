@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import myStyles from "@/styles/news.module.css";
-import NewsBody from "@/components/news/newsBody";
-import SeeMoreList from "@/components/news/seeMore_list";
+import NewsBody from "@/components/news/news_body";
+import SeeMoreList from "@/components/news/see_more_list";
 import { INewsDetail } from "@/interfaces/news_detail";
 import { getAllNews } from "@/interfaces/news_detail";
 
