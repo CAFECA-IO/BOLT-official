@@ -1,11 +1,12 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import moment from "moment";
 import myStyles from "@/styles/privacy.module.css";
 
 function PrivacyPage() {
   const { t } = useTranslation("common");
 
-  const UPDATE = "2023-2-23";
+  const UPDATE = moment(1677081600000).format("YYYY.MM.DD");
 
   return (
     <div className={myStyles.privacy_main_container}>

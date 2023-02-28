@@ -1,40 +1,26 @@
-import { useState, useEffect } from "react";
 import NewsItems from "./news_items";
-import { getAllNews } from "@/interfaces/news_detail";
 import { INewsDetail } from "@/interfaces/news_detail";
 
-function NewsList(props: { styles: { [key: string]: string }; max: number }) {
-  const newsData = getAllNews();
-  const { styles, max } = props;
+function NewsList(props: {
+  newsData: INewsDetail[];
+  styles: { [key: string]: string };
+  max: number;
+}) {
+  //const newsData = getAllNews();
+  const { newsData, styles, max } = props;
 
-  const [loadedList, setLoadedList] = useState<INewsDetail[]>();
-
-  useEffect(() => {
-    fetch(`/api/news`)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setLoadedList(data);
-      })
-      .catch((e) => {
-        /*發生錯誤時要做的事情*/
-        throw e; // ++ ToDo: 導入錯誤頁面
-      });
-  }, []);
-
-  if (loadedList && max > 6) {
+  if (newsData && max > 6) {
     //loadedList.splice(4);
   }
 
-  const newsList = loadedList ? (
+  const newsList = newsData ? (
     newsData.map((v) => {
       return (
         <NewsItems
           key={v.id}
           id={v.id}
           title={v.title}
-          date={v.date}
+          timestamp={v.timestamp}
           thumbnail={v.thumbnail}
           contents={v.contents}
           styles={styles}

@@ -1,6 +1,7 @@
 import Link from "next/link";
-import myStyles from "@/styles/news.module.css";
+import moment from "moment";
 import { useTranslation } from "next-i18next";
+import myStyles from "@/styles/news.module.css";
 import { getAllNews } from "@/interfaces/news_detail";
 
 function SeeMoreList() {
@@ -8,13 +9,15 @@ function SeeMoreList() {
 
   const newsData = getAllNews();
 
+  //ToDo: timestamp
+
   const seeMoreList = newsData.map((v) => {
     const newsLink = `/news/${v.id}`;
 
     return (
       <Link key={v.id} href={newsLink} className={myStyles.seeMore_items}>
         <h2>{v.title}</h2>
-        <time>{v.date}</time>
+        <time>{v.timestamp}</time>
       </Link>
     );
   });

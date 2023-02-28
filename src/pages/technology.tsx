@@ -2,7 +2,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { getTechnologyData } from "contents";
 import myStyles from "@/styles/technology.module.css";
-import TechnologyItems from "@/components/techology/techologyItems";
+import TechnologyItems from "@/components/techology/techology_items";
 
 function TechnologyPage() {
   const { t } = useTranslation("common");
