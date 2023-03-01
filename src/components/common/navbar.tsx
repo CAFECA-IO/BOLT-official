@@ -20,7 +20,7 @@ function MainNavbar() {
   return (
     <nav className={myStyles.nav_main_container}>
       <div className={myStyles.nav_logoArea}>
-        <Link href="/#">
+        <Link href="/#" onClick={navToggler}>
           <div className={myStyles.nav_logo}></div>
         </Link>
 
@@ -34,13 +34,19 @@ function MainNavbar() {
       <div className={`${menuStyles} ${myStyles.nav_list_container}`}>
         <ul className={myStyles.leftList}>
           <li>
-            <Link href="/about_bolt">{t("nav.about")}</Link>
+            <Link href="/about_bolt" onClick={navToggler}>
+              {t("nav.about")}
+            </Link>
           </li>
           <li>
-            <Link href="/technology">{t("nav.technology")}</Link>
+            <Link href="/technology" onClick={navToggler}>
+              {t("nav.technology")}
+            </Link>
           </li>
           <li>
-            <Link href="/faq">{t("nav.faq")}</Link>
+            <Link href="/faq" onClick={navToggler}>
+              {t("nav.faq")}
+            </Link>
           </li>
         </ul>
 
@@ -51,7 +57,11 @@ function MainNavbar() {
             <I18n />
           </li>
           <li>
-            <Link href="" className={myStyles.blockchain_btn}>
+            <Link
+              href=""
+              className={myStyles.blockchain_btn}
+              onClick={navToggler}
+            >
               {t("nav.blockchain")}
             </Link>
           </li>
