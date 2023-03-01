@@ -1,7 +1,5 @@
 export const NEWS_PER_PAGE = 4;
 
-export const baseUrl = "http://localhost:3000/";
-
 export function getPageIndex() {
   return pageIndex;
 }
