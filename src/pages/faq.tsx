@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import myStyles from "@/styles/faq.module.css";
 import FAQItems from "@/components/faq/faqItems";
-import { getFaqData } from "contents";
+import { getFaqData } from "@/constants/config";
 
 function FAQPage() {
   const { t } = useTranslation("common");

@@ -3,18 +3,15 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import myStyles from "@/styles/news.module.css";
-import NewsBody from "@/components/news/newsBody";
-import SeeMoreList from "@/components/news/seeMore_list";
+import NewsBody from "@/components/news/news_body";
+import SeeMoreList from "@/components/news/see_more_list";
 import { INewsDetail } from "@/interfaces/news_detail";
-import { getAllNews } from "@/interfaces/news_detail";
 
 /* 
 const fetcher = async (url: string) => {
   const res = await fetch(`/api${url}`);
   return await res.json();
 }; */
-
-const baseUrl = "http://localhost:3000/";
 
 function NewsDetailPage() {
   const router = useRouter();
@@ -39,6 +36,7 @@ function NewsDetailPage() {
         throw e; // ++ ToDo: 導入錯誤頁面
       });
   }, []);
+
   const newsBodyArea = loadedNews ? (
     <NewsBody
       id={loadedNews.id}
@@ -72,14 +70,16 @@ export const getStaticPaths = async () => {
     params: { newsId: v.id },
   })); */
 
-  const news = getAllNews();
-
-  const paths = news.map((v) => ({
-    params: { newsId: v.id },
-  }));
-
   return {
-    paths,
+    paths: [
+      { params: { newsId: "n001" } },
+      { params: { newsId: "n002" } },
+      { params: { newsId: "n003" } },
+      { params: { newsId: "n004" } },
+      { params: { newsId: "n005" } },
+      { params: { newsId: "n006" } },
+      { params: { newsId: "n007" } },
+    ],
     fallback: "blocking",
   };
 };

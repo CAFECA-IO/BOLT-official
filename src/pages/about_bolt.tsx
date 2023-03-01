@@ -47,7 +47,7 @@ function AboutBoltPage() {
         <NewsList newsData={loadedList} styles={myStyles} max={4} />
 
         <Link href="/news" className={myStyles.newslist_link}>
-          查看更多
+          {t("news.seeMoreBtn")}
         </Link>
       </div>
     </div>

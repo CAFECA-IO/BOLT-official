@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import myStyles from "@/styles/footer.module.css";
-//import { getPageIndex } from "../../../contents";
+//import { getPageIndex } from "@/constants/config";
 
 function Footer() {
   const { t } = useTranslation("common");

@@ -1,6 +1,6 @@
 import myStyles from "@/styles/about.module.css";
 import UseCaseItems from "./usecase_items";
-import { getUseCaseData } from "../../../contents";
+import { getUseCaseData } from "@/constants/config";
 
 function UseCaseList() {
   const useData = getUseCaseData();

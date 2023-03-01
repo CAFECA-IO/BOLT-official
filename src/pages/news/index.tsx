@@ -5,6 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NewsList from "@/components/common/news_list";
 import myStyles from "@/styles/news.module.css";
 import { INewsDetail } from "@/interfaces/news_detail";
+import { NEWS_PER_PAGE } from "@/constants/config";
 import Pagination from "./pagination";
 /* 
 const fetcher = async (url: string) => {
@@ -16,8 +17,6 @@ function AllNewsPage() {
   const { t } = useTranslation("common");
 
   //const { data: news } = useSWR<INewsDetail[]>(`/news`, fetcher);
-
-  const NEWS_PER_PAGE = 5;
 
   const [loadedList, setLoadedList] = useState<INewsDetail[]>();
   const [currentPage, setCurrentPage] = useState(1);
