@@ -1,11 +1,11 @@
 import useSWR from "swr";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NewsList from "@/components/common/news_list";
 import myStyles from "@/styles/news.module.css";
 import { INewsDetail } from "@/interfaces/news_detail";
-import { NEWS_PER_PAGE } from "@/constants/config";
 import Pagination from "./pagination";
 /* 
 const fetcher = async (url: string) => {
@@ -16,17 +16,27 @@ const fetcher = async (url: string) => {
 function AllNewsPage() {
   const { t } = useTranslation("common");
 
-  //const { data: news } = useSWR<INewsDetail[]>(`/news`, fetcher);
-
-  const [loadedList, setLoadedList] = useState<INewsDetail[]>();
+  const [loadedList, setLoadedList] = useState<INewsDetail[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
+  const router = useRouter();
+  const { page } = router.query;
+
+  //const { data: news } = useSWR<INewsDetail[]>(`/news`, fetcher);
+
   useEffect(() => {
-    fetch(`/api/news`)
+    if (page) {
+      setCurrentPage(Number(page));
+    } else {
+      setCurrentPage(1);
+    }
+    fetch(`/api/news?page=${currentPage}`)
       .then((res) => {
+        console.log(currentPage);
         return res.json();
       })
       .then((data) => {
+        //console.log(data);
         setLoadedList(data);
       })
       .catch((e) => {
@@ -38,22 +48,13 @@ function AllNewsPage() {
     return <div>loading</div>;
   }
 
-  const lastNewsIndex = currentPage * NEWS_PER_PAGE;
-  const firstNewsIndex = lastNewsIndex - NEWS_PER_PAGE;
-  const currentNews = loadedList.slice(firstNewsIndex, lastNewsIndex);
-
   return (
     <div className={myStyles.news_main_container}>
       <div className={myStyles.news_main_banner}>
         <h1>{t("news.title")}</h1>
       </div>
-      <NewsList newsData={currentNews} styles={myStyles} max={0} />
-      <Pagination
-        allNews={loadedList.length}
-        newsPerPage={NEWS_PER_PAGE}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-      />
+      <NewsList newsData={loadedList} styles={myStyles} />
+      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
     </div>
   );
 }

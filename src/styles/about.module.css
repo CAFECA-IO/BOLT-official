@@ -127,6 +127,11 @@
 .newsitem_textbox h3 {
   font: normal normal normal 28px/45px Noto Sans TC;
   margin: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .newsitem_textbox time,

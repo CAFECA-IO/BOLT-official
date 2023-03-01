@@ -44,7 +44,7 @@ function AboutBoltPage() {
 
       <div id="news" className={myStyles.about_block3}>
         <h1>{t("about.news.title")}</h1>
-        <NewsList newsData={loadedList} styles={myStyles} max={4} />
+        <NewsList newsData={loadedList} styles={myStyles} />
 
         <Link href="/news" className={myStyles.newslist_link}>
           {t("news.seeMoreBtn")}

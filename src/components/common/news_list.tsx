@@ -4,14 +4,8 @@ import { INewsDetail } from "@/interfaces/news_detail";
 function NewsList(props: {
   newsData: INewsDetail[];
   styles: { [key: string]: string };
-  max: number;
 }) {
-  //const newsData = getAllNews();
-  const { newsData, styles, max } = props;
-
-  if (newsData && max > 6) {
-    //loadedList.splice(4);
-  }
+  const { newsData, styles } = props;
 
   const newsList = newsData ? (
     newsData.map((v) => {

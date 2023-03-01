@@ -90,11 +90,11 @@
   text-align: left;
   white-space: pre-wrap;
 }
-
+/* 
 .news_contents p:last-child {
   text-align: end;
   color: lightcoral;
-}
+} */
 
 .news_contents ol,
 .news_contents ul {

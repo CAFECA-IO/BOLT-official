@@ -8,16 +8,20 @@ function SeeMoreList() {
   const { t } = useTranslation("common");
 
   const newsData = getAllNews();
-
-  //ToDo: timestamp
+  //ToDo: API
 
   const seeMoreList = newsData.map((v) => {
     const newsLink = `/news/${v.id}`;
 
     return (
-      <Link key={v.id} href={newsLink} className={myStyles.seeMore_items}>
+      <Link
+        key={v.id}
+        href="/news/[newsId]"
+        as={newsLink}
+        className={myStyles.seeMore_items}
+      >
         <h2>{v.title}</h2>
-        <time>{v.timestamp}</time>
+        <time>{moment(v.timestamp).format("YYYY.MM.DD")}</time>
       </Link>
     );
   });
