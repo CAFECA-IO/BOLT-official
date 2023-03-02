@@ -10,12 +10,14 @@ function BoltMain() {
     <div className={myStyles.bolt_main_container}>
       <div className={myStyles.bolt_main_textbox}>
         <div className={myStyles.bolt_main_from_top}>
-          <Image
-            src="/img/bolt_logo_black@2x.png"
-            alt="bolt_logo"
-            width={160}
-            height={45}
-          />
+          <div className={myStyles.bolt_main_logo}>
+            <Image
+              src="/img/bolt_logo_black@2x.png"
+              alt="bolt_logo"
+              width={160}
+              height={45}
+            />
+          </div>
           <h1>{t("main.block1.title")}</h1>
           <Link
             download="BOLT_Whitepaper_v2.0.11.pdf"

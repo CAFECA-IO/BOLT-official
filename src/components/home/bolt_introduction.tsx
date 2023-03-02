@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import lottie from "lottie-web";
 import { useTranslation } from "next-i18next";
-import myStyles from "@/styles/Home.module.css";
+import myStyles from "@/styles/introduction.module.css";
 
 function BoltIntro() {
   const { t } = useTranslation("common");
@@ -95,10 +95,7 @@ function BoltIntro() {
   return (
     <div className={myStyles.bolt_intro_container}>
       <div className={myStyles.bolt_intro_odd}>
-        <div
-          style={{ height: "600px", width: "600px" }}
-          ref={lottieStep1}
-        ></div>
+        <div className={myStyles.animSteps} ref={lottieStep1}></div>
         <div className={myStyles.bolt_intro_textbox}>
           <h2>
             <span>{t("main.block2.title1highlight")}</span>
@@ -107,15 +104,9 @@ function BoltIntro() {
           <p>{t("main.block2.description1")}</p>
         </div>
       </div>
-      <div
-        style={{ height: "400px", width: "1400px" }}
-        ref={lottieConnection1}
-      ></div>
+      <div className={myStyles.animConnections} ref={lottieConnection1}></div>
       <div className={myStyles.bolt_intro_even}>
-        <div
-          style={{ height: "600px", width: "600px" }}
-          ref={lottieStep2}
-        ></div>
+        <div className={myStyles.animSteps} ref={lottieStep2}></div>
         <div className={myStyles.bolt_intro_textbox}>
           <h2>
             {t("main.block2.title2")}
@@ -126,21 +117,15 @@ function BoltIntro() {
           <p>{t("main.block2.description2Line3")}</p>
         </div>
       </div>
-      <div
-        style={{ height: "400px", width: "1400px" }}
-        ref={lottieConnection2}
-      ></div>
+      <div className={myStyles.animConnections} ref={lottieConnection2}></div>
       <div className={myStyles.bolt_intro_odd}>
-        <div
-          style={{ height: "600px", width: "600px" }}
-          ref={lottieStep3}
-        ></div>
+        <div className={myStyles.animSteps} ref={lottieStep3}></div>
         <div className={myStyles.bolt_intro_textbox}>
           <h2>
-            <span>{t("main.block2.title1highlight")}</span>
-            {t("main.block2.title1")}
+            {t("main.block2.title3")}
+            <span>{t("main.block2.title3highlight")}</span>
           </h2>
-          <p>{t("main.block2.description1")}</p>
+          <p>{t("main.block2.description3")}</p>
         </div>
       </div>
     </div>
