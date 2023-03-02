@@ -46,6 +46,7 @@ const pageIndex = [
 
 const useCaseData = [
   {
+    id: "u001",
     title: "about.useCase.case1.title",
     description: [
       "about.useCase.case1.descriptionLine1",
@@ -57,16 +58,19 @@ const useCaseData = [
     image: "about.useCase.case1.image",
   },
   {
+    id: "u002",
     title: "about.useCase.case2.title",
     description: ["about.useCase.case2.description"],
     image: "about.useCase.case2.image",
   },
   {
+    id: "u003",
     title: "about.useCase.case3.title",
     description: ["about.useCase.case3.description"],
     image: "about.useCase.case3.image",
   },
   {
+    id: "u004",
     title: "about.useCase.case4.title",
     description: ["about.useCase.case4.description"],
     image: "about.useCase.case4.image",

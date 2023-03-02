@@ -1,4 +1,5 @@
 .main {
+  background-color: #f8fafa;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +9,7 @@
 
 .main_bg {
   padding-top: 6rem;
-  background: #f8fafa url("/img/main_bg.svg") no-repeat center top/ cover;
+  background: url("/img/main_bg.svg") no-repeat center top/ cover;
 }
 
 .main_block1,
@@ -37,8 +38,9 @@
 }
 
 .main_block3 {
-  background: transparent url("/img/ground_bg.svg") no-repeat bottom / cover;
-  background-position: bottom;
+  background: transparent url("/img/ground_bg.svg") no-repeat;
+  background-size: cover;
+  background-position: bottom center;
 }
 
 /* bolt_main */
@@ -121,6 +123,11 @@
   height: 650px;
 }
 
+.animSafe {
+  width: 624px;
+  height: 775px;
+}
+
 /* Mobile */
 @media screen and (max-width: 768px) {
   .bolt_main_imgbox {
@@ -138,8 +145,17 @@
     font: normal normal 28px/58px Noto Sans TC;
   }
 
+  .main_block3 {
+    background-size: contain;
+  }
+
   .bolt_main_textbox h1 {
     font: normal normal 28px/97px Noto Sans TC;
+  }
+
+  .animSafe {
+    width: 400px;
+    height: 350px;
   }
 }
 

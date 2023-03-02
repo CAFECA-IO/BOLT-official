@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useTranslation } from "next-i18next";
 import myStyles from "@/styles/about.module.css";
 
@@ -12,7 +12,7 @@ function UseCaseItems({ title, description, image }: IUsecaseParams) {
   const { t } = useTranslation("common");
 
   const useDescrip = description;
-  const useImg = t(image); //image .svg
+  const useImg = t(image);
 
   const useDescripList = useDescrip.map((v) => {
     return <p key={v}>{t(v)}</p>;
@@ -25,7 +25,7 @@ function UseCaseItems({ title, description, image }: IUsecaseParams) {
         {useDescripList}
       </div>
       <div className={myStyles.useitem_imgbox}>
-        <Image src={useImg} alt={title} width={400} height={400} />
+        <Image src={useImg} alt={title} layout="fill" objectFit="contain" />
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ function UseCaseList() {
   const useList = useData.map((v) => {
     return (
       <UseCaseItems
-        key={v.title}
+        key={v.id}
         title={v.title}
         description={v.description}
         image={v.image}

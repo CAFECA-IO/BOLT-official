@@ -49,10 +49,7 @@ export default function Home() {
           </div>
           <div id="safe" className={myStyles.main_block3}>
             <h1>{t("main.block3.title")}</h1>
-            <div
-              style={{ height: "775px", width: "624px" }}
-              ref={animContainer}
-            ></div>
+            <div className={myStyles.animSafe} ref={animContainer}></div>
           </div>
         </div>
 

@@ -1,5 +1,5 @@
 .about_container {
-  padding-top: 6rem;
+  padding: 6rem 0 1rem 0;
   display: flex;
   flex-direction: column;
   background-color: #f8fafa;
@@ -19,6 +19,7 @@
 .about_block3 h1 {
   font: normal normal 36px/58px Noto Sans TC;
   color: #3a3b4d;
+  white-space: nowrap;
 }
 
 /* why bolt */
@@ -26,7 +27,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  animation: flip 1.5s ease-in-out 1 forwards;
 }
 
 .ticket {
@@ -41,6 +41,7 @@
 .ticket h3 {
   font: normal normal normal 28px/45px Noto Sans TC;
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 
 .ticket p {
@@ -78,8 +79,9 @@
 }
 
 .useitem_imgbox {
-  display: block;
-  padding: 1rem;
+  position: relative;
+  width: 400px;
+  height: 400px;
 }
 
 /* news */
@@ -113,9 +115,9 @@
 }
 
 .newsitem_imgbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 320px;
+  height: 240px;
 }
 
 .newsitem_textbox {
@@ -151,6 +153,76 @@
   -webkit-box-orient: vertical;
 }
 
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .about_container {
+    background: #f8fafa url("/img/mask_group2.png") no-repeat center 3rem;
+  }
+
+  .about_block1,
+  .about_block2,
+  .about_block3 {
+    padding: 1rem 1rem 5rem 1rem;
+  }
+
+  .about_block1 h1,
+  .about_block2 h1,
+  .about_block3 h1 {
+    font: normal normal 28px/58px Noto Sans TC;
+  }
+
+  .ticket {
+    padding: 3rem 1rem 3rem 1rem;
+  }
+
+  .ticket h3 {
+    font: normal normal normal 20px/45px Noto Sans TC;
+  }
+
+  .ticket p {
+    font: normal normal normal 12px/23px Noto Sans TC;
+  }
+
+  .useitem_imgbox {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .useitem_textbox h3 {
+    font: normal normal 20px/23px Noto Sans TC;
+  }
+
+  .useitem_textbox p {
+    font: normal normal normal 12px/23px Noto Sans TC;
+  }
+
+  .newsitem_ticket {
+    width: 80vw;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .newsitem_imgbox {
+    position: relative;
+    width: 260px;
+    height: 240px;
+  }
+
+  .newsitem_textbox h3 {
+    font: normal normal normal 20px/45px Noto Sans TC;
+  }
+
+  .newsitem_textbox p {
+    font: normal normal normal 12px/23px Noto Sans TC;
+  }
+
+  .newslist_link {
+    margin-top: 1.5rem;
+    font: normal normal 16px/26px Noto Sans TC;
+    letter-spacing: 0.08px;
+  }
+}
+
 /* 螢幕寬度小於 992px 時 */
 @media screen and (max-width: 992px) {
   .ticket_holder {
@@ -159,12 +231,16 @@
 
   .useitem_container {
     padding: 3rem 0 3rem 0;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .useitem_textbox {
     width: 100%;
-    margin-bottom: 3rem;
+    padding: 2rem;
+  }
+
+  .newslist_container {
+    padding: 2rem;
   }
 }
 
@@ -172,6 +248,7 @@
 @media screen and (min-width: 992.1px) {
   .ticket_holder {
     flex-direction: row;
+    animation: flip 1.5s ease-in-out 1 forwards;
   }
 
   .ticket {
@@ -179,7 +256,7 @@
   }
 
   .useitem_container {
-    padding: 5rem;
+    padding: 5rem 0 5rem 0;
   }
 
   .useitem_container:nth-child(odd) {
@@ -191,7 +268,7 @@
 
   .useitem_textbox {
     width: 50%;
-    padding: 3rem;
+    padding: 0 3rem 0 3rem;
   }
 }
 

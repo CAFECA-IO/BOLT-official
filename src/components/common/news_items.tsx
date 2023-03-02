@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import moment from "moment";
@@ -32,7 +32,7 @@ function NewsItems({
       <Link href="/news/[newsId]" as={newsLink}>
         <div className={styles.newsitem_ticket}>
           <div className={styles.newsitem_imgbox}>
-            <Image alt={title} src={newsImg} width={320} height={240} />
+            <Image alt={title} src={newsImg} layout="fill" objectFit="cover" />
           </div>
           <div className={styles.newsitem_textbox}>
             <h3>{t(title)}</h3>
