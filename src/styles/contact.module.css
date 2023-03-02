@@ -1,0 +1,106 @@
+/* contact form */
+.contact_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact_imgbox {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact_formPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact_formPart input,
+.contact_formPart textarea {
+  background-color: transparent;
+  width: 80%;
+  border: none;
+  color: #3a3b4d;
+  font: normal normal 15px/23px Noto Sans TC;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact_formPart input::placeholder,
+.contact_formPart textarea::placeholder {
+  text-align: left;
+  font: normal normal 18px/26px Noto Sans TC;
+  letter-spacing: 0.09px;
+  color: #3a3b4d;
+}
+
+.contact_formPart input:focus::placeholder,
+.contact_formPart textarea:focus::placeholder {
+  opacity: 0;
+}
+
+.contact_formPart input {
+  border-bottom: 1px solid #3a3b4d;
+  background-color: transparent;
+  height: 40px;
+}
+
+.contact_formPart textarea {
+  border: 1px solid #3a3b4d;
+}
+
+.contact_formPart button {
+  padding: 10px;
+  width: 120px;
+  background-color: #31d3f5;
+  border: 1px solid #31d3f5;
+  border-radius: 23px;
+  color: #3a3b4d;
+  font: normal normal 18px/26px Noto Sans TC;
+  letter-spacing: 0.09px;
+  transition: all 0.1s ease-in;
+}
+
+.contact_formPart button:hover {
+  background-color: transparent;
+  color: #31d3f5;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .contact_imgbox {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* 螢幕寬度小於 992px 時 */
+@media screen and (max-width: 992px) {
+  .contact_container {
+    flex-direction: column;
+    padding-top: 3rem;
+  }
+
+  .contact_formPart {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
+
+/* 螢幕寬度大於 992.1px 時 */
+@media screen and (min-width: 992.1px) {
+  .contact_container {
+    flex-direction: row;
+    padding: 3rem;
+  }
+
+  .contact_formPart {
+    width: 50%;
+  }
+}
