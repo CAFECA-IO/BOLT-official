@@ -1,13 +1,17 @@
 .nav_main_container {
-  background-color: #3a3b4d;
   width: 100vw;
   display: flex;
   font: normal normal 18px/26px Noto Sans TC;
   font-size: medium;
-  padding: 1rem 5rem 1rem 5rem;
   position: fixed;
   border-bottom: 0.5px solid #f8fafa;
   z-index: 100;
+}
+
+.nav_logo {
+  background: url("/img/bolt_logo_main.svg") no-repeat center top / cover;
+  width: 160px;
+  height: 45px;
 }
 
 .nav_list_container {
@@ -20,21 +24,12 @@
 .nav_list_container ul {
   list-style: none;
   display: inline-flex;
-
   align-items: center;
-}
-
-.leftList li {
-  padding: 1.5rem;
-}
-
-.rightList li {
-  padding: 0.75rem;
 }
 
 .menu_btn {
   position: absolute;
-  top: 1.75rem;
+  top: 1.5rem;
   right: 5rem;
   width: 50px;
   height: 30px;
@@ -45,106 +40,196 @@
   cursor: pointer;
 }
 
-/* Language */
-.lang_icon_box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.blockchain_btn {
+  padding: 10px 20px 10px 20px;
+  border-radius: 5rem;
+  border: 1px solid #31d3f5;
+
+  color: #3a3b4d;
+  background-color: #31d3f5;
+  transition: all 0.1s ease-in;
 }
 
+.blockchain_btn:hover {
+  background-color: transparent;
+  color: #31d3f5;
+}
+
+/* Language */
 .langmenu_open,
 .langmenu_close {
   position: absolute;
-  color: black;
+  color: #3a3b4d;
   padding-top: 10px;
   transition: all 0.2s ease-in-out;
 }
 
-.langmenu_open {
-  visibility: visible;
-  opacity: 1;
-}
-.langmenu_close {
-  visibility: hidden;
-  opacity: 0;
-}
-
 .lang_dropmenu {
-  width: 150px;
-  background-color: #f2f2f2;
+  display: flex;
   flex-direction: column;
-  text-align: left;
-  border-radius: 0.25rem;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
 }
 
 .lang_dropmenu li {
-  padding: 10px;
-  width: 95%;
-  border-bottom: 0.5px outset;
+  padding: 1.25rem;
+}
+
+.lang_backBtn {
+  position: absolute;
+  top: 3rem;
+  left: 4rem;
+  width: 17px;
+  height: 17px;
+  border-right: 4px solid #3a3b4d;
+  border-bottom: 4px solid #3a3b4d;
+  border-radius: 2px;
+  transform: rotate(135deg);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 /* 螢幕寬度小於 768px 時 */
 @media screen and (max-width: 768px) {
-  .nav_main_container {
-    padding: 1rem 2rem 1rem 2rem;
-  }
   .menu_btn {
+    top: 1rem;
     right: 2rem;
+  }
+  .nav_logoArea {
+    height: 60px;
+    padding: 1.5rem;
+  }
+
+  .nav_logo {
+    width: 88px;
+    height: 25px;
+  }
+
+  /* Language */
+  .lang_dropmenu {
+    padding-top: 2rem;
+  }
+
+  .lang_backBtn {
+    top: 1.5rem;
+    left: 2rem;
   }
 }
 
 /* 螢幕寬度小於 992px 時 */
 @media screen and (max-width: 992px) {
   .nav_main_container {
+    background-color: #ffffff;
     flex-direction: column;
     overflow: hidden;
+    box-shadow: 0px 3px 12px #00000029;
+  }
+
+  .nav_logoArea {
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    background-color: #3a3b4d;
+    width: 100vw;
+    display: flex;
+    align-items: center;
   }
 
   .menu_btn_burger,
   .menu_btn_cross {
     width: 35px;
-    height: 2px;
+    height: 4px;
     background-color: #f2f2f2;
     border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in;
   }
   .menu_btn_cross:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 10px);
+    transform: rotate(45deg) translate(8px, 10px);
+    width: 37px;
   }
   .menu_btn_cross:nth-child(2) {
     transform: scale(0.1);
   }
   .menu_btn_cross:nth-child(3) {
-    transform: rotate(-45deg) translate(10px, -10px);
+    transform: rotate(-45deg) translate(8px, -10px);
+    width: 37px;
   }
 
   .nav_list_container span {
-    background-color: #f2f2f2;
-    height: 1px;
-    width: 90vw;
+    display: none;
   }
 
   .nav_list_container,
   .nav_list_container ul {
     flex-direction: column;
+    letter-spacing: 0.09px;
+    color: #3a3b4d;
   }
 
   .closeMenu {
     max-height: 0;
   }
   .openMenu {
-    max-height: 700px;
+    max-height: 1000px;
+  }
+
+  .rightList {
+    padding-bottom: 1.5rem;
+  }
+
+  .leftList li,
+  .rightList li {
+    padding: 1.5rem;
+  }
+
+  /* Language */
+  .lang_icon_box {
+    display: none;
+  }
+
+  .lang_text_open,
+  .lang_text_close {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .lang_text_open {
+    transform: translateY(-210px);
+    color: #c7c7c7;
+  }
+
+  .langmenu_open,
+  .langmenu_close {
+    top: 4.5rem;
+    left: 0;
+  }
+
+  .langmenu_open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .langmenu_close {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .lang_dropmenu {
+    padding-top: 3rem;
   }
 }
 
 /* 螢幕寬度大於 992.1px 時 */
 @media screen and (min-width: 992.1px) {
   .nav_main_container {
+    padding: 1rem 5rem 1rem 5rem;
+    background-color: #3a3b4d;
     height: 80px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     transition: all 0.3s ease-in-out;
   }
 
@@ -158,18 +243,53 @@
     display: none;
   }
 
-  .blockchain_btn {
-    padding: 10px 20px 10px 20px;
-    border-radius: 5rem;
-    border: 1px solid #31d3f5;
-
-    color: #3a3b4d;
-    background-color: #31d3f5;
-    transition: all 0.1s ease-in;
+  .leftList li {
+    padding: 1.5rem;
   }
 
-  .blockchain_btn:hover {
-    background-color: transparent;
-    color: #31d3f5;
+  .rightList li {
+    padding: 0.75rem;
+  }
+
+  /* Language */
+  .lang_icon_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .lang_text_open,
+  .lang_text_close,
+  .lang_backBtn {
+    display: none;
+  }
+
+  .langmenu_open,
+  .langmenu_close {
+    padding-top: 10px;
+  }
+
+  .langmenu_open {
+    visibility: visible;
+    opacity: 1;
+  }
+  .langmenu_close {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .lang_dropmenu {
+    width: 150px;
+    background-color: #f2f2f2;
+    text-align: left;
+    border-radius: 0.25rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .lang_dropmenu li {
+    padding: 10px;
+    width: 95%;
+    border-bottom: 0.5px outset;
   }
 }

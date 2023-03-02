@@ -1,27 +1,31 @@
 import NewsItems from "./news_items";
-import { getAllNews } from "@/interfaces/news_detail";
+import { INewsDetail } from "@/interfaces/news_detail";
 
-function NewsList(props: { styles: { [key: string]: string }; max: number }) {
-  const newsData = getAllNews();
+function NewsList(props: {
+  newsData: INewsDetail[];
+  styles: { [key: string]: string };
+}) {
+  const { newsData, styles } = props;
 
-  const { styles, max } = props;
-  if (max > 6) {
-    newsData.splice(4);
-  }
-
-  const newsList = newsData.map((v) => {
-    return (
-      <NewsItems
-        key={v.id}
-        id={v.id}
-        title={v.title}
-        date={v.date}
-        thumbnail={v.thumbnail}
-        contents={v.contents}
-        styles={styles}
-      />
-    );
-  });
+  const newsList = newsData ? (
+    newsData.map((v) => {
+      return (
+        <NewsItems
+          key={v.id}
+          id={v.id}
+          title={v.title}
+          timestamp={v.timestamp}
+          thumbnail={v.thumbnail}
+          contents={v.contents}
+          styles={styles}
+        />
+      );
+    })
+  ) : (
+    <div>
+      <h1>無法載入最新消息，請稍後再試</h1>
+    </div>
+  );
 
   return <div className={styles.newslist_container}>{newsList}</div>;
 }

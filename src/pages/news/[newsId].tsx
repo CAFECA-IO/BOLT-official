@@ -1,35 +1,53 @@
-import useSWR from "swr";
+//import useSWR from "swr";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import myStyles from "@/styles/news.module.css";
-import NewsBody from "@/components/news/newsBody";
-import SeeMoreList from "@/components/news/seeMore_list";
+import NewsBody from "@/components/news/news_body";
+import SeeMoreList from "@/components/news/see_more_list";
 import { INewsDetail } from "@/interfaces/news_detail";
 
-const fetcher = (url: string, id: string) => {
-  return fetch(`/api${url}`).then((res) => res.json());
-};
+/* 
+const fetcher = async (url: string) => {
+  const res = await fetch(`/api${url}`);
+  return await res.json();
+}; */
 
 function NewsDetailPage() {
   const router = useRouter();
   const { newsId } = router.query;
 
-  const { data: news } = useSWR<INewsDetail>(
+  const [loadedNews, setLoadedNews] = useState<INewsDetail>();
+  /* 
+  const { data: news } = useSWR<INewsDetail[]>(
     newsId ? `/news/${newsId}` : "null",
     fetcher
-  );
+  ); */
 
-  const newsBodyArea = !news ? (
-    <div style={{ padding: "10rem", color: "white" }}>loading...</div>
-  ) : (
+  useEffect(() => {
+    fetch(`/api/news/${newsId}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setLoadedNews(data);
+      })
+      .catch((e) => {
+        throw e; // ++ ToDo: 導入錯誤頁面
+      });
+  }, []);
+
+  const newsBodyArea = loadedNews ? (
     <NewsBody
-      id={news.id}
-      title={news.title}
-      date={news.date}
+      id={loadedNews.id}
+      title={loadedNews.title}
+      timestamp={loadedNews.timestamp}
       thumbnail=""
-      image={news.image}
-      contents={news.contents}
+      image={loadedNews.image}
+      contents={loadedNews.contents}
     />
+  ) : (
+    <div style={{ padding: "10rem", color: "white" }}>loading...</div>
   );
 
   return (
@@ -44,8 +62,24 @@ function NewsDetailPage() {
 export default NewsDetailPage;
 
 export const getStaticPaths = async () => {
+  /* ToDo:React Hook useEffect has a missing dependency: 'newsId'. Either include it or remove the dependency array. 
+  const res = await fetch(new URL("/api/news", baseUrl));
+  const news: INewsDetail[] = await res.json();
+
+  const paths = news.map((v) => ({
+    params: { newsId: v.id },
+  })); */
+
   return {
-    paths: [{ params: { newsId: "" } }],
+    paths: [
+      { params: { newsId: "n001" } },
+      { params: { newsId: "n002" } },
+      { params: { newsId: "n003" } },
+      { params: { newsId: "n004" } },
+      { params: { newsId: "n005" } },
+      { params: { newsId: "n006" } },
+      { params: { newsId: "n007" } },
+    ],
     fallback: "blocking",
   };
 };

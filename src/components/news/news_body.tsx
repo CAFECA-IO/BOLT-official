@@ -1,11 +1,16 @@
 import Image from "next/legacy/image";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 import { useTranslation } from "next-i18next";
+import moment from "moment";
 import myStyles from "@/styles/news.module.css";
 import { INewsDetail } from "../../interfaces/news_detail";
 
-function NewsBody({ title, date, image, contents }: INewsDetail) {
+function NewsBody({ title, timestamp, image, contents }: INewsDetail) {
   const { t } = useTranslation("common");
+
+  const localeDate = moment(timestamp).format("YYYY.MM.DD");
+  const contentLines = contents.join("");
 
   return (
     <div className={myStyles.news_body_container}>
@@ -20,9 +25,10 @@ function NewsBody({ title, date, image, contents }: INewsDetail) {
       </div>
       <div className={myStyles.news_body_textbox}>
         <h1>{title}</h1>
-        <time>{date}</time>
+        <time>{localeDate}</time>
         <div className={myStyles.news_contents}>
-          <p>{contents}</p>
+          {/* <ReactMarkdown children={contentLines} /> ToDo: react/no-children-prop */}
+          <p>{contentLines}</p>
         </div>
       </div>
       <Link href="/news" className={myStyles.goBackBtn}>

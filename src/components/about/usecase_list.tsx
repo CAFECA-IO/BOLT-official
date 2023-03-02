@@ -1,6 +1,6 @@
 import myStyles from "@/styles/about.module.css";
 import UseCaseItems from "./usecase_items";
-import { getUseCaseData } from "../../../contents";
+import { getUseCaseData } from "@/constants/config";
 
 function UseCaseList() {
   const useData = getUseCaseData();
@@ -8,7 +8,7 @@ function UseCaseList() {
   const useList = useData.map((v) => {
     return (
       <UseCaseItems
-        key={v.title}
+        key={v.id}
         title={v.title}
         description={v.description}
         image={v.image}

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import myStyles from "@/styles/footer.module.css";
-//import { getPageIndex } from "../../../contents";
+//import { getPageIndex } from "@/constants/config";
 
 function Footer() {
   const { t } = useTranslation("common");
@@ -22,13 +22,13 @@ function Footer() {
     <div className={myStyles.footer_link_list}>
       <div className={myStyles.footer_link_item}>
         <h4>{t("nav.about")}</h4>
-        <Link href="/about_bolt#whyBolt" scroll={false}>
+        <Link href="/about_bolt#whyBolt">
           <p>{t("about.whyBolt.title")}</p>
         </Link>
-        <Link href="/about_bolt#useCase" scroll={false}>
+        <Link href="/about_bolt#useCase">
           <p>{t("about.useCase.title")}</p>
         </Link>
-        <Link href="/about_bolt#news" scroll={false}>
+        <Link href="/about_bolt#news">
           <p>{t("about.news.title")}</p>
         </Link>
       </div>
@@ -48,21 +48,21 @@ function Footer() {
 
       <div className={myStyles.footer_link_item}>
         <h4>{t("nav.faq")}</h4>
-        <Link href="/faq#" scroll={false}>
+        <Link href="/faq#topics" scroll={false}>
           <p>{t("FAQ.title")}</p>
         </Link>
       </div>
 
       <div className={myStyles.footer_link_item}>
         <h4>{t("nav.contactUs")}</h4>
-        <Link href="/#contact_us">
+        <Link href="/#contact_us" scroll={false}>
           <p>{t("contactForm.title")}</p>
         </Link>
       </div>
 
       <div className={myStyles.footer_link_item}>
         <h4>{t("nav.privacy")}</h4>
-        <Link href="/privacy_policy">
+        <Link href="/privacy_policy#">
           <p>{t("privacy.title")}</p>
         </Link>
       </div>

@@ -1,6 +1,6 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useTranslation } from "next-i18next";
-import myStyles from "@/styles/Home.module.css";
+import myStyles from "@/styles/contact.module.css";
 
 function ContactUsForm() {
   const { t } = useTranslation("common");
@@ -8,12 +8,7 @@ function ContactUsForm() {
   return (
     <div className={myStyles.contact_container}>
       <div className={myStyles.contact_imgbox}>
-        <Image
-          alt="contact_us"
-          src="/img/contact.svg"
-          width={400}
-          height={400}
-        />
+        <Image alt="contact_us" src="/img/contact.svg" layout="fill" />
       </div>
       <form className={myStyles.contact_formPart}>
         <input
@@ -36,7 +31,7 @@ function ContactUsForm() {
         ></input>
         <textarea
           id="message"
-          rows={5}
+          rows={7}
           wrap="soft"
           placeholder={`${t("contactForm.message")}`}
           required

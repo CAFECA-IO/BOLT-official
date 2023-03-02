@@ -1,17 +1,22 @@
 .tech_main_container {
+  padding-top: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f8fafa url("/img/main_bg.svg") no-repeat center top/ cover;
+  background: #f8fafa url("/img/mask_group2@2x.png") no-repeat top left;
+}
+
+.tech_main_container::after {
+  content: "";
+  width: 100vw;
+  height: 160px;
+  background: url("/img/mask_group2@2x.png") no-repeat;
+  transform: scale(-1);
 }
 
 .tech_main_container h1 {
   font: normal normal 36px/58px Noto Sans TC;
   color: #3a3b4d;
-}
-
-.tech_contents_container {
-  padding-top: 3rem;
 }
 
 /* technology items */
@@ -22,9 +27,9 @@
 }
 
 .tech_item_imgbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  width: 400px;
+  height: 400px;
 }
 
 .tech_item_textbox {
@@ -45,28 +50,66 @@
   font: normal normal normal 14px/23px Noto Sans TC;
 }
 
-/* 螢幕寬度小於 992px 時 */
-@media screen and (max-width: 992px) {
+/* Mobile */
+@media screen and (max-width: 768px) {
   .tech_main_container {
-    padding: 10rem 0 6rem 0;
+    background: #f8fafa url("/img/mask_group2.png") no-repeat center 3rem;
+  }
+  .tech_main_container h1 {
+    font: normal normal 28px/58px Noto Sans TC;
   }
 
+  .tech_item_imgbox {
+    width: 300px;
+    height: 300px;
+    margin: 4rem;
+  }
+
+  .tech_item_textbox {
+    padding: 4rem 2rem 4rem 2rem;
+  }
+
+  .tech_item_textbox h4 {
+    font: normal normal 20px/23px Noto Sans TC;
+  }
+
+  .tech_item_textbox p {
+    margin-top: 2rem;
+    font: normal normal normal 12px/23px Noto Sans TC;
+  }
+
+  .tech_main_container::after {
+    background: url("/img/mask_group2.png") no-repeat;
+  }
+}
+
+/* 螢幕寬度小於 992px 時 */
+@media screen and (max-width: 992px) {
   .tech_item_container {
     flex-direction: column;
     align-items: center;
     justify-content: stretch;
   }
+
+  .tech_contents_container {
+    width: 100vw;
+  }
+
+  .tech_item_textbox {
+    height: 400px;
+  }
 }
 
 /* 螢幕寬度大於 992.1px 時 */
 @media screen and (min-width: 992.1px) {
-  .tech_main_container {
-    padding: 10rem 10rem 6rem 10rem;
-  }
-
   .tech_item_container:nth-child(odd) {
     flex-direction: row;
     height: 400px;
+  }
+
+  .tech_contents_container {
+    width: 80vw;
+    padding-top: 3rem;
   }
 
   .tech_item_container:nth-child(even) {

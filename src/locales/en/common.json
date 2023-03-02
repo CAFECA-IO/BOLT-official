@@ -5,7 +5,8 @@
     "faq": "FAQ",
     "blockchain": "區塊鏈瀏覽器",
     "contactUs": "Contact Us",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "language": "Language (EN)"
   },
   "main": {
     "block1": {
@@ -97,6 +98,7 @@
   },
   "news": {
     "title": "News",
+    "seeMoreBtn": "See More",
     "seeMore": "See More",
     "goBack": "Go Back"
   },
@@ -110,10 +112,17 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "update": "Update as of 2023-2-22",
+    "update": "Update as of",
     "line1": "At BOLT, we take your privacy seriously and take measures to provide all visitors and users to our web site with a safe and secure environment. If you have any questions about this Policy, please contact us via our website.",
+    "gather1": "個人資料的蒐集、處理及利用方式",
+    "gather2": "當您蒞臨本網站或參與本網站活動時，我們將視活動性質請您提供必要的個人資料，並在該特定目的範圍內處理及利用您的個人資料。",
+    "gather3": "本網站蒐集足以識別使用者身分的個人資料、消費與交易資料，或日後經您同意而提供之其他個人資料，都僅供本網站於其內部、依照蒐集之目的進行處理和利用、或為完成提供服務或履行合約義務之必要、或依照相關法令規定或有權政府機關之命令或要求，否則 本網站不會將足以識別使用者身分的個人資料提供給第三人（包括境內及境外）、或移作蒐集目的以外之使用。",
+    "protect1": "資料之保護",
+    "protect2": "本網站主機均設有防火牆、防毒系統等相關的各項資訊安全設備及必要的安全防護措施，加以保護網站及您的個人資料採用嚴格的保護措施，只由經過授權的人員才能接觸您的個人資料，相關處理人員皆簽有保密合約，如有違反保密義務者，將會受到相關的法律處分。",
+    "protect3": "如因業務需要有必要委託本網站相關單位提供服務時，本網站亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。",
     "cookie1": "Cookies ",
     "cookie2": "BOLT may set and access our Cookies on your computer.  Cookies are used to provide our system with the basic information to provide the services you are requesting.  Cookies can be cleared at any time from your internet browser settings. ",
+    "cookie3": "若您不願接受Cookie的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕Cookie的寫入，但可能會導至網站某些功能無法正常執行。",
     "third1": "Third Parties",
     "third2": "本網站絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關，但有法律依據或合約義務者，不在此限。前項但書之情形包括不限於：",
     "third3": "- 經由您書面同意。",
