@@ -1,9 +1,10 @@
 .faq_main_container {
+  padding: 10rem 1rem 6rem 1rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f8fafa url("/img/main_bg.svg") no-repeat center top/ cover;
+  background: #f8fafa url("/img/mask_group2@2x.png") no-repeat top left;
 }
 
 .faq_main_container h1 {
@@ -12,7 +13,7 @@
 }
 
 .faq_items_container {
-  width: 100%;
+  width: 80vw;
   margin-top: 4rem;
   padding: 1rem 1.5rem 1rem 1.5rem;
   background: #ffffff;
@@ -25,6 +26,10 @@
   padding: 1rem;
   color: #3a3b4d;
   cursor: pointer;
+}
+
+.faq_block h4 {
+  font: normal normal normal 28px/45px Noto Sans TC;
 }
 
 .faq_block:not(:last-child) {
@@ -73,23 +78,53 @@
   height: 0;
 }
 
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .faq_main_container {
+    padding: 6rem 0 6rem 0;
+    min-height: auto;
+    background: #f8fafa url("/img/mask_group2.png") no-repeat center 3rem;
+  }
+
+  .faq_main_container h1 {
+    font: normal normal 28px/78px Noto Sans TC;
+  }
+
+  .faq_items_container {
+    width: 90vw;
+    margin-top: 2rem;
+  }
+
+  .faq_block {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+
+  .faq_block h4 {
+    font: normal normal normal 16px/23px Noto Sans TC;
+  }
+
+  .hideAnswer p,
+  .showAnswer p {
+    padding: 2rem 0 0 0;
+  }
+
+  .faq_showAns h4::after,
+  .faq_hideAns h4::after {
+    margin-top: 5px;
+    width: 10px;
+    height: 10px;
+    border-right: 3px solid #3a3b4d;
+    border-bottom: 3px solid #3a3b4d;
+    border-radius: 2px;
+  }
+}
+
 /* 螢幕寬度小於 992px 時 */
 @media screen and (max-width: 992px) {
-  .faq_main_container {
-    padding: 10rem 1rem 6rem 1rem;
-  }
 }
 
 /* 螢幕寬度大於 992.1px 時 */
 @media screen and (min-width: 992.1px) {
-  .faq_main_container {
-    padding: 10rem 10rem 6rem 10rem;
-  }
-
-  .faq_block h4 {
-    font: normal normal normal 28px/45px Noto Sans TC;
-  }
-
   .faq_showAns h4::after,
   .faq_hideAns h4::after {
     margin-top: 10px;
