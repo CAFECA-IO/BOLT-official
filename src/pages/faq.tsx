@@ -33,7 +33,7 @@ function FAQPage() {
   });
 
   return (
-    <div className={myStyles.faq_main_container}>
+    <div id="topics" className={myStyles.faq_main_container}>
       <h1>{t("FAQ.title")}</h1>
       <div className={myStyles.faq_items_container}>{faqList}</div>
     </div>
