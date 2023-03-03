@@ -1,13 +1,12 @@
-import { Dispatch, SetStateAction, useState, useEffect } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 import myStyles from "@/styles/news.module.css";
 
 interface IPagination {
   currentPage: number;
-  setCurrentPage: Dispatch<SetStateAction<number>>;
+  paginationHandler: (page: Number) => void;
 }
 
-function Pagination({ currentPage, setCurrentPage }: IPagination) {
+function Pagination({ currentPage, paginationHandler }: IPagination) {
   const [pages, setPages] = useState<Number[]>([]);
 
   useEffect(() => {
@@ -25,21 +24,17 @@ function Pagination({ currentPage, setCurrentPage }: IPagination) {
 
   const paging = pages.map((i) => {
     return (
-      <Link
+      <button
         key={Number(i)}
-        href={{ pathname: "/news", query: { page: `${i}` } }}
-        onClick={() => setCurrentPage(Number(i))}
+        style={
+          i === currentPage
+            ? { backgroundColor: "#31d3f5", color: "#ffffff" }
+            : {}
+        }
+        onClick={() => paginationHandler(i)}
       >
-        <button
-          style={
-            i === currentPage
-              ? { backgroundColor: "#31d3f5", color: "#ffffff" }
-              : {}
-          }
-        >
-          {Number(i)}
-        </button>
-      </Link>
+        {Number(i)}
+      </button>
     );
   });
 
@@ -47,24 +42,20 @@ function Pagination({ currentPage, setCurrentPage }: IPagination) {
     currentPage === pages[0] ? (
       <></>
     ) : (
-      <Link href={`/news?page=${currentPage - 1}`}>
-        <label
-          className={myStyles.front}
-          onClick={() => setCurrentPage(currentPage - 1)}
-        ></label>
-      </Link>
+      <label
+        className={myStyles.front}
+        onClick={() => paginationHandler(currentPage - 1)}
+      ></label>
     );
 
   const nextArrow =
     currentPage === pages[pages.length - 1] ? (
       <></>
     ) : (
-      <Link href={`/news?page=${currentPage + 1}`}>
-        <label
-          className={myStyles.next}
-          onClick={() => setCurrentPage(currentPage + 1)}
-        ></label>
-      </Link>
+      <label
+        className={myStyles.next}
+        onClick={() => paginationHandler(currentPage + 1)}
+      ></label>
     );
 
   return (

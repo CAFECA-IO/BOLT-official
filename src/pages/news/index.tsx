@@ -1,6 +1,5 @@
 import useSWR from "swr";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NewsList from "@/components/common/news_list";
@@ -19,30 +18,30 @@ function AllNewsPage() {
   const [loadedList, setLoadedList] = useState<INewsDetail[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const router = useRouter();
-  const { page } = router.query;
+  //const router = useRouter();
+  //const { page } = router.query;
 
   //const { data: news } = useSWR<INewsDetail[]>(`/news`, fetcher);
 
   useEffect(() => {
-    if (page) {
-      setCurrentPage(Number(page));
-    } else {
-      setCurrentPage(1);
-    }
-    fetch(`/api/news?page=${currentPage}`)
+    paginationHandler(1);
+  }, []);
+
+  function paginationHandler(page: Number) {
+    setCurrentPage(Number(page));
+
+    fetch(`/api/news?page=${page}`)
       .then((res) => {
-        console.log(currentPage);
+        console.log(res);
         return res.json();
       })
       .then((data) => {
-        //console.log(data);
         setLoadedList(data);
       })
       .catch((e) => {
         throw e; // ++ ToDo: 導入錯誤頁面
       });
-  }, []);
+  }
 
   if (!loadedList) {
     return <div>loading</div>;
@@ -54,7 +53,10 @@ function AllNewsPage() {
         <h1>{t("news.title")}</h1>
       </div>
       <NewsList newsData={loadedList} styles={myStyles} />
-      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <Pagination
+        currentPage={currentPage}
+        paginationHandler={paginationHandler}
+      />
     </div>
   );
 }
