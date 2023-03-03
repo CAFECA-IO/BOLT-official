@@ -54,7 +54,7 @@ function NewsDetailPage() {
     <div className={myStyles.news_detail_container}>
       {newsBodyArea}
 
-      <SeeMoreList />
+      <SeeMoreList currentNewsId={String(newsId)} />
     </div>
   );
 }

@@ -1,14 +1,16 @@
 import Link from "next/link";
 import moment from "moment";
+import { use, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import myStyles from "@/styles/news.module.css";
 import { getAllNews } from "@/interfaces/news_detail";
 
-function SeeMoreList() {
+function SeeMoreList(props: { currentNewsId: String }) {
   const { t } = useTranslation("common");
 
   const newsData = getAllNews();
   //ToDo: API
+  useEffect(() => {}, []);
 
   const seeMoreList = newsData.map((v) => {
     const newsLink = `/news/${v.id}`;

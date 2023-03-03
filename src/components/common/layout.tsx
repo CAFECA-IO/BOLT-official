@@ -1,11 +1,15 @@
 import MainNavbar from "./navbar";
 import Footer from "./footer";
 
-function Layout(props: any) {
+type Props = {
+  children: JSX.Element;
+};
+
+function Layout({ children }: Props) {
   return (
     <div>
       <MainNavbar />
-      <main>{props.children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );

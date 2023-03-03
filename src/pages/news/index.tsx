@@ -5,7 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NewsList from "@/components/common/news_list";
 import myStyles from "@/styles/news.module.css";
 import { INewsDetail } from "@/interfaces/news_detail";
-import Pagination from "./pagination";
+import Pagination from "../../components/common/pagination";
 /* 
 const fetcher = async (url: string) => {
   const res = await fetch(`/api${url}`);
