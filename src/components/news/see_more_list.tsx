@@ -1,16 +1,30 @@
 import Link from "next/link";
 import moment from "moment";
-import { use, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import myStyles from "@/styles/news.module.css";
+import { INewsDetail } from "@/interfaces/news_detail";
 import { getAllNews } from "@/interfaces/news_detail";
 
 function SeeMoreList(props: { currentNewsId: String }) {
   const { t } = useTranslation("common");
 
+  const [newsList, setNewsList] = useState<INewsDetail[]>([]);
+
   const newsData = getAllNews();
   //ToDo: API
-  useEffect(() => {}, []);
+  /*   useEffect(() => {
+    fetch(`/api/news/see_more_list?newsId=${props.currentNewsId}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setNewsList(data);
+      })
+      .catch((e) => {
+        throw e; // ++ ToDo: 導入錯誤頁面
+      });
+  }, []); */
 
   const seeMoreList = newsData.map((v) => {
     const newsLink = `/news/${v.id}`;
