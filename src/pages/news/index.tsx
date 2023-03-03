@@ -33,7 +33,7 @@ function AllNewsPage() {
         };
         return data;
       });
-    const page = Number(querys.find((v) => v.key === "page")?.value || 1);
+    const page = Number(querys?.find((v) => v.key === "page")?.value || 1);
     paginationHandler(page);
   }, []);
 
