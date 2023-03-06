@@ -67,12 +67,13 @@
 }
 
 .news_body_textbox time {
+  margin-top: 1rem;
   font: normal normal normal 14px/23px Barlow;
   text-align: center;
 }
 
 .news_body_textbox img {
-  width: 80vw;
+  max-width: 600px;
   display: block;
   margin: auto;
 }
@@ -292,13 +293,16 @@
   }
 
   .news_body_textbox time {
-    margin-top: 1rem;
     font: normal normal normal 12px/23px Barlow;
   }
 
   .news_body_textbox p {
     padding: 1rem 0 1rem 0;
     font: normal normal normal 12px/23px Barlow;
+  }
+
+  .news_body_textbox img {
+    max-width: 80vw;
   }
 
   .news_contents ol,
