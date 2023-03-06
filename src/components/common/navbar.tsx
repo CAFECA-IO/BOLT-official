@@ -12,6 +12,7 @@ function MainNavbar() {
   const navToggler = () => {
     setShowMenu(!showMenu);
   };
+
   const menuStyles = showMenu ? myStyles.openMenu : myStyles.closeMenu;
   const btnStyles = showMenu
     ? myStyles.menu_btn_cross
