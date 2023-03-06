@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f8fafa url("/img/main_bg.svg") no-repeat center top/ cover;
+  background: #f8fafa url("/img/mask_group2@2x.png") no-repeat left top;
   color: #3a3b4d;
 }
 
@@ -18,6 +18,7 @@
 }
 
 .privacy_contents_container h4 {
+  margin-top: 2rem;
   font: normal normal bold 14px/45px Noto Sans TC;
 }
 
@@ -28,4 +29,37 @@
 .privacy_contents_container h2,
 .privacy_contents_container p {
   font: normal normal normal 14px/45px Noto Sans TC;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .privacy_main_container {
+    background: #f8fafa url("/img/mask_group2.png") no-repeat center 3rem;
+    padding: 6rem 3rem 6rem 3rem;
+  }
+
+  .privacy_main_container h1 {
+    font: normal normal normal 28px/78px Noto Sans TC;
+  }
+
+  .privacy_contents_container {
+    padding-top: 1rem;
+  }
+
+  .privacy_contents_container h4 {
+    font: normal normal bold 12px/45px Noto Sans TC;
+  }
+
+  .privacy_contents_container h2,
+  .privacy_contents_container p {
+    font: normal normal normal 12px/45px Noto Sans TC;
+  }
+}
+
+/* 螢幕寬度小於 992px 時 */
+@media screen and (max-width: 992px) {
+}
+
+/* 螢幕寬度大於 992.1px 時 */
+@media screen and (min-width: 992.1px) {
 }

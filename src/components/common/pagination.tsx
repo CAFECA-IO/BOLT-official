@@ -3,7 +3,7 @@ import myStyles from "@/styles/news.module.css";
 
 interface IPagination {
   currentPage: number;
-  paginationHandler: (page: Number) => void;
+  paginationHandler: (page: number) => void;
 }
 
 function Pagination({ currentPage, paginationHandler }: IPagination) {
@@ -31,7 +31,7 @@ function Pagination({ currentPage, paginationHandler }: IPagination) {
             ? { backgroundColor: "#31d3f5", color: "#ffffff" }
             : {}
         }
-        onClick={() => paginationHandler(i)}
+        onClick={() => paginationHandler(Number(i))}
       >
         {Number(i)}
       </button>

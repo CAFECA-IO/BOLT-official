@@ -9,7 +9,8 @@ import { INewsDetail } from "../../interfaces/news_detail";
 function NewsBody({ title, timestamp, image, contents }: INewsDetail) {
   const { t } = useTranslation("common");
 
-  const localeDate = moment(timestamp).format("YYYY.MM.DD");
+  const localeDate =
+    timestamp !== 0 ? moment(timestamp).format("YYYY.MM.DD") : "";
   const contentLines = contents ? contents.join("") : "";
 
   return (
@@ -27,8 +28,8 @@ function NewsBody({ title, timestamp, image, contents }: INewsDetail) {
         <h1>{title}</h1>
         <time>{localeDate}</time>
         <div className={myStyles.news_contents}>
-          {/* <ReactMarkdown children={contentLines} /> ToDo: react/no-children-prop */}
-          <p>{contentLines}</p>
+          {/* eslint-disable-next-line */}
+          <ReactMarkdown key={title} children={contentLines} />
         </div>
       </div>
       <Link href="/news" className={myStyles.goBackBtn}>

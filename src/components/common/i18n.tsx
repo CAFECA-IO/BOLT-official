@@ -37,32 +37,17 @@ function I18n() {
 
         <ul className={myStyles.lang_dropmenu}>
           <li>
-            <Link
-              href={router}
-              onClick={clickHandler}
-              scroll={false}
-              locale="en"
-            >
+            <Link href={router} onClick={clickHandler} locale="en">
               English
             </Link>
           </li>
           <li>
-            <Link
-              href={router}
-              onClick={clickHandler}
-              scroll={false}
-              locale="zh-TW"
-            >
+            <Link href={router} onClick={clickHandler} locale="zh-TW">
               繁體中文
             </Link>
           </li>
           <li>
-            <Link
-              href={router}
-              onClick={clickHandler}
-              scroll={false}
-              locale="zh-CN"
-            >
+            <Link href={router} onClick={clickHandler} locale="zh-CN">
               简体中文
             </Link>
           </li>

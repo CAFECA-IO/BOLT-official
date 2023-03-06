@@ -12,6 +12,7 @@ function MainNavbar() {
   const navToggler = () => {
     setShowMenu(!showMenu);
   };
+
   const menuStyles = showMenu ? myStyles.openMenu : myStyles.closeMenu;
   const btnStyles = showMenu
     ? myStyles.menu_btn_cross
@@ -20,7 +21,7 @@ function MainNavbar() {
   return (
     <nav className={myStyles.nav_main_container}>
       <div className={myStyles.nav_logoArea}>
-        <Link href="/#">
+        <Link href="/#" onClick={navToggler}>
           <div className={myStyles.nav_logo}></div>
         </Link>
 

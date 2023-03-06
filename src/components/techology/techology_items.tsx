@@ -20,7 +20,7 @@ function TechnologyItems({
   return (
     <div id={anchor} className={myStyles.tech_item_container}>
       <div className={myStyles.tech_item_imgbox}>
-        <Image src={image} layout="fill" objectFit="contain" />
+        <Image src={image} alt={title} layout="fill" objectFit="contain" />
       </div>
       <div className={myStyles.tech_item_textbox}>
         <h4>{t(title)}</h4>

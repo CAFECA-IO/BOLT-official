@@ -4,7 +4,6 @@ import { NEWS_PER_PAGE } from "@/constants/config";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const allNews = dummyNewsData;
-  //const page = req.headers.page ? Number(req.headers.page) : 1;
   const page = req.query.page ? Number(req.query.page) : 1;
 
   const lastNewsIndex = page * NEWS_PER_PAGE;

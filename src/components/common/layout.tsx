@@ -7,11 +7,11 @@ type Props = {
 
 function Layout({ children }: Props) {
   return (
-    <div>
+    <>
       <MainNavbar />
       <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 }
 export default Layout;

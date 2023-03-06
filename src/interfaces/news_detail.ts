@@ -193,7 +193,3 @@ export const dummyNewsError: INewsDetail[] = [
     contents: [],
   },
 ];
-
-export function getAllNews() {
-  return dummyNewsData;
-}

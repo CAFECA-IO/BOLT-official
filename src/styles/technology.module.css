@@ -53,6 +53,7 @@
 /* Mobile */
 @media screen and (max-width: 768px) {
   .tech_main_container {
+    padding-top: 6rem;
     background: #f8fafa url("/img/mask_group2.png") no-repeat center 3rem;
   }
   .tech_main_container h1 {

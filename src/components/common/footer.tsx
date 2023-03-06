@@ -2,12 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import myStyles from "@/styles/footer.module.css";
-//import { getPageIndex } from "@/constants/config";
 
 function Footer() {
   const { t } = useTranslation("common");
   /* 
-  const pageData = getPageIndex();
 
   const pageIndexList = pageData.map((v) => {
     return (
