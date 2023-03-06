@@ -1,11 +1,12 @@
-import useSWR from "swr";
+//import useSWR from "swr";
 import { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import NewsList from "@/components/common/news_list";
-import myStyles from "@/styles/news.module.css";
 import { INewsDetail } from "@/interfaces/news_detail";
+import { getQuerys } from "@/lib/common";
+import NewsList from "@/components/common/news_list";
 import Pagination from "../../components/common/pagination";
+import myStyles from "@/styles/news.module.css";
 /* 
 const fetcher = async (url: string) => {
   const res = await fetch(`/api${url}`);
@@ -21,19 +22,7 @@ function AllNewsPage() {
   //const { data: news } = useSWR<INewsDetail[]>(`/news`, fetcher);
 
   useEffect(() => {
-    // 寫進 lib
-    const querys = location.search
-      ?.split("?")[1]
-      ?.split("&")
-      .map((v) => {
-        const tmp = v.split("=");
-        const data = {
-          key: tmp[0],
-          value: tmp[1],
-        };
-        return data;
-      });
-    const page = Number(querys?.find((v) => v.key === "page")?.value || 1);
+    const page = Number(getQuerys("page") || 1);
     paginationHandler(page);
   }, []);
 
