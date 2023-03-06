@@ -27,8 +27,10 @@ function NewsBody({ title, timestamp, image, contents }: INewsDetail) {
         <h1>{title}</h1>
         <time>{localeDate}</time>
         <div className={myStyles.news_contents}>
-          {/* <ReactMarkdown children={contentLines} /> ToDo: react/no-children-prop */}
-          <p>{contentLines}</p>
+          {/* eslint-disable-next-line */}
+          <ReactMarkdown key={title} children={contentLines} />
+
+          {/* <p>{contentLines}</p> */}
         </div>
       </div>
       <Link href="/news" className={myStyles.goBackBtn}>

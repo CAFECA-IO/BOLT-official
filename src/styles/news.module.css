@@ -5,12 +5,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background-color: #f8fafa;
   color: #3a3b4d;
 }
 
 .news_main_banner {
+  padding: 3rem;
   width: 100vw;
   height: 500px;
   background: url("/img/newsPage_banner.png") no-repeat top center / cover;
@@ -71,8 +71,14 @@
   text-align: center;
 }
 
+.news_body_textbox img {
+  width: 80vw;
+  display: block;
+  margin: auto;
+}
+
 .news_contents {
-  padding-top: 2rem;
+  padding: 2rem 0 4rem 0;
 }
 
 .news_contents h6 {
@@ -98,7 +104,7 @@
 
 .news_contents ol,
 .news_contents ul {
-  margin-left: 2rem;
+  margin: 0 0 1rem 2rem;
   font: normal normal normal 14px/23px Barlow;
 }
 
@@ -246,6 +252,129 @@
 
 .next {
   transform: rotate(-45deg);
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  /* all news */
+  .news_main_container {
+    padding: 3rem 0 6rem 0;
+  }
+
+  .news_main_banner {
+    height: 240px;
+    background: #f2f2f2 url("/img/newsPage_banner.png") no-repeat top left;
+    background-size: 300% auto;
+    align-items: end;
+  }
+
+  .news_main_banner h1 {
+    font: normal normal 28px/58px Noto Sans TC;
+  }
+
+  /* news detail */
+  .news_detail_container {
+    padding-top: 8rem;
+    background: linear-gradient(180deg, #3a3b4d 250px, #f8fafa 250px);
+  }
+
+  /* news body */
+  .news_body_imgbox {
+    height: 210px;
+  }
+
+  .news_body_textbox {
+    margin-top: 2rem;
+  }
+
+  .news_body_textbox h1 {
+    font: normal normal normal 28px/38px Noto Sans TC;
+  }
+
+  .news_body_textbox time {
+    margin-top: 1rem;
+    font: normal normal normal 12px/23px Barlow;
+  }
+
+  .news_body_textbox p {
+    padding: 1rem 0 1rem 0;
+    font: normal normal normal 12px/23px Barlow;
+  }
+
+  .news_contents ol,
+  .news_contents ul {
+    font: normal normal normal 12px/23px Barlow;
+  }
+
+  .goBackBtn button {
+    font: normal normal 16px/26px Noto Sans TC;
+    letter-spacing: 0.08px;
+  }
+
+  /* news list */
+  .newslist_container {
+    padding: 1rem;
+  }
+
+  /* news items */
+  .newsitem_ticket {
+    padding: 2rem;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .newsitem_textbox {
+    width: 100%;
+    margin-left: 0rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .newsitem_textbox h3 {
+    font: normal normal normal 20px/45px Noto Sans TC;
+  }
+
+  .newsitem_textbox time {
+    float: none;
+  }
+
+  .newsitem_contentbox {
+    flex-direction: column;
+  }
+
+  .newsitem_textbox time,
+  .newsitem_contentbox p {
+    font: normal normal normal 12px/23px Noto Sans TC;
+  }
+
+  .newsitem_contentbox p {
+    padding: 0;
+    -webkit-line-clamp: 6;
+  }
+
+  /* see more */
+  .seeMore_container {
+    padding: 2rem;
+  }
+
+  .seeMore_container h1 {
+    text-align: center;
+    font: normal normal 20px/58px Noto Sans TC;
+  }
+
+  .seeMore_list {
+    padding-top: 1rem;
+  }
+
+  .seeMore_items h2 {
+    padding-right: 1rem;
+    font: normal normal normal 14px/24px Noto Sans TC;
+  }
+
+  .seeMore_items time {
+    font: normal normal normal 12px/23px Noto Sans TC;
+  }
 }
 
 /* 螢幕寬度小於 992px 時 */

@@ -26,8 +26,8 @@ function AllNewsPage() {
     paginationHandler(page);
   }, []);
 
-  function paginationHandler(pageIndex: Number) {
-    setCurrentPage(Number(pageIndex));
+  function paginationHandler(pageIndex: number) {
+    setCurrentPage(pageIndex);
 
     fetch(`/api/news?page=${pageIndex}`)
       .then((res) => {

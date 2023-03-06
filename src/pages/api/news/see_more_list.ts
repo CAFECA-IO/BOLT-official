@@ -2,10 +2,15 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { dummyNewsData } from "@/interfaces/news_detail";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const newsId = req.query.newsId as string;
+  const allNews = dummyNewsData;
+  const newsId = req.query.newsId;
+  const newsIndex = Number(newsId?.slice(1));
 
-  const seeMoreList = dummyNewsData.slice();
-  //const news = dummyNewsData.find((news) => news.id === newsId) || null;
+  const newsList = allNews.slice(newsIndex - 2, newsIndex + 1);
+  const seeMoreList =
+    newsId === "n001"
+      ? allNews.slice(1, 2)
+      : newsList.filter((news) => !(news.id === newsId));
 
-  res.status(200).send(newsId);
+  res.status(200).send(seeMoreList);
 }

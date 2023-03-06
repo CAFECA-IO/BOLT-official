@@ -17,6 +17,9 @@ function NewsDetailPage() {
   const router = useRouter();
   const { newsId } = router.query;
 
+  const [currentNewsId, setCurrentNewsId] = useState(
+    String(newsId) || "nError"
+  );
   const [loadedNews, setLoadedNews] = useState<INewsDetail>();
   /* 
   const { data: news } = useSWR<INewsDetail[]>(
@@ -25,7 +28,13 @@ function NewsDetailPage() {
   ); */
 
   useEffect(() => {
-    fetch(`/api/news/${newsId}`)
+    newsDetailHandler(currentNewsId);
+  }, []);
+
+  function newsDetailHandler(id: string) {
+    setCurrentNewsId(id);
+
+    fetch(`/api/news/${id}`)
       .then((res) => {
         return res.json();
       })
@@ -35,7 +44,7 @@ function NewsDetailPage() {
       .catch((e) => {
         throw e; // ++ ToDo: 導入錯誤頁面
       });
-  }, []);
+  }
 
   const newsBodyArea = loadedNews ? (
     <NewsBody
@@ -43,7 +52,7 @@ function NewsDetailPage() {
       title={loadedNews.title}
       timestamp={loadedNews.timestamp}
       thumbnail=""
-      image={loadedNews.image}
+      image={loadedNews.image || "/img/black.jpg"}
       contents={loadedNews.contents}
     />
   ) : (
@@ -54,7 +63,10 @@ function NewsDetailPage() {
     <div className={myStyles.news_detail_container}>
       {newsBodyArea}
 
-      <SeeMoreList currentNewsId={String(newsId)} />
+      <SeeMoreList
+        currentNewsId={String(newsId)}
+        newsDetailHandler={newsDetailHandler}
+      />
     </div>
   );
 }

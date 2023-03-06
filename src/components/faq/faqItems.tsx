@@ -23,7 +23,7 @@ function FAQItems({
   const { t } = useTranslation("common");
 
   const clickHandler = () => {
-    if (showAnsIndex != id) {
+    if (showAnsIndex !== id) {
       setShowAnsIndex(id);
     } else {
       setShowAnsIndex("");
