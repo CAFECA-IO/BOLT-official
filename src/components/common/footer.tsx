@@ -22,13 +22,13 @@ function Footer() {
     <div className={myStyles.footer_link_list}>
       <div className={myStyles.footer_link_item}>
         <h4>{t("nav.about")}</h4>
-        <Link href="/about_bolt#whyBolt">
+        <Link href="/about_bolt#whyBolt" scroll={false}>
           <p>{t("about.whyBolt.title")}</p>
         </Link>
         <Link href="/about_bolt#useCase">
           <p>{t("about.useCase.title")}</p>
         </Link>
-        <Link href="/about_bolt#news">
+        <Link href="/news">
           <p>{t("about.news.title")}</p>
         </Link>
       </div>

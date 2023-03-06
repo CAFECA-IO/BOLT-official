@@ -1,12 +1,11 @@
 import useSWR from "swr";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NewsList from "@/components/common/news_list";
 import myStyles from "@/styles/news.module.css";
 import { INewsDetail } from "@/interfaces/news_detail";
-import Pagination from "./pagination";
+import Pagination from "../../components/common/pagination";
 /* 
 const fetcher = async (url: string) => {
   const res = await fetch(`/api${url}`);
@@ -19,30 +18,39 @@ function AllNewsPage() {
   const [loadedList, setLoadedList] = useState<INewsDetail[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const router = useRouter();
-  const { page } = router.query;
-
   //const { data: news } = useSWR<INewsDetail[]>(`/news`, fetcher);
 
   useEffect(() => {
-    if (page) {
-      setCurrentPage(Number(page));
-    } else {
-      setCurrentPage(1);
-    }
-    fetch(`/api/news?page=${currentPage}`)
+    // 寫進 lib
+    const querys = location.search
+      ?.split("?")[1]
+      ?.split("&")
+      .map((v) => {
+        const tmp = v.split("=");
+        const data = {
+          key: tmp[0],
+          value: tmp[1],
+        };
+        return data;
+      });
+    const page = Number(querys?.find((v) => v.key === "page")?.value || 1);
+    paginationHandler(page);
+  }, []);
+
+  function paginationHandler(pageIndex: Number) {
+    setCurrentPage(Number(pageIndex));
+
+    fetch(`/api/news?page=${pageIndex}`)
       .then((res) => {
-        console.log(currentPage);
         return res.json();
       })
       .then((data) => {
-        //console.log(data);
         setLoadedList(data);
       })
       .catch((e) => {
         throw e; // ++ ToDo: 導入錯誤頁面
       });
-  }, []);
+  }
 
   if (!loadedList) {
     return <div>loading</div>;
@@ -54,7 +62,10 @@ function AllNewsPage() {
         <h1>{t("news.title")}</h1>
       </div>
       <NewsList newsData={loadedList} styles={myStyles} />
-      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <Pagination
+        currentPage={currentPage}
+        paginationHandler={paginationHandler}
+      />
     </div>
   );
 }

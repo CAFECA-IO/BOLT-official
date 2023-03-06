@@ -183,6 +183,17 @@ export const dummyNewsData: INewsDetail[] = [
   },
 ];
 
+export const dummyNewsError: INewsDetail[] = [
+  {
+    id: "nError",
+    title: "找不到文章！",
+    timestamp: 0,
+    thumbnail: "",
+    image: "",
+    contents: [],
+  },
+];
+
 export function getAllNews() {
   return dummyNewsData;
 }

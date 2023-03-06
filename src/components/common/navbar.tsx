@@ -20,7 +20,7 @@ function MainNavbar() {
   return (
     <nav className={myStyles.nav_main_container}>
       <div className={myStyles.nav_logoArea}>
-        <Link href="/#" onClick={navToggler}>
+        <Link href="/#">
           <div className={myStyles.nav_logo}></div>
         </Link>
 

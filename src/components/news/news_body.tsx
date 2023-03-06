@@ -10,7 +10,7 @@ function NewsBody({ title, timestamp, image, contents }: INewsDetail) {
   const { t } = useTranslation("common");
 
   const localeDate = moment(timestamp).format("YYYY.MM.DD");
-  const contentLines = contents.join("");
+  const contentLines = contents ? contents.join("") : "";
 
   return (
     <div className={myStyles.news_body_container}>
