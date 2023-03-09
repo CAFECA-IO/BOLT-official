@@ -57,24 +57,46 @@ function BoltIntro() {
       path: "/animation/step03.json",
     });
 
+    //const [animFrameStep1,setAnimFrameStep1] = useState<number>()
+
     function animatebodymovin(duration: number) {
       const scrollPosition = window.scrollY;
-      const maxFrames = animStep1.totalFrames;
 
-      const frameStep1 = maxFrames * ((scrollPosition - 350) / duration);
+      const frameStep1 =
+        animStep1.totalFrames * ((scrollPosition - 350) / duration);
+
       const frameConne1 =
-        maxFrames * (((scrollPosition - 1200) / duration) * 2);
-      const frameStep2 = maxFrames * (((scrollPosition - 1600) / duration) * 2);
-      const frameConne2 =
-        maxFrames * (((scrollPosition - 2200) / duration) * 2);
-      const frameStep3 =
-        maxFrames * (((scrollPosition - 2600) / duration) * 1.5);
+        animConne1.totalFrames * (((scrollPosition - 1200) / duration) * 2);
 
-      animStep1.goToAndStop(frameStep1, true);
-      animConne1.goToAndStop(frameConne1, true);
-      animStep2.goToAndStop(frameStep2, true);
-      animConne2.goToAndStop(frameConne2, true);
-      animStep3.goToAndStop(frameStep3, true);
+      const frameStep2 =
+        animStep2.totalFrames * ((scrollPosition - 1600) / duration);
+
+      const frameConne2 =
+        animConne2.totalFrames * (((scrollPosition - 2200) / duration) * 2);
+
+      const frameStep3 =
+        animStep3.totalFrames * (((scrollPosition - 2600) / duration) * 1.5);
+
+      // play animation
+      if (scrollPosition > 350 && scrollPosition < 1300) {
+        animStep1.goToAndStop(frameStep1, true);
+      }
+
+      if (scrollPosition < 1700) {
+        animConne1.goToAndStop(frameConne1, true);
+      }
+
+      if (scrollPosition > 1600 && scrollPosition < 2300) {
+        animStep2.goToAndStop(frameStep2, true);
+      }
+
+      if (scrollPosition < 2700) {
+        animConne2.goToAndStop(frameConne2, true);
+      }
+
+      if (scrollPosition > 2600 && scrollPosition < 3600) {
+        animStep3.goToAndStop(frameStep3, true);
+      }
     }
     const onScroll = () => {
       animatebodymovin(animDuration);
