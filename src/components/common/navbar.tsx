@@ -59,7 +59,7 @@ function MainNavbar() {
           </li>
           <li>
             <Link
-              href=""
+              href="/coming_soon"
               className={myStyles.blockchain_btn}
               onClick={navToggler}
             >

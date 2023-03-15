@@ -160,8 +160,9 @@
   }
 }
 
-/* 404 */
-.not_found_container {
+/* 404 & coming soon */
+.not_found_container,
+.coming_soon_container {
   padding: 10rem 1rem 6rem 1rem;
   min-height: 100vh;
   display: flex;
@@ -170,12 +171,17 @@
   background: #f8fafa url("/img/mask_group2@2x.png") no-repeat top left;
 }
 
-.not_found_container h1 {
-  font: normal normal normal 36px/78px Noto Sans TC;
-  color: #3a3b4d;
+.coming_soon_container h1 {
+  opacity: 0;
+  text-align: center;
+  font: normal normal 92px/313px Futura;
+  letter-spacing: -2.3px;
+  animation: fadeIn 1s 5s ease-in-out 1 forwards;
 }
 
-.not_found_container button {
+.not_found_container button,
+.coming_soon_container button {
+  position: relative;
   margin-top: 4rem;
   padding: 10px;
   width: 120px;
@@ -189,9 +195,36 @@
   transition: all 0.1s ease-in;
 }
 
-.not_found_container button:hover {
+.coming_soon_container span {
+  margin: -3rem 0 3rem 0;
+  background-color: #31d3f5;
+  height: 10px;
+  animation: grow 1s 5s ease-in-out 1 forwards;
+}
+
+.coming_soon_container p {
+  opacity: 0;
+  margin-top: 1rem;
+  animation: fromBottomComingSoon 1s 5s ease-in-out 1 forwards;
+}
+
+.coming_soon_container button {
+  opacity: 0;
+  margin-top: 10rem;
+  animation: fromBottom 1s 5s ease-in-out 1 forwards;
+}
+
+.not_found_container button:hover,
+.coming_soon_container button:hover {
   background-color: transparent;
   color: #31d3f5;
+}
+
+.animComingSoon {
+  margin-top: 60px;
+  position: absolute;
+  width: 800px;
+  height: 200px;
 }
 
 /* 螢幕寬度小於 992px 時 */
@@ -228,13 +261,14 @@
     display: none;
   }
 
-  /* 404 */
+  /* 404 & coming soon */
   .animNotFound {
     width: 400px;
     height: 250px;
   }
 
-  .not_found_container button {
+  .not_found_container button,
+  .coming_soon_container button {
     font: normal normal 16px/26px Noto Sans TC;
     letter-spacing: 0.08px;
   }
@@ -270,7 +304,7 @@
     animation: fromRight 1s ease-out 1 forwards;
   }
 
-  /* 404 */
+  /* 404 & coming soon */
   .animNotFound {
     width: 800px;
     height: 500px;
@@ -320,5 +354,25 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 800px;
+  }
+}
+
+@keyframes fromBottomComingSoon {
+  from {
+    opacity: 0;
+    transform: translateY(7rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

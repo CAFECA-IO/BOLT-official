@@ -138,5 +138,10 @@
   "NOT_FOUND": {
     "TITLE": "Page Not Found",
     "BUTTON": "Go Back"
+  },
+  "COMING_SOON": {
+    "TITLE": "COMING SOON",
+    "DESCRIPTION": "Our Launch is Just Around the Corner - Stay Tuned!",
+    "BUTTON": "Go Back"
   }
 }

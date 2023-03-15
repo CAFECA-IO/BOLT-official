@@ -138,5 +138,10 @@
   "NOT_FOUND": {
     "TITLE": "您查找的頁面不存在",
     "BUTTON": "返回上頁"
+  },
+  "COMING_SOON": {
+    "TITLE": "COMING SOON",
+    "DESCRIPTION": "Our Launch is Just Around the Corner - Stay Tuned!",
+    "BUTTON": "返回上頁"
   }
 }

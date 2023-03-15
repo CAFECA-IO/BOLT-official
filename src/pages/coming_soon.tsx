@@ -1,12 +1,12 @@
 import { useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import lottie from "lottie-web";
-import animationData from "../../public/animation/404.json";
+import animationData from "../../public/animation/coming_soon.json";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import myStyles from "@/styles/Home.module.css";
 
-function NotFoundPage() {
+function ComingSoonPage() {
   const { t } = useTranslation("common");
 
   const router = useRouter();
@@ -19,7 +19,7 @@ function NotFoundPage() {
     const anim = lottie.loadAnimation({
       container: animContainer.current!,
       renderer: "svg",
-      loop: true,
+      loop: false,
       autoplay: true,
       animationData,
     });
@@ -28,15 +28,18 @@ function NotFoundPage() {
   }, []);
 
   return (
-    <div className={myStyles.not_found_container}>
-      <div className={myStyles.animNotFound} ref={animContainer}></div>
+    <div className={myStyles.coming_soon_container}>
+      <h1>{t("COMING_SOON.TITLE")}</h1>
+      <span></span>
+      <p>{t("COMING_SOON.DESCRIPTION")}</p>
+      <button onClick={clickHandler}>{t("COMING_SOON.BUTTON")}</button>
 
-      <button onClick={clickHandler}>{t("NOT_FOUND.BUTTON")}</button>
+      <div className={myStyles.animComingSoon} ref={animContainer}></div>
     </div>
   );
 }
 
-export default NotFoundPage;
+export default ComingSoonPage;
 
 export async function getStaticProps({ locale }: any) {
   return {
