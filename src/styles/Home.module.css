@@ -174,9 +174,7 @@
 .coming_soon_container h1 {
   opacity: 0;
   text-align: center;
-  font: normal normal 92px/313px Futura;
-  letter-spacing: -2.3px;
-  animation: fadeIn 1s 5s ease-in-out 1 forwards;
+  animation: fadeIn 1s 9s ease-in-out 1 forwards;
 }
 
 .not_found_container button,
@@ -198,8 +196,6 @@
 .coming_soon_container span {
   margin: -3rem 0 3rem 0;
   background-color: #31d3f5;
-  height: 10px;
-  animation: grow 1s 5s ease-in-out 1 forwards;
 }
 
 .coming_soon_container p {
@@ -223,8 +219,6 @@
 .animComingSoon {
   margin-top: 60px;
   position: absolute;
-  width: 800px;
-  height: 200px;
 }
 
 /* 螢幕寬度小於 992px 時 */
@@ -267,10 +261,27 @@
     height: 250px;
   }
 
+  .animComingSoon {
+    width: 400px;
+    height: 100px;
+  }
+
   .not_found_container button,
   .coming_soon_container button {
     font: normal normal 16px/26px Noto Sans TC;
     letter-spacing: 0.08px;
+  }
+
+  .coming_soon_container h1 {
+    font: normal normal 42px/218px Futura;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+
+  .coming_soon_container span {
+    background-color: #31d3f5;
+    height: 4px;
+    animation: growMobile 1s 5s ease-in-out 1 forwards;
   }
 }
 
@@ -308,6 +319,21 @@
   .animNotFound {
     width: 800px;
     height: 500px;
+  }
+
+  .animComingSoon {
+    width: 800px;
+    height: 200px;
+  }
+
+  .coming_soon_container h1 {
+    font: normal normal 92px/313px Futura;
+    letter-spacing: -2.3px;
+  }
+
+  .coming_soon_container span {
+    height: 10px;
+    animation: grow 1s 5s ease-in-out 1 forwards;
   }
 }
 
@@ -363,6 +389,15 @@
   }
   to {
     width: 800px;
+  }
+}
+
+@keyframes growMobile {
+  from {
+    width: 0;
+  }
+  to {
+    width: 370px;
   }
 }
 
