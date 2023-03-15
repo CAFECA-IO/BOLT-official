@@ -62,6 +62,7 @@
   font: normal normal 18px/26px Noto Sans TC;
   letter-spacing: 0.09px;
   transition: all 0.1s ease-in;
+  cursor: pointer;
 }
 
 .contact_formPart button:hover {
