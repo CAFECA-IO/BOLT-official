@@ -120,10 +120,10 @@ function BoltIntro() {
         <div className={myStyles.animSteps} ref={lottieStep1}></div>
         <div className={myStyles.bolt_intro_textbox}>
           <h2>
-            <span>{t("main.block2.title1highlight")}</span>
-            {t("main.block2.title1")}
+            <span>{t("MAIN.BLOCK2.TITLE1_HIGHLIGHT")}</span>
+            {t("MAIN.BLOCK2.TITLE1")}
           </h2>
-          <p>{t("main.block2.description1")}</p>
+          <p>{t("MAIN.BLOCK2.DESCRIPTION1")}</p>
         </div>
       </div>
       <div className={myStyles.animConnections} ref={lottieConnection1}></div>
@@ -131,12 +131,12 @@ function BoltIntro() {
         <div className={myStyles.animSteps} ref={lottieStep2}></div>
         <div className={myStyles.bolt_intro_textbox}>
           <h2>
-            {t("main.block2.title2")}
-            <span>{t("main.block2.title2highlight")}</span>
+            {t("MAIN.BLOCK2.TITLE2")}
+            <span>{t("MAIN.BLOCK2.TITLE2_HIGHLIGHT")}</span>
           </h2>
-          <p>{t("main.block2.description2Line1")}</p>
-          <p>{t("main.block2.description2Line2")}</p>
-          <p>{t("main.block2.description2Line3")}</p>
+          <p>{t("MAIN.BLOCK2.DESCRIPTION2_LINE1")}</p>
+          <p>{t("MAIN.BLOCK2.DESCRIPTION2_LINE2")}</p>
+          <p>{t("MAIN.BLOCK2.DESCRIPTION2_LINE3")}</p>
         </div>
       </div>
       <div className={myStyles.animConnections} ref={lottieConnection2}></div>
@@ -144,10 +144,10 @@ function BoltIntro() {
         <div className={myStyles.animSteps} ref={lottieStep3}></div>
         <div className={myStyles.bolt_intro_textbox}>
           <h2>
-            {t("main.block2.title3")}
-            <span>{t("main.block2.title3highlight")}</span>
+            {t("MAIN.BLOCK2.TITLE3")}
+            <span>{t("MAIN.BLOCK2.TITLE3_HIGHLIGHT")}</span>
           </h2>
-          <p>{t("main.block2.description3")}</p>
+          <p>{t("MAIN.BLOCK2.DESCRIPTION3")}</p>
         </div>
       </div>
     </div>

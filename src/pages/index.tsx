@@ -44,17 +44,17 @@ export default function Home() {
             </Link>
           </div>
           <div id="what" className={myStyles.main_block2}>
-            <h1>{t("main.block2.title")}</h1>
+            <h1>{t("MAIN.BLOCK2.TITLE")}</h1>
             <BoltIntro />
           </div>
           <div id="safe" className={myStyles.main_block3}>
-            <h1>{t("main.block3.title")}</h1>
+            <h1>{t("MAIN.BLOCK3.TITLE")}</h1>
             <div className={myStyles.animSafe} ref={animContainer}></div>
           </div>
         </div>
 
         <div id="contact_us" className={myStyles.main_block4}>
-          <h1>{t("contactForm.title")}</h1>
+          <h1>{t("CONTACT_FORM.TITLE")}</h1>
           <ContactUsForm />
         </div>
       </main>

@@ -33,21 +33,21 @@ function AboutBoltPage() {
   return (
     <div className={myStyles.about_container}>
       <div id="whyBolt" className={myStyles.about_block1}>
-        <h1>{t("about.whyBolt.title")}</h1>
+        <h1>{t("ABOUT.WHY_BOLT.TITLE")}</h1>
         <WhyBolt />
       </div>
 
       <div id="useCase" className={myStyles.about_block2}>
-        <h1>{t("about.useCase.title")}</h1>
+        <h1>{t("ABOUT.USE_CASE.TITLE")}</h1>
         <UseCaseList />
       </div>
 
       <div id="news" className={myStyles.about_block3}>
-        <h1>{t("about.news.title")}</h1>
+        <h1>{t("ABOUT.NEWS.TITLE")}</h1>
         <NewsList newsData={loadedList} styles={myStyles} />
 
         <Link href="/news" className={myStyles.newslist_link}>
-          {t("news.seeMoreBtn")}
+          {t("NEWS.SEE_MORE_BUTTON")}
         </Link>
       </div>
     </div>

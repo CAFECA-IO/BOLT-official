@@ -33,7 +33,7 @@ function NewsBody({ title, timestamp, image, contents }: INewsDetail) {
         </div>
       </div>
       <Link href="/news" className={myStyles.goBackBtn}>
-        <button>{t("news.goBack")}</button>
+        <button>{t("NEWS.GO_BACK_BUTTON")}</button>
       </Link>
     </div>
   );

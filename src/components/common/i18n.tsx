@@ -29,7 +29,7 @@ function I18n() {
       </div>
 
       <div className={textStyles} onClick={clickHandler}>
-        {t("nav.language")}
+        {t("NAV_BAR.LANGUAGE")}
       </div>
 
       <div className={subMenuStyles}>

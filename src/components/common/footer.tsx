@@ -19,49 +19,49 @@ function Footer() {
   const linkList = (
     <div className={myStyles.footer_link_list}>
       <div className={myStyles.footer_link_item}>
-        <h4>{t("nav.about")}</h4>
+        <h4>{t("NAV_BAR.ABOUT")}</h4>
         <Link href="/about_bolt#whyBolt" scroll={false}>
-          <p>{t("about.whyBolt.title")}</p>
+          <p>{t("ABOUT.WHY_BOLT.TITLE")}</p>
         </Link>
         <Link href="/about_bolt#useCase">
-          <p>{t("about.useCase.title")}</p>
+          <p>{t("ABOUT.USE_CASE.TITLE")}</p>
         </Link>
         <Link href="/news">
-          <p>{t("about.news.title")}</p>
+          <p>{t("ABOUT.NEWS.TITLE")}</p>
         </Link>
       </div>
 
       <div className={myStyles.footer_link_item}>
-        <h4>{t("nav.technology")}</h4>
+        <h4>{t("NAV_BAR.TECHNOLOGY")}</h4>
         <Link href="/technology#distributed-audit" scroll={false}>
-          <p>{t("technology.title1")}</p>
+          <p>{t("TECHNOLOGY.TITLE1")}</p>
         </Link>
         <Link href="/technology#zero-knowledge-proof" scroll={false}>
-          <p>{t("technology.title2")}</p>
+          <p>{t("TECHNOLOGY.TITLE2")}</p>
         </Link>
         <Link href="/technology#hybrid-chain-evidence" scroll={false}>
-          <p>{t("technology.title3")}</p>
+          <p>{t("TECHNOLOGY.TITLE3")}</p>
         </Link>
       </div>
 
       <div className={myStyles.footer_link_item}>
-        <h4>{t("nav.faq")}</h4>
+        <h4>{t("NAV_BAR.FAQ")}</h4>
         <Link href="/faq#topics" scroll={false}>
-          <p>{t("FAQ.title")}</p>
+          <p>{t("FAQ.TITLE")}</p>
         </Link>
       </div>
 
       <div className={myStyles.footer_link_item}>
-        <h4>{t("nav.contactUs")}</h4>
+        <h4>{t("NAV_BAR.CONTACT_US")}</h4>
         <Link href="/#contact_us" scroll={false}>
-          <p>{t("contactForm.title")}</p>
+          <p>{t("CONTACT_FORM.TITLE")}</p>
         </Link>
       </div>
 
       <div className={myStyles.footer_link_item}>
-        <h4>{t("nav.privacy")}</h4>
+        <h4>{t("NAV_BAR.PRIVACY")}</h4>
         <Link href="/privacy_policy#">
-          <p>{t("privacy.title")}</p>
+          <p>{t("PRIVACY.TITLE")}</p>
         </Link>
       </div>
     </div>
