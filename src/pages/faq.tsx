@@ -34,7 +34,7 @@ function FAQPage() {
 
   return (
     <div id="topics" className={myStyles.faq_main_container}>
-      <h1>{t("FAQ.title")}</h1>
+      <h1>{t("FAQ.TITLE")}</h1>
       <div className={myStyles.faq_items_container}>{faqList}</div>
     </div>
   );

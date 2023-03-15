@@ -8,21 +8,21 @@ function WhyBolt() {
   return (
     <div className={myStyles.ticket_holder}>
       <div className={myStyles.ticket}>
-        <h3>{t("about.whyBolt.title1")}</h3>
+        <h3>{t("ABOUT.WHY_BOLT.TITLE1")}</h3>
         <Image src="/img/icons/cost.svg" alt="" width={150} height={150} />
-        <p>{t("about.whyBolt.description1")}</p>
+        <p>{t("ABOUT.WHY_BOLT.DESCRIPTION1")}</p>
       </div>
 
       <div className={myStyles.ticket}>
-        <h3>{t("about.whyBolt.title2")}</h3>
+        <h3>{t("ABOUT.WHY_BOLT.TITLE2")}</h3>
         <Image src="/img/icons/chain.svg" alt="" width={150} height={150} />
-        <p>{t("about.whyBolt.description2")}</p>
+        <p>{t("ABOUT.WHY_BOLT.DESCRIPTION2")}</p>
       </div>
 
       <div className={myStyles.ticket}>
-        <h3>{t("about.whyBolt.title3")}</h3>
+        <h3>{t("ABOUT.WHY_BOLT.TITLE3")}</h3>
         <Image src="/img/icons/cloud.svg" alt="" width={150} height={150} />
-        <p>{t("about.whyBolt.description3")}</p>
+        <p>{t("ABOUT.WHY_BOLT.DESCRIPTION3")}</p>
       </div>
     </div>
   );

@@ -18,28 +18,28 @@ export function getTechnologyData() {
 
 const pageIndex = [
   {
-    title: "nav.about",
-    items: ["about.whyBolt.title", "about.useCase.title", "about.news.title"],
+    title: "NAV_BAR.ABOUT",
+    items: ["ABOUT.WHY_BOLT.TITLE", "ABOUT.USE_CASE.TITLE", "ABOUT.NEWS.TITLE"],
     links: ["/about_bolt#whyBolt", "/about_bolt#useCase", "/about_bolt#news"],
   },
   {
-    title: "nav.technology",
-    items: ["technology.title1", "technology.title2", "technology.title3"],
+    title: "NAV_BAR.TECHNOLOGY",
+    items: ["TECHNOLOGY.TITLE1", "TECHNOLOGY.TITLE2", "TECHNOLOGY.TITLE3"],
     links: ["/technology#", "/technology#", "/technology#"],
   },
   {
-    title: "nav.faq",
-    items: ["FAQ.title"],
+    title: "NAV_BAR.FAQ",
+    items: ["FAQ.TITLE"],
     links: ["/faq#"],
   },
   {
-    title: "nav.contactUs",
-    items: ["contactForm.title"],
+    title: "NAV_BAR.CONTACT_US",
+    items: ["CONTACT_FORM.TITLE"],
     links: ["/#contactForm"],
   },
   {
-    title: "nav.privary",
-    items: ["privary.title"],
+    title: "NAV_BAR.PRIVACY",
+    items: ["PRIVACY.TITLE"],
     links: ["/privary_policy"],
   },
 ];
@@ -47,60 +47,60 @@ const pageIndex = [
 const useCaseData = [
   {
     id: "u001",
-    title: "about.useCase.case1.title",
+    title: "ABOUT.USE_CASE.CASE1.TITLE",
     description: [
-      "about.useCase.case1.descriptionLine1",
-      "about.useCase.case1.descriptionLine2",
-      "about.useCase.case1.descriptionLine3",
-      "about.useCase.case1.descriptionLine4",
-      "about.useCase.case1.descriptionLine5",
+      "ABOUT.USE_CASE.CASE1.DESCRIPTION_LINE1",
+      "ABOUT.USE_CASE.CASE1.DESCRIPTION_LINE2",
+      "ABOUT.USE_CASE.CASE1.DESCRIPTION_LINE3",
+      "ABOUT.USE_CASE.CASE1.DESCRIPTION_LINE4",
+      "ABOUT.USE_CASE.CASE1.DESCRIPTION_LINE5",
     ],
-    image: "about.useCase.case1.image",
+    image: "ABOUT.USE_CASE.CASE1.IMAGE",
   },
   {
     id: "u002",
-    title: "about.useCase.case2.title",
-    description: ["about.useCase.case2.description"],
-    image: "about.useCase.case2.image",
+    title: "ABOUT.USE_CASE.CASE2.TITLE",
+    description: ["ABOUT.USE_CASE.CASE2.DESCRIPTION"],
+    image: "ABOUT.USE_CASE.CASE2.IMAGE",
   },
   {
     id: "u003",
-    title: "about.useCase.case3.title",
-    description: ["about.useCase.case3.description"],
-    image: "about.useCase.case3.image",
+    title: "ABOUT.USE_CASE.CASE3.TITLE",
+    description: ["ABOUT.USE_CASE.CASE3.DESCRIPTION"],
+    image: "ABOUT.USE_CASE.CASE3.IMAGE",
   },
   {
     id: "u004",
-    title: "about.useCase.case4.title",
-    description: ["about.useCase.case4.description"],
-    image: "about.useCase.case4.image",
+    title: "ABOUT.USE_CASE.CASE4.TITLE",
+    description: ["ABOUT.USE_CASE.CASE4.DESCRIPTION"],
+    image: "ABOUT.USE_CASE.CASE4.IMAGE",
   },
 ];
 
 const faqData = [
-  { id: "q001", question: "FAQ.question1", answer: "FAQ.answer1" },
-  { id: "q002", question: "FAQ.question2", answer: "FAQ.answer2" },
-  { id: "q003", question: "FAQ.question3", answer: "FAQ.answer3" },
-  { id: "q004", question: "FAQ.question4", answer: "FAQ.answer4" },
+  { id: "q001", question: "FAQ.QUESTION1", answer: "FAQ.ANSWER1" },
+  { id: "q002", question: "FAQ.QUESTION2", answer: "FAQ.ANSWER2" },
+  { id: "q003", question: "FAQ.QUESTION3", answer: "FAQ.ANSWER3" },
+  { id: "q004", question: "FAQ.QUESTION4", answer: "FAQ.ANSWER4" },
 ];
 
 const technologyData = [
   {
     anchor: "distributed-audit",
-    title: "technology.title1",
-    description: "technology.description1",
+    title: "TECHNOLOGY.TITLE1",
+    description: "TECHNOLOGY.DESCRIPTION1",
     image: "/img/technology01.svg",
   },
   {
     anchor: "zero-knowledge-proof",
-    title: "technology.title2",
-    description: "technology.description2",
+    title: "TECHNOLOGY.TITLE2",
+    description: "TECHNOLOGY.DESCRIPTION2",
     image: "/img/technology02.svg",
   },
   {
     anchor: "hybrid-chain-evidence",
-    title: "technology.title3",
-    description: "technology.description3",
+    title: "TECHNOLOGY.TITLE3",
+    description: "TECHNOLOGY.DESCRIPTION3",
     image: "/img/technology03.svg",
   },
 ];

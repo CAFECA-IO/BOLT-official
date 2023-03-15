@@ -18,26 +18,26 @@ function BoltMain() {
               height={45}
             />
           </div>
-          <h1>{t("main.block1.title")}</h1>
+          <h1>{t("MAIN.BLOCK1.TITLE")}</h1>
           <Link
             download="BOLT_Whitepaper_v2.0.11.pdf"
             href="/files/BOLT_Whitepaper_v2.0.11.pdf"
             target="_blank"
           >
             <p className={myStyles.whitepaper}>
-              &emsp;&emsp;<span>{t("main.block1.whitepaper")}</span>
+              &emsp;&emsp;<span>{t("MAIN.BLOCK1.WHITEPAPER")}</span>
             </p>
           </Link>
         </div>
         <div className={myStyles.bolt_main_from_bottom}>
           <div className={myStyles.bolt_main_btnbox}>
-            <button>{t("main.block1.windows")}</button>
-            <button>{t("main.block1.macos")}</button>
-            <button>{t("main.block1.linux")}</button>
+            <button>{t("MAIN.BLOCK1.WINDOWS")}</button>
+            <button>{t("MAIN.BLOCK1.MAC_OS")}</button>
+            <button>{t("MAIN.BLOCK1.LINUX")}</button>
           </div>
           <Link href="/faq">
             <p>
-              <span>{t("main.block1.howTo")}</span>
+              <span>{t("MAIN.BLOCK1.HOW_TO")}</span>
             </p>
           </Link>
         </div>

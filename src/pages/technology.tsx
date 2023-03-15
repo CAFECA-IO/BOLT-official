@@ -22,7 +22,7 @@ function TechnologyPage() {
 
   return (
     <div className={myStyles.tech_main_container}>
-      <h1>{t("technology.title")}</h1>
+      <h1>{t("TECHNOLOGY.TITLE")}</h1>
       <div className={myStyles.tech_contents_container}>{techList}</div>
     </div>
   );

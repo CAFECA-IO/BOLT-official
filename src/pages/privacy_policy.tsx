@@ -10,38 +10,38 @@ function PrivacyPage() {
 
   return (
     <div className={myStyles.privacy_main_container}>
-      <h1>{t("privacy.title")}</h1>
+      <h1>{t("PRIVACY.TITLE")}</h1>
       <div className={myStyles.privacy_contents_container}>
         <h2>
-          {t("privacy.update")}&emsp;
+          {t("PRIVACY.UPDATE")}&emsp;
           {UPDATE}
         </h2>
-        <p>{t("privacy.line1")}</p>
+        <p>{t("PRIVACY.LINE1")}</p>
 
-        <h4>{t("privacy.gather1")}</h4>
-        <p>{t("privacy.gather2")}</p>
-        <p>{t("privacy.gather3")}</p>
+        <h4>{t("PRIVACY.GATHER1")}</h4>
+        <p>{t("PRIVACY.GATHER2")}</p>
+        <p>{t("PRIVACY.GATHER3")}</p>
 
-        <h4>{t("privacy.protect1")}</h4>
-        <p>{t("privacy.protect2")}</p>
-        <p>{t("privacy.protect3")}</p>
+        <h4>{t("PRIVACY.PROTECT1")}</h4>
+        <p>{t("PRIVACY.PROTECT2")}</p>
+        <p>{t("PRIVACY.PROTECT3")}</p>
 
-        <h4>{t("privacy.cookie1")}</h4>
-        <p>{t("privacy.cookie2")}</p>
-        <p>{t("privacy.cookie3")}</p>
+        <h4>{t("PRIVACY.COOKIE1")}</h4>
+        <p>{t("PRIVACY.COOKIE2")}</p>
+        <p>{t("PRIVACY.COOKIE3")}</p>
 
-        <h4>{t("privacy.third1")}</h4>
-        <p>{t("privacy.third2")}</p>
-        <p>{t("privacy.third3")}</p>
-        <p>{t("privacy.third4")}</p>
-        <p>{t("privacy.third5")}</p>
-        <p>{t("privacy.third6")}</p>
-        <p>{t("privacy.third7")}</p>
-        <p>{t("privacy.third8")}</p>
-        <p>{t("privacy.third9")}</p>
+        <h4>{t("PRIVACY.THIRD1")}</h4>
+        <p>{t("PRIVACY.THIRD2")}</p>
+        <p>{t("PRIVACY.THIRD3")}</p>
+        <p>{t("PRIVACY.THIRD4")}</p>
+        <p>{t("PRIVACY.THIRD5")}</p>
+        <p>{t("PRIVACY.THIRD6")}</p>
+        <p>{t("PRIVACY.THIRD7")}</p>
+        <p>{t("PRIVACY.THIRD8")}</p>
+        <p>{t("PRIVACY.THIRD9")}</p>
 
-        <h4>{t("privacy.change1")}</h4>
-        <p>{t("privacy.change2")}</p>
+        <h4>{t("PRIVACY.CHANGE1")}</h4>
+        <p>{t("PRIVACY.CHANGE2")}</p>
       </div>
     </div>
   );

@@ -14,30 +14,30 @@ function ContactUsForm() {
         <input
           id="name"
           type="text"
-          placeholder={`${t("contactForm.name")}`}
+          placeholder={`${t("CONTACT_FORM.NAME")}`}
           required
         ></input>
         <input
           id="phone"
           type="text"
-          placeholder={`${t("contactForm.phone")}`}
+          placeholder={`${t("CONTACT_FORM.PHONE")}`}
           required
         ></input>
         <input
           id="email"
           type="text"
-          placeholder={`${t("contactForm.email")}`}
+          placeholder={`${t("CONTACT_FORM.EMAIL")}`}
           required
         ></input>
         <textarea
           id="message"
           rows={7}
           wrap="soft"
-          placeholder={`${t("contactForm.message")}`}
+          placeholder={`${t("CONTACT_FORM.MESSAGE")}`}
           required
         ></textarea>
         <button id="submit" type="submit">
-          {t("contactForm.button")}
+          {t("CONTACT_FORM.SUBMIT_BUTTON")}
         </button>
       </form>
     </div>

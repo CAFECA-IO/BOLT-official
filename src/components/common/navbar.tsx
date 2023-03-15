@@ -36,17 +36,17 @@ function MainNavbar() {
         <ul className={myStyles.leftList}>
           <li>
             <Link href="/about_bolt" onClick={navToggler}>
-              {t("nav.about")}
+              {t("NAV_BAR.ABOUT")}
             </Link>
           </li>
           <li>
             <Link href="/technology" onClick={navToggler}>
-              {t("nav.technology")}
+              {t("NAV_BAR.TECHNOLOGY")}
             </Link>
           </li>
           <li>
             <Link href="/faq" onClick={navToggler}>
-              {t("nav.faq")}
+              {t("NAV_BAR.FAQ")}
             </Link>
           </li>
         </ul>
@@ -59,11 +59,11 @@ function MainNavbar() {
           </li>
           <li>
             <Link
-              href=""
+              href="/coming_soon"
               className={myStyles.blockchain_btn}
               onClick={navToggler}
             >
-              {t("nav.blockchain")}
+              {t("NAV_BAR.BLOCKCHAIN")}
             </Link>
           </li>
         </ul>

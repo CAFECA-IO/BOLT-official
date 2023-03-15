@@ -54,7 +54,7 @@ function SeeMoreList({ currentNewsId, newsDetailHandler }: ISeeMoreList) {
 
   return (
     <div className={myStyles.seeMore_container}>
-      <h1>{t("news.seeMore")}</h1>
+      <h1>{t("NEWS.SEE_MORE_TITLE")}</h1>
       <div className={myStyles.seeMore_list}>{seeMoreList}</div>
     </div>
   );

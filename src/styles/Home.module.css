@@ -160,6 +160,67 @@
   }
 }
 
+/* 404 & coming soon */
+.not_found_container,
+.coming_soon_container {
+  padding: 10rem 1rem 6rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8fafa url("/img/mask_group2@2x.png") no-repeat top left;
+}
+
+.coming_soon_container h1 {
+  opacity: 0;
+  text-align: center;
+  animation: fadeIn 1s 9s ease-in-out 1 forwards;
+}
+
+.not_found_container button,
+.coming_soon_container button {
+  position: relative;
+  margin-top: 4rem;
+  padding: 10px;
+  width: 120px;
+  background-color: #31d3f5;
+  border: 1px solid #31d3f5;
+  border-radius: 23px;
+  color: #3a3b4d;
+  font: normal normal 18px/26px Noto Sans TC;
+  letter-spacing: 0.09px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.coming_soon_container span {
+  margin: -3rem 0 3rem 0;
+  background-color: #31d3f5;
+}
+
+.coming_soon_container p {
+  opacity: 0;
+  margin-top: 1rem;
+  animation: fromBottomComingSoon 1s 5s ease-in-out 1 forwards;
+}
+
+.coming_soon_container button {
+  opacity: 0;
+  margin-top: 10rem;
+  animation: fromBottom 1s 5s ease-in-out 1 forwards;
+}
+
+.not_found_container button:hover,
+.coming_soon_container button:hover {
+  background-color: transparent;
+  color: #31d3f5;
+}
+
+.animComingSoon {
+  margin-top: 60px;
+  position: absolute;
+}
+
 /* 螢幕寬度小於 992px 時 */
 @media screen and (max-width: 992px) {
   /* bolt_main */
@@ -193,6 +254,35 @@
   .scroll_down {
     display: none;
   }
+
+  /* 404 & coming soon */
+  .animNotFound {
+    width: 400px;
+    height: 250px;
+  }
+
+  .animComingSoon {
+    width: 400px;
+    height: 100px;
+  }
+
+  .not_found_container button,
+  .coming_soon_container button {
+    font: normal normal 16px/26px Noto Sans TC;
+    letter-spacing: 0.08px;
+  }
+
+  .coming_soon_container h1 {
+    font: normal normal 42px/218px Futura;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+
+  .coming_soon_container span {
+    background-color: #31d3f5;
+    height: 4px;
+    animation: growMobile 1s 5s ease-in-out 1 forwards;
+  }
 }
 
 /* 螢幕寬度大於 992.1px 時 */
@@ -223,6 +313,27 @@
 
   .bolt_main_imgbox {
     animation: fromRight 1s ease-out 1 forwards;
+  }
+
+  /* 404 & coming soon */
+  .animNotFound {
+    width: 800px;
+    height: 500px;
+  }
+
+  .animComingSoon {
+    width: 800px;
+    height: 200px;
+  }
+
+  .coming_soon_container h1 {
+    font: normal normal 92px/313px Futura;
+    letter-spacing: -2.3px;
+  }
+
+  .coming_soon_container span {
+    height: 10px;
+    animation: grow 1s 5s ease-in-out 1 forwards;
   }
 }
 
@@ -269,5 +380,34 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 800px;
+  }
+}
+
+@keyframes growMobile {
+  from {
+    width: 0;
+  }
+  to {
+    width: 370px;
+  }
+}
+
+@keyframes fromBottomComingSoon {
+  from {
+    opacity: 0;
+    transform: translateY(7rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

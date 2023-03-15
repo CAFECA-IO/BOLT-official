@@ -48,7 +48,7 @@ function AllNewsPage() {
   return (
     <div className={myStyles.news_main_container}>
       <div className={myStyles.news_main_banner}>
-        <h1>{t("news.title")}</h1>
+        <h1>{t("NEWS.TITLE")}</h1>
       </div>
       <NewsList newsData={loadedList} styles={myStyles} />
       <Pagination
