@@ -1,4 +1,3 @@
-//import useSWR from "swr";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -6,12 +5,6 @@ import myStyles from "@/styles/news.module.css";
 import NewsBody from "@/components/news/news_body";
 import SeeMoreList from "@/components/news/see_more_list";
 import { INewsDetail } from "@/interfaces/news_detail";
-
-/* 
-const fetcher = async (url: string) => {
-  const res = await fetch(`/api${url}`);
-  return await res.json();
-}; */
 
 function NewsDetailPage() {
   const router = useRouter();
@@ -21,11 +14,6 @@ function NewsDetailPage() {
     String(newsId) || "nError"
   );
   const [loadedNews, setLoadedNews] = useState<INewsDetail>();
-  /* 
-  const { data: news } = useSWR<INewsDetail[]>(
-    newsId ? `/news/${newsId}` : "null",
-    fetcher
-  ); */
 
   useEffect(() => {
     newsDetailHandler(currentNewsId);
@@ -41,8 +29,8 @@ function NewsDetailPage() {
       .then((data) => {
         setLoadedNews(data);
       })
-      .catch((e) => {
-        throw e; // ++ ToDo: 導入錯誤頁面
+      .catch(() => {
+        router.push("/404");
       });
   }
 

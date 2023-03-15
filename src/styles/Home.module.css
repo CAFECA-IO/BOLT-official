@@ -160,6 +160,40 @@
   }
 }
 
+/* 404 */
+.not_found_container {
+  padding: 10rem 1rem 6rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8fafa url("/img/mask_group2@2x.png") no-repeat top left;
+}
+
+.not_found_container h1 {
+  font: normal normal normal 36px/78px Noto Sans TC;
+  color: #3a3b4d;
+}
+
+.not_found_container button {
+  margin-top: 4rem;
+  padding: 10px;
+  width: 120px;
+  background-color: #31d3f5;
+  border: 1px solid #31d3f5;
+  border-radius: 23px;
+  color: #3a3b4d;
+  font: normal normal 18px/26px Noto Sans TC;
+  letter-spacing: 0.09px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.not_found_container button:hover {
+  background-color: transparent;
+  color: #31d3f5;
+}
+
 /* 螢幕寬度小於 992px 時 */
 @media screen and (max-width: 992px) {
   /* bolt_main */
@@ -193,6 +227,17 @@
   .scroll_down {
     display: none;
   }
+
+  /* 404 */
+  .animNotFound {
+    width: 400px;
+    height: 250px;
+  }
+
+  .not_found_container button {
+    font: normal normal 16px/26px Noto Sans TC;
+    letter-spacing: 0.08px;
+  }
 }
 
 /* 螢幕寬度大於 992.1px 時 */
@@ -223,6 +268,12 @@
 
   .bolt_main_imgbox {
     animation: fromRight 1s ease-out 1 forwards;
+  }
+
+  /* 404 */
+  .animNotFound {
+    width: 800px;
+    height: 500px;
   }
 }
 

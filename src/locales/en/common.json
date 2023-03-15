@@ -134,5 +134,9 @@
     "THIRD9": "- 本網站委託廠商協助蒐集、處理或利用您的個人資料時，將對委外廠商或個人善盡監督管理之責。",
     "CHANGE1": "Changes to Our Privacy Policy",
     "CHANGE2": "We may make changes to our Privacy Policy in the future. If we make a change to this policy is material, we will notify you by an email, where possible. By continuing to access or use our services, you agree to be bound to the terms of our Privacy Policy."
+  },
+  "NOT_FOUND": {
+    "TITLE": "Page Not Found",
+    "BUTTON": "Go Back"
   }
 }
