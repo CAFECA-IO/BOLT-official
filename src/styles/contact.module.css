@@ -55,19 +55,36 @@
 .contact_formPart button {
   padding: 10px;
   width: 120px;
-  background-color: #31d3f5;
-  border: 1px solid #31d3f5;
   border-radius: 23px;
-  color: #3a3b4d;
   font: normal normal 18px/26px Noto Sans TC;
   letter-spacing: 0.09px;
   transition: all 0.1s ease-in;
   cursor: pointer;
 }
 
-.contact_formPart button:hover {
+.btn_submit {
+  background-color: #31d3f5;
+  border: 1px solid #31d3f5;
+  color: #3a3b4d;
+}
+
+.btn_submit:hover {
   background-color: transparent;
   color: #31d3f5;
+}
+
+.btn_send {
+  background-color: #c7c7c7;
+  border: 1px solid #c7c7c7;
+  color: #ffffff;
+}
+
+.contact_animation_container {
+  display: flex;
+  width: 100%;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Mobile */
