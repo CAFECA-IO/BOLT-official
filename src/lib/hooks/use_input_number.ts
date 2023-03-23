@@ -5,7 +5,7 @@ const useInputNumber = (defaultVal = ""): [string, (val: string) => void] => {
   const [numVal, setNumVal] = useState(defaultVal);
 
   const handleChange = (val: string) => {
-    val = val.replace(/[^\d]/g, "");
+    val = val.replace(/[^-\d]/g, ""); //加減號
     setNumVal(val);
   };
 
