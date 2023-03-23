@@ -16,6 +16,13 @@ function ContactUsForm() {
   const [sendSuccess, setSendSuccess] = useState(false);
   const [showResult, setShowResult] = useState(false);
 
+  const [inputName, setInputName] = useState("");
+  const [inputPhone, setInputPhone] = useInputNumber("");
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputMessage, setInputMessage] = useState("");
+
+  const now = new Date().toLocaleString("zh-TW", { timeZone: "Asia/Taipei" });
+
   useEffect(() => {
     const animSend = lottie.loadAnimation({
       container: sendAnimContainer.current!,
@@ -39,11 +46,6 @@ function ContactUsForm() {
     };
   }, [sendAnimation, sendSuccess, showResult]);
 
-  const [inputName, setInputName] = useState("");
-  const [inputPhone, setInputPhone] = useInputNumber("");
-  const [inputEmail, setInputEmail] = useState("");
-  const [inputMessage, setInputMessage] = useState("");
-
   const nameChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputName(event.target.value);
   };
@@ -61,12 +63,6 @@ function ContactUsForm() {
   ) => {
     setInputMessage(event.target.value);
   };
-  /* 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
-  }; */
 
   const submitHandler = async (event: React.FormEvent<HTMLFormElement>) => {
     const failedProcess = async () => {
@@ -83,7 +79,7 @@ function ContactUsForm() {
       event.preventDefault();
 
       const emailData = {
-        comment: `<h3>姓名：${inputName}</h3><h3>手機：${inputPhone}</h3><h3>Email：${inputEmail}</h3><h3>意見：${inputMessage}</h3>`,
+        comment: `<h3>姓名：${inputName}</h3><h3>手機：${inputPhone}</h3><h3>Email：${inputEmail}</h3><h3>意見：${inputMessage}</h3><p>${now}<p>`,
       };
 
       setSubmitBtnDisabled(true);
@@ -108,6 +104,10 @@ function ContactUsForm() {
         setSendAnimation(false);
         setSendSuccess(false);
         setShowResult(false);
+        setInputName("");
+        setInputPhone("");
+        setInputEmail("");
+        setInputMessage("");
       } else {
         await failedProcess();
       }
