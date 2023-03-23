@@ -85,7 +85,7 @@ function ContactUsForm() {
       setSubmitBtnDisabled(true);
       setSendAnimation(true);
 
-      await new Promise((resolve) => setTimeout(resolve, 3300));
+      await new Promise((resolve) => setTimeout(resolve, 3000));
 
       const res = await fetch("/api/email", {
         method: "POST",
