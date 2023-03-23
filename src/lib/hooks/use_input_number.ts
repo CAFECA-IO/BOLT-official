@@ -5,7 +5,8 @@ const useInputNumber = (defaultVal = ""): [string, (val: string) => void] => {
   const [numVal, setNumVal] = useState(defaultVal);
 
   const handleChange = (val: string) => {
-    val = val.replace(/[^-+\d]/g, ""); //電話號碼正規表達式
+    /* Todo: (20230323 - Julian) 電話號碼正規表達式 */
+    val = val.replace(/[^-+\d]/g, "");
     setNumVal(val);
   };
 
