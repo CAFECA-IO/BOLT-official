@@ -5,7 +5,7 @@ const useInputNumber = (defaultVal = ""): [string, (val: string) => void] => {
   const [numVal, setNumVal] = useState(defaultVal);
 
   const handleChange = (val: string) => {
-    val = val.replace(/[^-\d]/g, ""); //加減號
+    val = val.replace(/[^-+\d]/g, ""); //電話號碼正規表達式
     setNumVal(val);
   };
 
