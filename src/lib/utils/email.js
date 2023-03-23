@@ -1,6 +1,3 @@
-/* eslint-disable no-async-promise-executor */
-/* eslint-disable @typescript-eslint/no-empty-function */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 const nodemailer = require("nodemailer");
 
 class SendMail {
@@ -53,4 +50,10 @@ class SendMail {
   }
 }
 
-module.exports = SendMail;
+(module.exports = SendMail),
+  {
+    rules: {
+      "react/no-unescaped-entities": "off",
+      "@next/next/no-page-custom-font": "off",
+    },
+  };
