@@ -1,43 +1,39 @@
 const nodemailer = require("nodemailer");
 
 class SendMail {
-  //the class constructor
-  /**
-   * set the default constructor without param
-   */
+  /* Info: (20230324 - Julian) 設定不含參數的 constructor */
   constructor() {
-    //nothing to do
+    /* Info: (20230324 - Julian) nothing to do */
   }
 
-  /**
-   * send email with config
-   * @param config options to start the function with
-   * @returns a promise resolved result when the function is ready to be called
-   */
-
   static async sendMail(config, comment) {
-    // create gmail service
+    /* Info: (20230324 - Julian) create gmail service */
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       host: "smtp.gmail.com",
       port: 465,
       auth: {
-        // 要用來發信的帳號及密碼，後面可以改用 dotenv 來傳入，進而保護自己的帳密
+        /* Info: (20230324 - Julian) 發信的帳號密碼，由 dotenv 傳入以保障安全 */
         user: config.googleClientID,
         pass: config.googleClientPassword,
       },
     });
 
-    // create email template
+    /* Info: (20230324 - Julian) 設定信件模板 */
     const mailOptions = {
-      from: config.googleClientID, // sender address
-      to: config.googleClientID, // list of receivers
-      subject: "Bolt 表單回覆", // Subject line
-      text: comment, // plaintext body
-      html: "<p>" + comment + "</p>", // html body
+      /* Info: (20230324 - Julian) 寄件地址 */
+      from: config.googleClientID,
+      /* Info: (20230324 - Julian) 收信人 */
+      to: config.googleClientID,
+      /* Info: (20230324 - Julian) 主旨 */
+      subject: "Bolt 表單回覆",
+      /* Info: (20230324 - Julian) plaintext body */
+      text: comment,
+      /* Info: (20230324 - Julian) html body */
+      html: "<p>" + comment + "</p>",
     };
 
-    // send mail with defined transport object
+    /* Info: (20230324 - Julian) send mail with defined transport object */
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         throw error;

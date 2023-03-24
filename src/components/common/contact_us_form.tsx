@@ -121,12 +121,12 @@ function ContactUsForm() {
     sendSuccess ? (
       <div className={myStyles.send_result_container}>
         <div className={myStyles.anim_send} ref={successAnimContainer}></div>
-        <p>Success!</p>
+        <p>{t("CONTACT_FORM.SUCCESS_MESSAGE")}</p>
       </div>
     ) : (
       <div className={myStyles.send_result_container}>
-        <h1>Error!</h1>
-        <p>Please try again later</p>
+        <h1>{t("CONTACT_FORM.ERROR_MESSAGE1")}</h1>
+        <p>{t("CONTACT_FORM.ERROR_MESSAGE2")}</p>
       </div>
     )
   ) : null;
@@ -174,7 +174,7 @@ function ContactUsForm() {
 
   const submitButton = submitBtnDisabled ? (
     <button disabled className={myStyles.btn_send}>
-      發送中...
+      {t("CONTACT_FORM.SENDING")}
     </button>
   ) : (
     <button id="submit" type="submit" className={myStyles.btn_submit}>

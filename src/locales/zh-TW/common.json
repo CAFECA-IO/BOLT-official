@@ -108,7 +108,11 @@
     "PHONE": "聯絡電話",
     "EMAIL": "E-mail",
     "MESSAGE": "訊息",
-    "SUBMIT_BUTTON": "確認發送"
+    "SUBMIT_BUTTON": "確認發送",
+    "SENDING": "發送中...",
+    "SUCCESS_MESSAGE": "發送成功！",
+    "ERROR_MESSAGE1": "發送失敗！",
+    "ERROR_MESSAGE2": "請稍後再試。"
   },
   "PRIVACY": {
     "TITLE": "隱私權政策與條款",
