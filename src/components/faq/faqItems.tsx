@@ -4,7 +4,7 @@ import myStyles from "@/styles/faq.module.css";
 interface IFaqItemsParams {
   id: string;
   question: string;
-  answer: string;
+  answer: string[];
   faqBlockStyles: string;
   answerAreaStyles: string;
   showAnsIndex: string;
@@ -30,15 +30,17 @@ function FAQItems({
     }
   };
 
+  const answerList = answer.map((v) => {
+    return <p key={String(v)}>{t(v)}</p>;
+  });
+
   return (
     <section
       className={`${myStyles.faq_block} ${faqBlockStyles}`}
       onClick={clickHandler}
     >
       <h4>{t(question)}</h4>
-      <div className={answerAreaStyles}>
-        <p>{t(answer)}</p>
-      </div>
+      <div className={answerAreaStyles}>{answerList}</div>
     </section>
   );
 }
