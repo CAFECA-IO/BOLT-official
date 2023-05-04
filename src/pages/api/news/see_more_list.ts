@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     newsId === "n001"
       ? allNews.slice(1, 2)
       : newsList.filter((news) => !(news.id === newsId));
-
+  /* ToDo: (20230504 - Julian) 修正隨機 news 的邏輯
   // 取得隨機一篇 news
   const getRandomNews = (max: number) => {
     const randomNumber = Math.floor(Math.random() * max);
@@ -27,7 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return randomNews;
   };
 
-  seeMoreList.push(getRandomNews(maxNewsIndex));
+  seeMoreList.push(getRandomNews(maxNewsIndex)); */
 
   res.status(200).send(seeMoreList);
 }
