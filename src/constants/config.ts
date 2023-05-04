@@ -75,6 +75,7 @@ const useCaseData = [
     description: [
       "ABOUT.USE_CASE.CASE4.DESCRIPTION1",
       "ABOUT.USE_CASE.CASE4.DESCRIPTION2",
+      "ABOUT.USE_CASE.CASE4.DESCRIPTION3",
     ],
     image: "ABOUT.USE_CASE.CASE4.IMAGE",
   },
@@ -113,7 +114,7 @@ const faqData = [
 
 const technologyData = [
   {
-    anchor: "distributed-audit",
+    anchor: "decentralized-audit",
     title: "TECHNOLOGY.TITLE1",
     description: "TECHNOLOGY.DESCRIPTION1",
     image: "/img/technology01.svg",
