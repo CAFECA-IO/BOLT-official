@@ -108,7 +108,11 @@
     "PHONE": "Phone",
     "EMAIL": "E-mail",
     "MESSAGE": "Message",
-    "SUBMIT_BUTTON": "Send"
+    "SUBMIT_BUTTON": "Send",
+    "SENDING": "Sending...",
+    "SUCCESSS_MESSAGE": "Success!",
+    "ERROR_MESSAGE1": "Error!",
+    "ERROR_MESSAGE2": "Please try again later."
   },
   "PRIVACY": {
     "TITLE": "Privacy Policy",

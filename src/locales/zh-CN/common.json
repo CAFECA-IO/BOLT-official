@@ -108,7 +108,11 @@
     "PHONE": "联络电话",
     "EMAIL": "E-mail",
     "MESSAGE": "讯息",
-    "SUBMIT_BUTTON": "确认发送"
+    "SUBMIT_BUTTON": "确认发送",
+    "SENDING": "发送中...",
+    "SUCCESS_MESSAGE": "发送成功！",
+    "ERROR_MESSAGE1": "发送失败！",
+    "ERROR_MESSAGE2": "请稍后再试。"
   },
   "PRIVACY": {
     "TITLE": "隐私权政策与条款",
