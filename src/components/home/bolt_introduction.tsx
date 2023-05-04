@@ -136,7 +136,7 @@ function BoltIntro() {
           <h2>
             {t("MAIN.BLOCK2.TITLE2")}
             <span>
-              <Link href="/technology#distributed-audit">
+              <Link href="/technology#decentralized-audit">
                 {t("MAIN.BLOCK2.TITLE2_HIGHLIGHT")}
               </Link>
             </span>
