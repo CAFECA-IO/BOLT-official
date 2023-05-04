@@ -70,10 +70,6 @@
   padding: 1rem 2rem 0 0;
 }
 
-.showAnswer {
-  height: 200px;
-}
-
 .hideAnswer {
   height: 0;
 }
@@ -103,9 +99,13 @@
     font: normal normal normal 16px/23px Noto Sans TC;
   }
 
+  .showAnswer {
+    min-height: 400px;
+  }
+
   .hideAnswer p,
   .showAnswer p {
-    padding: 2rem 0 0 0;
+    padding: 2rem 0.25rem 0 0.25rem;
   }
 
   .faq_showAns h4::after,
@@ -128,5 +128,9 @@
   .faq_showAns h4::after,
   .faq_hideAns h4::after {
     margin-top: 10px;
+  }
+
+  .showAnswer {
+    height: 500px;
   }
 }

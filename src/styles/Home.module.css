@@ -60,7 +60,8 @@
 
 .bolt_main_textbox h1 {
   font: normal normal 60px/97px Noto Sans TC;
-  white-space: nowrap;
+  white-space: wrap;
+  padding: 1rem;
 }
 
 .bolt_main_textbox span {
@@ -151,7 +152,7 @@
   }
 
   .bolt_main_textbox h1 {
-    font: normal normal 28px/97px Noto Sans TC;
+    font: normal normal 28px/50px Noto Sans TC;
   }
 
   .animSafe {
@@ -293,11 +294,12 @@
   }
 
   .bolt_main_textbox {
+    max-width: 70%;
     padding: 3rem;
   }
 
   .bolt_main_from_top {
-    height: 250px;
+    height: 300px;
     animation: fromTop 1s ease-out 1 forwards;
   }
 

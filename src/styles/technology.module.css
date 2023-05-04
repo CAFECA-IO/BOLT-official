@@ -48,6 +48,7 @@
 .tech_item_textbox p {
   margin-top: 2rem;
   font: normal normal normal 14px/23px Noto Sans TC;
+  white-space: pre-wrap;
 }
 
 /* Mobile */
@@ -97,7 +98,7 @@
   }
 
   .tech_item_textbox {
-    height: 400px;
+    min-height: 400px;
   }
 }
 

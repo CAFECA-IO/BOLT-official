@@ -72,21 +72,49 @@ const useCaseData = [
   {
     id: "u004",
     title: "ABOUT.USE_CASE.CASE4.TITLE",
-    description: ["ABOUT.USE_CASE.CASE4.DESCRIPTION"],
+    description: [
+      "ABOUT.USE_CASE.CASE4.DESCRIPTION1",
+      "ABOUT.USE_CASE.CASE4.DESCRIPTION2",
+      "ABOUT.USE_CASE.CASE4.DESCRIPTION3",
+    ],
     image: "ABOUT.USE_CASE.CASE4.IMAGE",
   },
 ];
 
 const faqData = [
-  { id: "q001", question: "FAQ.QUESTION1", answer: "FAQ.ANSWER1" },
-  { id: "q002", question: "FAQ.QUESTION2", answer: "FAQ.ANSWER2" },
-  { id: "q003", question: "FAQ.QUESTION3", answer: "FAQ.ANSWER3" },
-  { id: "q004", question: "FAQ.QUESTION4", answer: "FAQ.ANSWER4" },
+  {
+    id: "q001",
+    question: "FAQ.QUESTION1",
+    answer: [
+      "FAQ.ANSWER1_LINE1",
+      "FAQ.ANSWER1_LINE2",
+      "FAQ.ANSWER1_LINE3",
+      "FAQ.ANSWER1_LINE4",
+      "FAQ.ANSWER1_LINE5",
+    ],
+  },
+  {
+    id: "q002",
+    question: "FAQ.QUESTION2",
+    answer: ["FAQ.ANSWER2_LINE1", "FAQ.ANSWER2_LINE2", "FAQ.ANSWER2_LINE3"],
+  },
+  {
+    id: "q003",
+    question: "FAQ.QUESTION3",
+    answer: [
+      "FAQ.ANSWER3_LINE1",
+      "FAQ.ANSWER3_LINE2",
+      "FAQ.ANSWER3_LINE3",
+      "FAQ.ANSWER3_LINE4",
+      "FAQ.ANSWER3_LINE5",
+    ],
+  },
+  { id: "q004", question: "FAQ.QUESTION4", answer: ["FAQ.ANSWER4"] },
 ];
 
 const technologyData = [
   {
-    anchor: "distributed-audit",
+    anchor: "decentralized-audit",
     title: "TECHNOLOGY.TITLE1",
     description: "TECHNOLOGY.DESCRIPTION1",
     image: "/img/technology01.svg",

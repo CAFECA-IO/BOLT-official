@@ -76,6 +76,7 @@
 
 .useitem_textbox p {
   font: normal normal normal 14px/23px Noto Sans TC;
+  white-space: pre-wrap;
 }
 
 .useitem_imgbox {

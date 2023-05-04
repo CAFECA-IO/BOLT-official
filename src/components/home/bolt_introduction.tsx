@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import lottie from "lottie-web";
 import { useTranslation } from "next-i18next";
 import myStyles from "@/styles/introduction.module.css";
+import Link from "next/link";
 
 function BoltIntro() {
   const { t } = useTranslation("common");
@@ -56,8 +57,6 @@ function BoltIntro() {
 
       path: "/animation/step03.json",
     });
-
-    //const [animFrameStep1,setAnimFrameStep1] = useState<number>()
 
     function animatebodymovin(duration: number) {
       const scrollPosition = window.scrollY;
@@ -120,7 +119,11 @@ function BoltIntro() {
         <div className={myStyles.animSteps} ref={lottieStep1}></div>
         <div className={myStyles.bolt_intro_textbox}>
           <h2>
-            <span>{t("MAIN.BLOCK2.TITLE1_HIGHLIGHT")}</span>
+            <span>
+              <Link href="/technology#zero-knowledge-proof">
+                {t("MAIN.BLOCK2.TITLE1_HIGHLIGHT")}
+              </Link>
+            </span>
             {t("MAIN.BLOCK2.TITLE1")}
           </h2>
           <p>{t("MAIN.BLOCK2.DESCRIPTION1")}</p>
@@ -132,7 +135,11 @@ function BoltIntro() {
         <div className={myStyles.bolt_intro_textbox}>
           <h2>
             {t("MAIN.BLOCK2.TITLE2")}
-            <span>{t("MAIN.BLOCK2.TITLE2_HIGHLIGHT")}</span>
+            <span>
+              <Link href="/technology#decentralized-audit">
+                {t("MAIN.BLOCK2.TITLE2_HIGHLIGHT")}
+              </Link>
+            </span>
           </h2>
           <p>{t("MAIN.BLOCK2.DESCRIPTION2_LINE1")}</p>
           <p>{t("MAIN.BLOCK2.DESCRIPTION2_LINE2")}</p>
@@ -145,7 +152,11 @@ function BoltIntro() {
         <div className={myStyles.bolt_intro_textbox}>
           <h2>
             {t("MAIN.BLOCK2.TITLE3")}
-            <span>{t("MAIN.BLOCK2.TITLE3_HIGHLIGHT")}</span>
+            <span>
+              <Link href="/technology#hybrid-chain-evidence">
+                {t("MAIN.BLOCK2.TITLE3_HIGHLIGHT")}
+              </Link>
+            </span>
           </h2>
           <p>{t("MAIN.BLOCK2.DESCRIPTION3")}</p>
         </div>

@@ -33,7 +33,7 @@ function Footer() {
 
       <div className={myStyles.footer_link_item}>
         <h4>{t("NAV_BAR.TECHNOLOGY")}</h4>
-        <Link href="/technology#distributed-audit" scroll={false}>
+        <Link href="/technology#decentralized-audit" scroll={false}>
           <p>{t("TECHNOLOGY.TITLE1")}</p>
         </Link>
         <Link href="/technology#zero-knowledge-proof" scroll={false}>

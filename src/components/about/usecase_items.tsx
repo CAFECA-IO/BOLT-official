@@ -16,13 +16,13 @@ function UseCaseItems({ title, description, image }: IUsecaseParams) {
 
   const useDescripList = useDescrip.map((v) => {
     return <p key={v}>{t(v)}</p>;
-  }); //todo: react use id
+  });
 
   return (
     <div className={myStyles.useitem_container}>
       <div className={myStyles.useitem_textbox}>
         <h3>{t(title)}</h3>
-        {useDescripList}
+        <p>{useDescripList}</p>
       </div>
       <div className={myStyles.useitem_imgbox}>
         <Image src={useImg} alt={title} layout="fill" objectFit="contain" />
