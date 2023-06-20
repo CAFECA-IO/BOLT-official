@@ -5,6 +5,7 @@ import myStyles from "@/styles/news.module.css";
 import NewsBody from "@/components/news/news_body";
 import SeeMoreList from "@/components/news/see_more_list";
 import { INewsDetail } from "@/interfaces/news_detail";
+import { ILocale } from "@/interfaces/locale";
 
 function NewsDetailPage() {
   const router = useRouter();
@@ -75,16 +76,12 @@ export const getStaticPaths = async () => {
       { params: { newsId: "n001" } },
       { params: { newsId: "n002" } },
       { params: { newsId: "n003" } },
-      { params: { newsId: "n004" } },
-      { params: { newsId: "n005" } },
-      { params: { newsId: "n006" } },
-      { params: { newsId: "n007" } },
     ],
     fallback: "blocking",
   };
 };
 
-export async function getStaticProps({ locale }: any) {
+export async function getStaticProps({ locale }: ILocale) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),

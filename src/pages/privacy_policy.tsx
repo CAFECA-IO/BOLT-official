@@ -2,6 +2,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import moment from "moment";
 import myStyles from "@/styles/privacy.module.css";
+import { ILocale } from "@/interfaces/locale";
 
 function PrivacyPage() {
   const { t } = useTranslation("common");
@@ -49,7 +50,7 @@ function PrivacyPage() {
 
 export default PrivacyPage;
 
-export async function getStaticProps({ locale }: any) {
+export async function getStaticProps({ locale }: ILocale) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),

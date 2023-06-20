@@ -4,6 +4,7 @@ import lottie from "lottie-web";
 import animationData from "../../public/animation/coming_soon.json";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { ILocale } from "@/interfaces/locale";
 import myStyles from "@/styles/Home.module.css";
 
 function ComingSoonPage() {
@@ -41,7 +42,7 @@ function ComingSoonPage() {
 
 export default ComingSoonPage;
 
-export async function getStaticProps({ locale }: any) {
+export async function getStaticProps({ locale }: ILocale) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),
