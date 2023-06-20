@@ -80,6 +80,7 @@ function Footer() {
             <a
               href={githubUrl}
               target="_blank"
+              rel="noreferrer"
               className={myStyles.github_text}
             >
               <p>
