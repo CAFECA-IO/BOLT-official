@@ -1,5 +1,9 @@
 export const NEWS_PER_PAGE = 4;
 
+export const contactEmail = "contact@boltchain.io";
+export const copyright = "Copyright © Bolt. All rights reserved. 2023";
+export const githubUrl = "https://github.com/CAFECA-IO";
+
 export function getPageIndex() {
   return pageIndex;
 }
