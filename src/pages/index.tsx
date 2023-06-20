@@ -9,6 +9,7 @@ import myStyles from "@/styles/Home.module.css";
 import BoltMain from "@/components/home/bolt_main";
 import BoltIntro from "@/components/home/bolt_introduction";
 import ContactUsForm from "@/components/common/contact_us_form";
+import { ILocale } from "@/interfaces/locale";
 
 export default function Home() {
   const { t } = useTranslation("common");
@@ -62,7 +63,7 @@ export default function Home() {
   );
 }
 
-export async function getStaticProps({ locale }: any) {
+export async function getStaticProps({ locale }: ILocale) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),

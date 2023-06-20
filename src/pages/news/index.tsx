@@ -1,4 +1,3 @@
-//import useSWR from "swr";
 import { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -7,19 +6,13 @@ import { getQuerys } from "@/lib/common";
 import NewsList from "@/components/common/news_list";
 import Pagination from "../../components/common/pagination";
 import myStyles from "@/styles/news.module.css";
-/* 
-const fetcher = async (url: string) => {
-  const res = await fetch(`/api${url}`);
-  return await res.json();
-}; */
+import { ILocale } from "@/interfaces/locale";
 
 function AllNewsPage() {
   const { t } = useTranslation("common");
 
   const [loadedList, setLoadedList] = useState<INewsDetail[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-
-  //const { data: news } = useSWR<INewsDetail[]>(`/news`, fetcher);
 
   useEffect(() => {
     const page = Number(getQuerys("page") || 1);
@@ -60,7 +53,7 @@ function AllNewsPage() {
 }
 export default AllNewsPage;
 
-export async function getStaticProps({ locale }: any) {
+export async function getStaticProps({ locale }: ILocale) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),

@@ -3,6 +3,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { getTechnologyData } from "@/constants/config";
 import myStyles from "@/styles/technology.module.css";
 import TechnologyItems from "@/components/techology/techology_items";
+import { ILocale } from "@/interfaces/locale";
 
 function TechnologyPage() {
   const { t } = useTranslation("common");
@@ -30,7 +31,7 @@ function TechnologyPage() {
 
 export default TechnologyPage;
 
-export async function getStaticProps({ locale }: any) {
+export async function getStaticProps({ locale }: ILocale) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),

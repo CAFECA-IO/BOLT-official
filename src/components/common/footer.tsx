@@ -1,20 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import { contactEmail, copyright, githubUrl } from "@/constants/config";
 import myStyles from "@/styles/footer.module.css";
 
 function Footer() {
   const { t } = useTranslation("common");
-  /* 
-
-  const pageIndexList = pageData.map((v) => {
-    return (
-      <div className={myStyles.footer_link_item} key={v.title}>
-        <h4>{t(`${v.title}`)}</h4>
-        <p>{v.items}</p>
-      </div>
-    );
-  }); */
 
   const linkList = (
     <div className={myStyles.footer_link_list}>
@@ -83,20 +74,25 @@ function Footer() {
           <span className={myStyles.borderline}></span>
 
           <div className={myStyles.footer_text_container}>
-            <p className={myStyles.email_text}>
-              &emsp;&emsp; service@boltchain.io
-            </p>
-            <Link href="" className={myStyles.github_text}>
+            <a href={`mailto:${contactEmail}`}>
+              <p className={myStyles.email_text}>&emsp;&emsp; {contactEmail}</p>
+            </a>
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              className={myStyles.github_text}
+            >
               <p>
                 &emsp;&emsp; <span>Github</span>
               </p>
-            </Link>
+            </a>
           </div>
         </div>
         {linkList}
 
         <div className={myStyles.footer_copyright}>
-          <p>Copyright © Bolt. All rights reserved. 2023</p>
+          <p>{copyright}</p>
         </div>
       </footer>
     </>

@@ -7,6 +7,7 @@ import WhyBolt from "@/components/about/why_bolt";
 import UseCaseList from "@/components/about/usecase_list";
 import NewsList from "@/components/common/news_list";
 import { INewsDetail } from "@/interfaces/news_detail";
+import { ILocale } from "@/interfaces/locale";
 
 function AboutBoltPage() {
   const { t } = useTranslation("common");
@@ -56,7 +57,7 @@ function AboutBoltPage() {
 
 export default AboutBoltPage;
 
-export async function getStaticProps({ locale }: any) {
+export async function getStaticProps({ locale }: ILocale) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),

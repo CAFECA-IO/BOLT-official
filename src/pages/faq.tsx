@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import myStyles from "@/styles/faq.module.css";
 import FAQItems from "@/components/faq/faqItems";
 import { getFaqData } from "@/constants/config";
+import { ILocale } from "@/interfaces/locale";
 
 function FAQPage() {
   const { t } = useTranslation("common");
@@ -42,7 +43,7 @@ function FAQPage() {
 
 export default FAQPage;
 
-export async function getStaticProps({ locale }: any) {
+export async function getStaticProps({ locale }: ILocale) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),
