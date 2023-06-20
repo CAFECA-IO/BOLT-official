@@ -16,6 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 540px;
 }
 
 .contact_formPart input,
@@ -62,6 +63,11 @@
   cursor: pointer;
 }
 
+.contact_formPart p {
+  padding: 10px;
+  color: #ff0000;
+}
+
 .btn_submit {
   background-color: #31d3f5;
   border: 1px solid #31d3f5;
@@ -73,7 +79,9 @@
   color: #31d3f5;
 }
 
-.btn_send {
+.btn_send,
+.btn_submit:disabled,
+.btn_submit:disabled:hover {
   background-color: #c7c7c7;
   border: 1px solid #c7c7c7;
   color: #ffffff;
