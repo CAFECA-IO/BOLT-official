@@ -119,6 +119,7 @@
     "NAME": "Name",
     "PHONE": "Phone",
     "EMAIL": "E-mail",
+    "EMAIL_VERIFY": "The entered address is invalid.",
     "MESSAGE": "Message",
     "SUBMIT_BUTTON": "Send",
     "SENDING": "Sending...",

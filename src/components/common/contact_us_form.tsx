@@ -23,6 +23,26 @@ function ContactUsForm() {
 
   const now = new Date().toLocaleString("zh-TW", { timeZone: "Asia/Taipei" });
 
+  // Info: (20230620 - Julian) check if email is valid
+  const emailRule =
+    /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+  const emailIsValid = emailRule.test(inputEmail);
+
+  const nameChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputName(event.target.value);
+  };
+  const phoneChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputPhone(event.target.value);
+  };
+  const emailChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputEmail(event.target.value);
+  };
+  const messageChangeHandler = (
+    event: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    setInputMessage(event.target.value);
+  };
+
   useEffect(() => {
     const animSend = lottie.loadAnimation({
       container: sendAnimContainer.current!,
@@ -45,24 +65,6 @@ function ContactUsForm() {
       animSuccess.destroy();
     };
   }, [sendAnimation, sendSuccess, showResult]);
-
-  const nameChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputName(event.target.value);
-  };
-
-  const phoneChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputPhone(event.target.value);
-  };
-
-  const emailChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputEmail(event.target.value);
-  };
-
-  const messageChangeHandler = (
-    event: React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
-    setInputMessage(event.target.value);
-  };
 
   const submitHandler = async (event: React.FormEvent<HTMLFormElement>) => {
     const failedProcess = async () => {
@@ -177,7 +179,12 @@ function ContactUsForm() {
       {t("CONTACT_FORM.SENDING")}
     </button>
   ) : (
-    <button id="submit" type="submit" className={myStyles.btn_submit}>
+    <button
+      id="submit"
+      type="submit"
+      disabled={emailIsValid ? false : true}
+      className={myStyles.btn_submit}
+    >
       {t("CONTACT_FORM.SUBMIT_BUTTON")}
     </button>
   );
@@ -196,6 +203,9 @@ function ContactUsForm() {
         {resultPart}
         {inputPart}
         {submitButton}
+        <p style={emailIsValid ? { display: "none" } : { display: "block" }}>
+          {t("CONTACT_FORM.EMAIL_VERIFY")}
+        </p>
       </form>
     </div>
   );

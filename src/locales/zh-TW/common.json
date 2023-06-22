@@ -119,6 +119,7 @@
     "NAME": "姓名",
     "PHONE": "聯絡電話",
     "EMAIL": "E-mail",
+    "EMAIL_VERIFY": "E-mail 格式有誤",
     "MESSAGE": "訊息",
     "SUBMIT_BUTTON": "確認發送",
     "SENDING": "發送中...",
