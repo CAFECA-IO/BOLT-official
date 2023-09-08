@@ -23,6 +23,8 @@ function BoltMain() {
             download="BOLT_Whitepaper_v2.0.11.pdf"
             href="/files/BOLT_Whitepaper_v2.0.11.pdf"
             target="_blank"
+            rel="noopener noreferrer"
+            locale={false}
           >
             <p className={myStyles.whitepaper}>
               &emsp;&emsp;<span>{t("MAIN.BLOCK1.WHITEPAPER")}</span>
